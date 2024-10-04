@@ -9,3 +9,12 @@
     <h1>Hola buenass</h1>
 </body>
 </html>
+
+<?php
+
+
+$name = 'anfer';
+
+echo "Mi nombre es $name";
+
+?>
