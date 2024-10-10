@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+}
+
+
+.Ba {
+    background-color: #DAE1E5;
+    margin-top: 0;
+    
+}
+
+.ESARM {
+    width:260px ;
+    height:80px ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+
+}
+
+.SEIN{
+    background-color: #35454f98;
+    width: 100%;
+    height: 260px; 
+    position: absolute;
+    z-index: 1;
+
+}
+
+.IMGIN {
+    width: 100%;
+    height: 260px;
+    position: absolute;
+    z-index: -1;
+
+}
+
+.TIBI{
+    color: white;
+    text-align:center;
+    margin-top: 70px;
+    font-size:50px;
+    font-family:   Georgia,
+
+}
+
+.BODIS{
+    text-align: center;
+    background-color: #d9d9d97e ;
+    width: 150px;
+    height: 45px;
+    border-radius:5px ;
+    border-color: rgba(255, 255, 255, 0);
+    margin-left: 670px;
+    margin-top: 5px;
+    position:absolute;
+    z-index: 1;
+}
+
+.BODISINT{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Helvetica;
+}
