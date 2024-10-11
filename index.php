@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>EN PROCESOOO</h1>
+    <h1>SEGUIMOS EN PROCESO</h1>
 </body>
 </html>
