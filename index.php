@@ -6,15 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hola buenass</h1>
+    <h1>EN PROCESOOO</h1>
 </body>
 </html>
-
-<?php
-
-
-$name = 'anfer';
-
-echo "Mi nombre es $name";
-
-?>
