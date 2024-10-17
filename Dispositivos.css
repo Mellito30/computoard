@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+}
+
+/* <!-- Sección de Barra  --> */
+.BA {
+    background-color: #DAE1E5;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+}
+.ESARM {
+    width:260px ;
+    height:80px ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+}
