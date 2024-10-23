@@ -1,0 +1,22 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+.header
+{
+    background-color: rgb(151, 164, 190);
+    padding: 5%;
+}
+
+.header h1
+{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.add-devices
+{
+    margin: 5%;
+}

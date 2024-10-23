@@ -8,10 +8,10 @@
 </head>
 <body>
     <div class="container">
-        <form class="formulario" onsubmit="return validateForm()">
+        <form class="formulario" onsubmit="return IniciarSesion()">
             <h2>Administracion</h2>
             <label for="name">Usuario:</label>
-            <input type="text" id="user" name="user">
+            <input type="text" id="user" name="user" placeholder="Usuario">
             <label for="email">Contraseña:</label>
             <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña">
             <button type="submit">Enviar</button>
@@ -22,19 +22,19 @@
 
 <script>
 
-function validateForm() {
-    const user = document.getElementById("user").value;
-    const validUser = "Administracion";
-    const password = document.getElementById("password").value;
-    const validPassword = "@ARD2024";
+    function IniciarSesion() {
+        const user = document.getElementById("user").value;
+        const validUser = "Administracion";
+        const password = document.getElementById("password").value;
+        const validPassword = "@ARD2024";
 
-    if (user === validUser && password === validPassword) {
-        sessionStorage.setItem("isLoggedIn", "true");       
-        window.location.href = "principal.php";
-        return false;
-    } else {
-        alert("La clave o usuario es incorrecto. Intenta de nuevo.");
-        return false;
+        if (user === validUser && password === validPassword) {
+            sessionStorage.setItem("EstaLogueado", "true");       
+            window.location.href = "principal.php";
+            return false;
+        } else {
+            alert("La clave o usuario es incorrecto. Intenta de nuevo.");
+            return false;
+        }
     }
-}
 </script>
