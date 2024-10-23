@@ -16,3 +16,65 @@ body{
     margin-bottom: 20px;
     margin-left: 200px;
 }
+/* <!-- Sección de Titulos de dispositivos --> */
+.SETIDI{
+    margin-left: 180px;
+    margin-right: 180px;
+}
+
+.TITADI{
+    display: flex;
+    justify-content: space-around;
+}
+.TIDIS{
+    margin-top: 70px;
+    text-align: center;
+    font-size: 28px;
+    color: #172f3e;
+    margin-bottom: 35px;
+}
+
+.TITETADI{
+    /* margin-left: -18px; */
+    margin-bottom: -5px;
+    background-color: #d9d9d98d;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 4px;
+    z-index: -2;
+}
+
+.LIGRTADI{
+    width: 1100px;
+    height: 8px;
+    background-color: #DAE1E5;
+    margin-left: 25px;
+    margin-right: 25px;
+    z-index: 2;
+    margin-left: 200px;
+    margin-right: 190px;
+}
+
+    /* <!-- Sección de dispositivos --> */
+.SEDI{
+    margin-left: 180px;
+    margin-right: 180px;
+}
+
+.SEDIBLA{
+    display: flex;
+    justify-content: space-around;
+    /* margin-left: -25px; */
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.TETADI{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
