@@ -18,6 +18,7 @@ $result = $conexion->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Dispositivos</title>
+    <link rel="stylesheet" href="tabla.css">
 </head>
 <body>
     <h1>Lista de Dispositivos Registrados</h1>
@@ -25,10 +26,11 @@ $result = $conexion->query($sql);
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Nombre</th>
-                <th>Tipo</th>
-                <th>Marca</th>
-                <th>Fecha de Registro</th>
+                <th>Estado</th>
+                <th>Equipo</th>
+                <th>Departamento</th>
+                <th>Fecha de Entrada</th>
+                <th>Fecha de Salida</th>
             </tr>
         </thead>
         <tbody>
@@ -37,11 +39,12 @@ $result = $conexion->query($sql);
                 // Mostrar cada fila de la tabla
                 while($row = $result->fetch_assoc()) {
                     echo "<tr>
-                            <td>" . $row['id'] . "</td>
-                            <td>" . $row['nombre'] . "</td>
-                            <td>" . $row['tipo'] . "</td>
-                            <td>" . $row['marca'] . "</td>
-                            <td>" . $row['fecha_registro'] . "</td>
+                            <td>" . $row['ID'] . "</td>
+                            <td>" . $row['Estado'] . "</td>
+                            <td>" . $row['Equipo'] . "</td>
+                            <td>" . $row['Departamento'] . "</td>
+                            <td>" . $row['Fecha_Entrada'] . "</td>
+                            <td>" . $row['Fecha_Salida'] . "</td>
                           </tr>";
                 }
             } else {

@@ -1,0 +1,16 @@
+table
+{
+    padding: 20px;
+}
+
+table th
+{
+    padding: 15px;
+    border: none;
+}
+
+table td
+{
+    padding: 10px;
+    border: none;
+}
