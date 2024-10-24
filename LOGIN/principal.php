@@ -1,43 +1,103 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
-    <link rel="stylesheet" href="principal.css">
+    <title>Soporte De Dispositivos</title>
+    <link rel="stylesheet" href="Dispositivos.css">
 </head>
 <body>
-    <section class="header">
-         <h1>Administracion de Dispositivos</h1>
+      <!-- Sección de barra -->
+      <section class="BA">
+        <img class="ESARM" src="img/LOGOARM.png" alt="EscudoARM">
     </section>
+ 
+    
+    <!-- Sección de titulos de dispositivos -->
+     <section class="SETIDI">
+        <h1 class="TIDIS">Dispositivos</h1>
+            <div class="TITADI">
+                    <h3 class="TITETADI" >Estado</h3>
+                    <h3 class="TITETADI" >Equipo</h3>
+                    <h3 class="TITETADI" >Departamento</h3>
+                    <h3 class="TITETADI" >Fecha de Entrada</h3>
+                    <h3 class="TITETADI" >Fecha de Salida</h3>
+            </div>
+        </section>
+            <div class="LIGRTADI"></div>
 
-    <section class="add-devices">
-        <h1>Registrar Dispositivo</h1>
-        <form action="guardar.php" method="POST">
-            <label for="nombre">Nombre del dispositivo:</label>
-            <input type="text" id="nombre" name="nombre" required><br><br>
+        <!-- Sección de dispositivos -->
 
-            <label for="tipo">Tipo de dispositivo:</label>
-            <input type="text" id="tipo" name="tipo" required><br><br>
+        <section class="SEDI">
+            <div class="SEDIBLA">
+                    <p class="TETADI" >Estado</p>
+                    <p class="TETADI" >Equipo</p>
+                    <p class="TETADI" >Departamento</p>
+                    <p class="TETADI" >Fecha de Entrada</p>
+                    <p class="TETADI" >Fecha de Salida</p>
+            </div>
+        </section>
+                <div class="LIGRTADI"></div>
 
-            <label for="marca">Modelo:</label>
-            <input type="text" id="marca" name="marca" required><br><br>
+        <section class="SEDI">
+            <div class="SEDINE">
+                    <p class="TETADI" >Estado</p>
+                    <p class="TETADI" >Equipo</p>
+                    <p class="TETADI" >Departamento</p>
+                    <p class="TETADI" >Fecha de Entrada</p>
+                    <p class="TETADI" >Fecha de Salida</p>
+            </div>
+        </section>
+                <div class="LIGRTADI"></div>
+     
+        <section class="SEDI">
+            <div class="SEDIBLA">
+                    <p class="TETADI" >Estado</p>
+                    <p class="TETADI" >Equipo</p>
+                    <p class="TETADI" >Departamento</p>
+                    <p class="TETADI" >Fecha de Entrada</p>
+                    <p class="TETADI" >Fecha de Salida</p>
+            </div>
+        </section>
+                <div class="LIGRTADI"></div>
 
-            <label for="marca">Descripcion del Problema:</label>
-            <input type="text" id="notas" name="notas" required><br><br>
-            
-            <label for="marca">Fecha de Ingreso:</label>
-            <input type="date" id="entradafecha" name="entradafecha" required><br><br>
-            
-            <label for="marca">Fecha de Salida:</label>
-            <input type="date" id="salidafecha" name="salidafecha" required><br><br>
+        <section class="SEDI">
+            <div class="SEDINE">
+                    <p class="TETADI" >Estado</p>
+                    <p class="TETADI" >Equipo</p>
+                    <p class="TETADI" >Departamento</p>
+                    <p class="TETADI" >Fecha de Entrada</p>
+                    <p class="TETADI" >Fecha de Salida.</p>
+            </div>
+        </section>
+                <div class="LIGRTADI"></div>
+     
+        <section class="SEDI">
+            <div class="SEDIBLA">
+                    <p class="TETADI" >Estado</p>
+                    <p class="TETADI" >Equipo</p>
+                    <p class="TETADI" >Departamento</p>
+                    <p class="TETADI" >Fecha de Entrada</p>
+                    <p class="TETADI" >Fecha de Salida</p>
+            </div>
+        </section>
+                <div class="LIGRTADI"></div>
 
-            <button type="submit">Registrar</button>
-        </form>
-    </section>
+        <section class="SEDI">
+            <div class="SEDINE">
+                    <p class="TETADI" >Estado</p>
+                    <p class="TETADI" >Equipo</p>
+                    <p class="TETADI" >Departamento</p>
+                    <p class="TETADI" >Fecha de Entrada</p>
+                    <p class="TETADI" >Fecha de Salida</p>
+            </div>
+        </section>
+                <div class="LIGRTADI"></div>
+     
 
 </body>
 </html>
+
 
 <script>
         // Verificar si el usuario está logueado
