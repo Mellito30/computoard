@@ -21,14 +21,14 @@ body{
 /* <!-- Sección de bienvenidad  --> */
 .IN{
     position: relative; 
-    max-width: 100%;
-    max-height: 260px; 
+    width: 100%;
+    height: 260px; 
     margin: 0;
 }
 
 .IMGIN {
-    max-width: 100%;
-    max-height: 260px;
+    width: 100%;
+    height: 260px;
     position: absolute;
     top: 0;
     left: 0;
@@ -42,7 +42,7 @@ body{
     color: white;
     text-align: center;
     padding-top: 1px; 
-    max-height: 100%;
+    height: 100%;
 }
 
 .TIBI {
@@ -55,8 +55,8 @@ body{
 .BODIS{
     text-align: center;
     background-color: #d9d9d96d;
-    max-width: 150px;
-    max-height: 45px;
+    width: 150px;
+    height: 45px;
     border-radius: 5px;
     border-color: transparent;
     margin-top: 5px;
@@ -97,8 +97,8 @@ body{
 
 .LIAZINFOR{
     margin-top: 67px;
-    max-width: 62px; 
-    max-height: 14px; 
+    width: 62px; 
+    height: 14px; 
     border-radius: 4px;
     background-color: #2b3c47; 
     margin-right: 8px; 
@@ -132,7 +132,6 @@ body{
 /* <!-- Sección de informacion del departamento -->  */
 .TIBLO{
     margin-top: 35px;
-    /* margin-left:  40px; */
     text-align: center;
     font-size: 28px;
     color: #172f3e;
@@ -161,7 +160,6 @@ body{
 }
 
 .CUINBLO:hover{
-
     box-shadow: 0px 0px 25px 5px  #425563;
 }
 
@@ -189,8 +187,8 @@ body{
 
 .IMGINBLOCE{
     margin-left: 195px;
-    max-width: 500px;
-    max-height: 310px;
+    width: 500px;
+    height: 310px;
     border-radius:2px;
 }
 
