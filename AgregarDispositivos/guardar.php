@@ -20,6 +20,7 @@ $sql = "INSERT INTO dispositivos (Estado, Equipo, Departamento, Fecha_Entrada, F
 if ($conexion->query($sql) === TRUE) {
     echo "Dispositivo registrado correctamente.";
     // Redirigir a la página de la tabla
+    header("Location: tabla.php");
     exit();
 } else {
     echo "Error: " . $sql . "<br>" . $conexion->error;
