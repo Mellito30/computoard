@@ -15,7 +15,7 @@
     
     <!-- Sección de titulos de dispositivos -->
      <section class="SETIDI">
-        <h1 class="TIDIS">Dispositivos</h1>
+        <h1 class="TIDIS">Dispositivos y Maquinas</h1>
             <div class="TITADI">
                     <h3 class="TITETADI" >Estado</h3>
                     <h3 class="TITETADI" >Equipo</h3>
