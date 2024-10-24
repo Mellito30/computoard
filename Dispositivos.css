@@ -91,3 +91,69 @@ body{
     padding-right: 25px;
 }
 
+/* <!-- seccion de paginacion --> */
+
+.SEPA{
+    transform: 50%;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.PA{
+
+    text-align: center;
+}
+
+.NUPA{
+    width: 10px;
+    height: 10px;
+    background-color: #424c52a4;
+    color: #000000;
+    padding: 15PX;
+    text-decoration: none;
+
+}
+.NUPA:hover{
+    background-color: #DAE1E5;
+    
+}
+    
+
+
+/* <!-- Sección de Footer --> */
+
+.SEFO{
+    background-color:#DAE1E5;
+    padding: 50px;
+    display: flex;
+}
+
+.IMGFOESARM{
+    margin-left: 155px;
+    width: 165px;
+    height: 58px;
+}
+
+.FOLOGOMINIS{
+    margin-left: 18px;
+    width: 165px;
+    height: 58px; 
+}
+
+.LIAZFIFO{
+    margin-left: 20px;
+    width: 1px; 
+    height: 90px; 
+    background-color: #2b3c47; 
+}
+
+.COTEFO{
+    margin-left: 55px ;
+    margin-right: 100px;}
+
+.TIINFO{
+    color: #133448;
+    margin-top: 10px;
+}
+.TEINFO{
+    margin-top: -15px;
+}
