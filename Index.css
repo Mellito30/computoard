@@ -39,7 +39,7 @@ body{
     font-size: 21px;
     transition-delay: -0.1s; 
     right: 10px; 
-    text-shadow: #0a3e5f5f 0px 5px 5px;
+    text-shadow: #0a3e5f5f 0px 3px 10px;
 }
 
 /* <!-- Sección de bienvenidad  --> */

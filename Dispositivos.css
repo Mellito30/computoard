@@ -8,14 +8,57 @@ body{
     margin-top: 0;
     margin-bottom: 0;
     position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+
 }
 .ESARM {
     width:260px ;
     height:80px ;
-    margin-top: 20px;
-    margin-bottom: 20px;
     margin-left: 200px;
 }
+
+/* <!-- Sección de formulario --> */
+.div-formulario {
+    position: relative;
+}
+.Formulario{
+    text-decoration: none;
+    position: absolute;
+    right: 20px;
+    transform: translateX(-50%);
+    bottom: 30px;
+    color: #133448;
+    font-size: 20px;
+}
+.Formulario:hover{
+    color: #425b77;
+    font-size: 21px;
+    transition-delay: -0.1s; 
+    right: 10px; 
+    text-shadow: #0a3e5f5f 0px 3px 10px;
+}
+
+/* <!-- Sección de inicio --> */
+
+.Inicio{
+    text-decoration: none;
+    position: absolute;
+    right: 320px;
+    transform: translateX(-50%);
+    bottom: 30px;
+    color: #133448;
+    font-size: 20px;
+}
+.Inicio:hover{
+    color: #425b77;
+    font-size: 21px;
+    transition-delay: -0.1s; 
+    right: 318px; 
+    text-shadow: #0a3e5f5f 0px 3px 10px;
+}
+
 /* <!-- Sección de Titulos de dispositivos --> */
 .SETIDI{
     margin-left: 180px;
