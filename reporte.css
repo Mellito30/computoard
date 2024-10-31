@@ -1,0 +1,42 @@
+.invoice-container {
+    max-width: 670px;
+    margin: auto;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.logo-img {
+    width: 250px;
+    height: auto;
+}
+
+h2 {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #495057;
+}
+
+label {
+    font-weight: 500;
+    color: #495057;
+}
+
+textarea {
+    resize: none;
+}
+
+.btn-custom {
+    background-color: #000080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #0084ff; 
+}
