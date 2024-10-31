@@ -8,14 +8,38 @@ body{
     margin-top: 0;
     margin-bottom: 0;
     position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .BAESARM {
     width:260px ;
     height:80px ;
-    margin-top: 20px;
-    margin-bottom: 20px;
     margin-left: 200px;
+}
+
+
+/* <!-- Sección de formulario --> */
+.div-formulario {
+    position: relative;
+}
+
+
+.Formulario{
+    text-decoration: none;
+    position: absolute;
+    right: 20px;
+    transform: translateX(-50%);
+    bottom: 30px;
+    color: #133448;
+    font-size: 20px;
+}
+.Formulario:hover{
+    color: #425b77;
+    font-size: 21px;
+    transition-delay: -0.1s; 
+    right: 10px; 
+    text-shadow: #0a3e5f5f 0px 5px 5px;
 }
 
 /* <!-- Sección de bienvenidad  --> */
@@ -171,39 +195,6 @@ body{
 .INCUINBLO{
     text-align: justify;
     font-size: 18px;
-    line-height: 25px;
-}
-
-/* <!-- Sección de informacion inferio --> */
-.SEINBLOGCE{
-    margin-top: 35px;
-}
-
-.COINBLOGCE{
-    display: flex;
-    margin-top: 65px;
-    margin-bottom: 70px;
-}
-
-.IMGINBLOCE{
-    margin-left: 195px;
-    width: 500px;
-    height: 310px;
-    border-radius:2px;
-}
-
-.TIINBLOCE{
-    margin-top: 55px; 
-    margin-left: 40px; 
-    font-size: 25px; 
-}
-
-.TEINBLOCE{
-    margin-top: 110px;
-    margin-left: -180px;
-    margin-right: 195px;
-    text-align: justify;
-    font-size: 20px;
     line-height: 25px;
 }
 
