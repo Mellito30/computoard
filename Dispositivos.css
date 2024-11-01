@@ -3,7 +3,7 @@ body{
 }
 
 /* <!-- Sección de Barra  --> */
-.BA {
+.Sec-Header {
     background-color: #DAE1E5;
     margin-top: 0;
     margin-bottom: 0;
@@ -13,7 +13,7 @@ body{
 
 
 }
-.ESARM {
+.Logo-ARM {
     width:260px ;
     height:80px ;
     margin-left: 200px;
@@ -60,16 +60,12 @@ body{
 }
 
 /* <!-- Sección de Titulos de dispositivos --> */
-.SETIDI{
+.Sec-Body1{
     margin-left: 180px;
     margin-right: 180px;
 }
 
-.TITADI{
-    display: flex;
-    justify-content: space-around;
-}
-.TIDIS{
+.Title-dispositivos{
     margin-top: 70px;
     text-align: center;
     font-size: 28px;
@@ -77,8 +73,13 @@ body{
     margin-bottom: 35px;
 }
 
-.TITETADI{
-    /* margin-left: -18px; */
+.div-dispositivos{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.Title-header-dispositivos{
     margin-bottom: -5px;
     background-color: #d9d9d98d;
     padding-top: 10px;
@@ -89,7 +90,7 @@ body{
     z-index: -2;
 }
 
-.LIGRTADI{
+.div-form-decorate{
     max-width: 1100px;
     height: 8px;
     background-color: #DAE1E5;
@@ -101,12 +102,12 @@ body{
 }
 
     /* <!-- Sección de dispositivos --> */
-.SEDI{
+.Sec-Dispositivos{
     margin-left: 200px;
     margin-right: 200px;
 }
 
-.SEDIBLA{
+.div-Info-Dispositivos{
     display: flex;
     justify-content: space-around;
     margin-top: 2px;
@@ -114,7 +115,7 @@ body{
 
 }
 
-.SEDINE{
+.div-Info-dispo-BGBLACK{
     background-color: #35454f88;
     display: flex;
     justify-content: space-around;
@@ -125,7 +126,7 @@ body{
 
 }
 
-.TETADI{
+.Text-info-Dispositivos{
     margin-left: -10px;
     margin-right: 5px;
     padding-top: 15px;
@@ -135,17 +136,17 @@ body{
 }
 
 /* <!-- seccion de paginacion --> */
-
-.SEPA{
+.Sec-Paginas{
     transform: 50%;
     margin-top: 35px;
     margin-bottom: 35px;
 }
-.PA{
+
+.div-paginas{
     text-align: center;
 }
 
-.NUPA{
+.Num-Pag{
     max-width: 10px;
     max-height: 10px;
     background-color: #424c52a4;
@@ -153,49 +154,48 @@ body{
     padding: 15PX;
     text-decoration: none;
     border-radius: 2px;
-    
-
 }
-.NUPA:hover{
+
+.Num-Pag:hover{
     background-color: #DAE1E5;  
     color: #424c52a4; 
+    transition: 0.4s ease-in-out;
 }
 
 /* <!-- Sección de Footer --> */
-
-.SEFO{
+.Sec-Footer{
     background-color:#DAE1E5;
     padding: 50px;
     display: flex;
 }
 
-.IMGFOESARM{
+.Logo-ARM-Footer{
     margin-left: 155px;
     width: 165px;
     height: 58px;
 }
 
-.FOLOGOMINIS{
+.Logo-GRD-Footer{
     margin-left: 18px;
     width: 165px;
     height: 58px; 
 }
 
-.LIAZFIFO{
+.div-Footer-decorate{
     margin-left: 20px;
     width: 1px; 
     height: 90px; 
     background-color: #2b3c47; 
 }
 
-.COTEFO{
+.div-text-footer{
     margin-left: 55px ;
     margin-right: 100px;}
 
-.TIINFO{
+.Title-footer{
     color: #133448;
     margin-top: 10px;
 }
-.TEINFO{
-    margin-top: -14px;
+.Text-footer{
+    margin-top: -15px;
 }

@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
-    <link rel="stylesheet" href="principal.css">
+    <title>Administrador de Usuarios</title>
+    <link rel="stylesheet" href="Pag Administrador.css">
 </head>
 <body>
-    <section class="header">
-         <h1>Administracion de Dispositivos</h1>
-    </section>
+        <!-- Sección de Barra  -->
+        <section class="Header">
+            <img class="Logo-ARM" src="/img/LOGOARM.png" alt="LOGO ARM" >
+        </section>
 
-    <section class="add-devices">
-        <h1>Registrar Dispositivo</h1>
+    <section class="Sec-Body1">
+        <h1 class="Title1">Registrar Dispositivo</h1>
         <form action="guardar.php" method="POST">
-            <label for="nombre">Nombre del dispositivo:</label>
-            <input type="text" id="nombre" name="nombre" required><br><br>
+            <div>
+                <label for="nombre">Nombre del dispositivo:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+            </div>
 
             <label for="tipo">Tipo de dispositivo:</label>
             <input type="text" id="tipo" name="tipo" required><br><br>

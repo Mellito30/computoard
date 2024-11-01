@@ -3,7 +3,7 @@ body{
 }
 
 /* <!-- Sección de Barra  --> */
-.BA {
+.Sec-Header {
     background-color: #DAE1E5;
     margin-top: 0;
     margin-bottom: 0;
@@ -12,7 +12,7 @@ body{
     padding-bottom: 20px;
 }
 
-.BAESARM {
+.Logo-ARM{
     width:260px ;
     height:80px ;
     margin-left: 200px;
@@ -23,8 +23,6 @@ body{
 .div-formulario {
     position: relative;
 }
-
-
 .Formulario{
     text-decoration: none;
     position: absolute;
@@ -43,23 +41,15 @@ body{
 }
 
 /* <!-- Sección de bienvenidad  --> */
-.IN{
+
+.Sec-Body1{
     position: relative; 
     width: 100%;
     height: 260px; 
     margin: 0;
 }
 
-.IMGIN {
-    width: 100%;
-    height: 260px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0; 
-}
-
-.CONIN {
+.div-img-inicio {
     position: relative; 
     z-index: 1; 
     background-color: #1a2831dc;
@@ -67,16 +57,16 @@ body{
     text-align: center;
     padding-top: 1px; 
     height: 100%;
-}
+} 
 
-.TIBI {
+.Title1 {
     font-size: 45px;
     font-family: Georgia;
     margin-top: 70px;
 }
 
 /* <!-- Sección de Boton de bienvenidad  --> */
-.BODIS{
+.Button-dispositivos{
     text-align: center;
     background-color: #d9d9d96d;
     width: 150px;
@@ -90,14 +80,13 @@ body{
     z-index: 1;
 }
 
-.BODIS:hover{
+.Button-dispositivos:hover{
     background-color: #a5c0d3;
     font: #263641 ;
     display: block;
- 
 }
 
-.BODISINT{
+.Button-link{
     color: white;
     text-decoration: none;
     font-size: 15px;
@@ -105,7 +94,7 @@ body{
 }
 
 /* <!-- Sección de informacion --> */
-.INFOR{
+.Sec-Body2{
     position: relative;
     background-color: #E9EDEF;
     padding-top: 0px;
@@ -113,13 +102,13 @@ body{
     padding-bottom: 90px;
 }
 
-.INFORCA {
+.div-info-inicio {
     display: flex; 
     right: 20px;
     align-items: right; 
 }
 
-.LIAZINFOR{
+.div-form-decorate{
     margin-top: 67px;
     width: 62px; 
     height: 14px; 
@@ -130,13 +119,20 @@ body{
     position: absolute;
 }
 
-.TIINFOR{
+.Escudo-ARM{
+    position: absolute;
+    top: 28px;
+    right: 120px;
+    transform: translateX(-50%);
+}
+
+.Title-Info{
     margin-top: 0;
     margin-top: 55px;
     font-size: 32px;
 }
 
-.TEXINFOR{
+.Text-Info{
     padding-top: 10px;
     padding-left: 19px;
     padding-right: 680px;
@@ -146,15 +142,9 @@ body{
     color: rgb(0, 0, 0);
 }
 
-.IMGINFOR{
-    position: absolute;
-    top: 28px;
-    right: 120px;
-    transform: translateX(-50%);
-}
 
 /* <!-- Sección de informacion del departamento -->  */
-.TIBLO{
+.Cards-Title-Info{
     margin-top: 35px;
     text-align: center;
     font-size: 28px;
@@ -163,7 +153,7 @@ body{
 }
 
         /* Bloque de la info */
-.SECUINBLO{
+.div-Cards{
     display: flex;
     align-items: center;
     margin-left: 180px;
@@ -172,7 +162,7 @@ body{
     margin-bottom: 35px;
 }
 
-.CUINBLO{
+.Cards{
     margin-left: 15px;  
     margin-right: 15px;
     padding-left: 28px;
@@ -183,16 +173,16 @@ body{
     border-radius: 2px;
 }
 
-.CUINBLO:hover{
+.Cards:hover{
     box-shadow: 0px 0px 25px 5px  #425563;
 }
 
         /* Informacion del bloque de la infomacion */
-.TICUINBLO{
+.Title-Cards{
     text-align: center;
     font-size: 23px;
 }
-.INCUINBLO{
+.Text-Cards{
     text-align: justify;
     font-size: 18px;
     line-height: 25px;
@@ -200,39 +190,39 @@ body{
 
 /* <!-- Sección de Footer --> */
 
-.SEFO{
+.Sec-Footer{
     background-color:#DAE1E5;
     padding: 50px;
     display: flex;
 }
 
-.IMGFOESARM{
+.Logo-ARM-Footer{
     margin-left: 155px;
     width: 165px;
     height: 58px;
 }
 
-.FOLOGOMINIS{
+.Logo-GRD-Footer{
     margin-left: 18px;
     width: 165px;
     height: 58px; 
 }
 
-.LIAZFIFO{
+.div-Footer-decorate{
     margin-left: 20px;
     width: 1px; 
     height: 90px; 
     background-color: #2b3c47; 
 }
 
-.COTEFO{
+.div-text-footer{
     margin-left: 55px ;
     margin-right: 100px;}
 
-.TIINFO{
+.Title-footer{
     color: #133448;
     margin-top: 10px;
 }
-.TEINFO{
+.Text-footer{
     margin-top: -15px;
 }
