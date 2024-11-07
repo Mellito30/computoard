@@ -1,228 +1,158 @@
-body{
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    font-family:Times;
 }
 
-/* <!-- Sección de Barra  --> */
+body {
+    /* font-family: Arial, sans-serif; */
+    color: #333;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Sección de encabezado */
 .Sec-Header {
-    background-color: #DAE1E5;
-    margin-top: 0;
-    margin-bottom: 0;
-    position: relative;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.Logo-ARM{
-    width:260px ;
-    height:80px ;
-    margin-left: 200px;
-}
-
-
-/* <!-- Sección de formulario --> */
-.div-formulario {
-    position: relative;
-}
-.Formulario{
-    text-decoration: none;
-    position: absolute;
-    right: 20px;
-    transform: translateX(-50%);
-    bottom: 30px;
-    color: #133448;
-    font-size: 20px;
-}
-.Formulario:hover{
-    color: #425b77;
-    font-size: 21px;
-    transition-delay: -0.1s; 
-    right: 10px; 
-    text-shadow: #0a3e5f5f 0px 3px 10px;
-}
-
-/* <!-- Sección de bienvenidad  --> */
-
-.Sec-Body1{
-    position: relative; 
-    width: 100%;
-    height: 260px; 
-    margin: 0;
-}
-
-.div-img-inicio {
-    position: relative; 
-    z-index: 1; 
-    background-color: #1a2831dc;
-    color: white;
-    text-align: center;
-    padding-top: 1px; 
-    height: 100%;
-} 
-
-.Title1 {
-    font-size: 45px;
-    font-family: Georgia;
-    margin-top: 70px;
-}
-
-/* <!-- Sección de Boton de bienvenidad  --> */
-.Button-dispositivos{
-    text-align: center;
-    background-color: #d9d9d96d;
-    width: 150px;
-    height: 45px;
-    border-radius: 5px;
-    border-color: transparent;
-    margin-top: 5px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-}
-
-.Button-dispositivos:hover{
-    background-color: #a5c0d3;
-    font: #263641 ;
-    display: block;
-}
-
-.Button-link{
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    font-family: Georgia;
-}
-
-/* <!-- Sección de informacion --> */
-.Sec-Body2{
-    position: relative;
-    background-color: #E9EDEF;
-    padding-top: 0px;
-    padding-left: 55px;
-    padding-bottom: 90px;
-}
-
-.div-info-inicio {
-    display: flex; 
-    right: 20px;
-    align-items: right; 
-}
-
-.div-form-decorate{
-    margin-top: 67px;
-    width: 62px; 
-    height: 14px; 
-    border-radius: 4px;
-    background-color: #2b3c47; 
-    margin-right: 8px; 
-    left: -15px;
-    position: absolute;
-}
-
-.Escudo-ARM{
-    position: absolute;
-    top: 28px;
-    right: 120px;
-    transform: translateX(-50%);
-}
-
-.Title-Info{
-    margin-top: 0;
-    margin-top: 55px;
-    font-size: 32px;
-}
-
-.Text-Info{
-    padding-top: 10px;
-    padding-left: 19px;
-    padding-right: 680px;
-    text-align: justify;
-    font-size: 20px;
-    line-height: 25px;
-    color: rgb(0, 0, 0);
-}
-
-
-/* <!-- Sección de informacion del departamento -->  */
-.Cards-Title-Info{
-    margin-top: 35px;
-    text-align: center;
-    font-size: 28px;
-    color: #172f3e;
-    margin-bottom: 35px;
-}
-
-        /* Bloque de la info */
-.div-Cards{
+    background-color: #01223b;
+    padding: 25px;
     display: flex;
     align-items: center;
-    margin-left: 180px;
-    margin-right: 180px;
-    margin-top: 35px;
-    margin-bottom: 35px;
+    justify-content: space-between;
+
 }
 
-.Cards{
-    margin-left: 15px;  
-    margin-right: 15px;
-    padding-left: 28px;
-    padding-right: 28px ;
-    padding-bottom: 150px;
-    background-color: #8ea8ba;
-    flex: 1;
-    border-radius: 2px;
-}
-
-.Cards:hover{
-    box-shadow: 0px 0px 25px 5px  #425563;
-}
-
-        /* Informacion del bloque de la infomacion */
-.Title-Cards{
-    text-align: center;
-    font-size: 23px;
-}
-.Text-Cards{
-    text-align: justify;
-    font-size: 18px;
-    line-height: 25px;
-}
-
-/* <!-- Sección de Footer --> */
-
-.Sec-Footer{
-    background-color:#DAE1E5;
-    padding: 50px;
-    display: flex;
-}
-
-.Logo-ARM-Footer{
-    margin-left: 155px;
-    width: 165px;
-    height: 58px;
-}
-
-.Logo-GRD-Footer{
-    margin-left: 18px;
-    width: 165px;
-    height: 58px; 
-}
-
-.div-Footer-decorate{
+.Logo-ARM {
+    width: 300px; 
     margin-left: 20px;
-    width: 1px; 
-    height: 90px; 
-    background-color: #2b3c47; 
 }
 
-.div-text-footer{
-    margin-left: 55px ;
-    margin-right: 100px;}
+.div-formulario {
+    margin-right: 20px;
+}
 
-.Title-footer{
-    color: #133448;
-    margin-top: 10px;
+.Formulario {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    border: none;
+    background: none;
+    padding: 5px 10px;
 }
-.Text-footer{
-    margin-top: -15px;
+
+/* Sección de bienvenida */
+.Sec-Body1 {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
 }
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    text-align: center;
+}
+
+.Title1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.Button-dispositivos {
+    background-color: #06263f;
+    padding: 12px 24px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.Button-dispositivos:hover {
+    background-color: #0056b3;
+}
+
+.Button-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Sección de información */
+.Sec-Body2 {
+    padding: 60px 20px;
+    background-color: #f2f7fb;
+    text-align: center;
+}
+
+.Title-Info {
+    font-size: 28px;
+    color: #00467f;
+    margin-bottom: 20px;
+}
+
+.Text-Info {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Footer */
+.Sec-Footer {
+    background-color: #06263f;
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Logo-ARM-Footer, .Logo-GRD-Footer {
+    width: 140px;
+    height: 70px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.div-text-footer {
+    color: #cce4f3;
+    max-width: 200px;
+    text-align: center;
+}
+
+.Title-footer {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e6f7ff;
+    margin-bottom: 10px;
+}
+
+.Text-footer {
+    font-size: 16px;
+    color: #cce4f3;
+}
+

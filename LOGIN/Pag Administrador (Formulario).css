@@ -77,3 +77,54 @@ body{
     margin-top: 35px;
     margin-bottom: 35px;
 }
+
+.div-formulario:hover {
+    color: #05060fc2;
+}
+
+.Label-formulario{
+    display: block;
+    margin-bottom: .3rem;
+    font-size: .9rem;
+    font-weight: bold;
+    color: #05060f99;
+    transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.Input-Formulario{
+    max-width: 190px;
+    height: 44px;
+    background-color: #05060f0a;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: 
+    border-color .3s cubic-bezier(.25,.01,.25,1) 0s 
+    color .3s cubic-bezier(.25,.01,.25,1) 0s, 
+    background .2s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.Input-Formulario:hover, .Input-Formulario:focus{
+    outline: none;
+    border-color: #05060f;
+    transition: 1s;
+}
+
+.Botton-formulario{
+    background-color: #063661;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: Times;
+    font-weight: bold;
+    margin-left: 250px;
+}
+
+.Botton-formulario:hover{
+    background-color: #4479a7; 
+    color: rgb(255, 255, 255);
+}
