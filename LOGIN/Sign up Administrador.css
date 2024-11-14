@@ -1,0 +1,133 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ .div-Formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.Formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    background-color: #fff;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: #c5c5c5 0px 0px 50px 15px;
+}
+
+.Title-Sign_up{
+    font-size: 28px;
+    color: #144268;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+ }
+
+
+.Title-Sign_up::before, .Title-Sign_up::after{
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #144268;
+ }
+
+ .Title-Sign_up::before {
+    width: 18px;
+    height: 18px;
+    background-color: #144268;
+  }
+  
+  .Title-Sign_up::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+
+ .Label-Sign_up {
+    display: block;
+    margin-bottom: .3rem;
+    font-size: .9rem;
+    font-weight: bold;
+    color: #05060f99;
+    transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+ }
+
+ .Input-Sign_up{
+    max-width: 200px;
+    height: 44px;
+    background-color: #05060f0a;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: 
+    border-color .3s cubic-bezier(.25,.01,.25,1) 0s 
+    color .3s cubic-bezier(.25,.01,.25,1) 0s, 
+    background .2s cubic-bezier(.25,.01,.25,1) 0s;
+ }
+
+ .Label-Sign_up:hover, .Input-Sign_up:hover{
+    outline: none;
+    border-color: #05060f;
+    transition: 1s;
+ }
+
+
+ .Button-Sign_up{
+    border: none;
+    outline: none;
+    background-color: #144268;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+ }
+
+ .Button-Sign_up:hover{
+    background-color: rgb(19, 100, 180);
+ }
+
+ .Link-log{
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+    text-align: center;
+ }
+
+ .Link{
+    color: #144268
+ }
+
+ .Link:hover{
+    text-decoration: underline #144268;
+ }
+
+ @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }

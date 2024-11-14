@@ -1,44 +1,65 @@
 body{
     margin: 0;
     background-color: rgb(255, 255, 255);
+    /* position: fixed; */
 }
 
 
 /* <!-- Sección de Barra de navegación --> */
+.Sec-Nav{
+    flex: 0 0 280px
+}
 .div-Nav{
     display: block;
 }
 
-.Barra-Nav{
+.Barra-Nav {
     list-style-type: none;
     margin: 0;
     width: 280px;
-    background-color: #2b3c47;
-    position:fixed ;
+    background-color: #144268;
+    position: fixed;
     height: 100%;
     overflow: auto;
-    list-style-position: outside;
     padding-left: 25px;
-    margin-right: 25px;
 }
+
 
 .div-Sec{
     display: block;
     text-align: center;
     margin-right: 45px;
-    margin-top: 35px;
-    font-family: Times;
-    font-weight:bold;
+    margin-top: 35px;    
     font: 25px;
-    
-   
 }
- .Link-Nav{
+
+.Link-Nav{
     color: #E9EDEF;
     padding: 8px 16px;
     text-decoration: none;
     display: block;
     text-align: center;
+    position: block;
+    font-family:sans-serif;
+ }
+
+ .Link-Nav:hover{
+    
+    text-shadow: #03152b 0px 2px 10px;
+    font-size: 18px;
+    position: relative;
+    font-weight: bolder;
+    transition: 0.8s;
+    padding-left: 4px;
+    padding-right: 4px;
+
+ }
+
+ #Button-active{
+    font-weight:bolder;
+    font-size: 18.5px;
+    padding-left: 5px;
+    padding-right: 5px;
  }
 
  .Logo-ARM {
@@ -68,12 +89,195 @@ body{
     color: #0b1a27;
 
 }
-    /* <!-- Sección de formulario --> */
+    /* <!-- Sección de dispositivos  --> */
 .Sec-Body1 {
+    margin-left: 320px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(255, 255, 255);
-    display: block;
+}
+
+.div-Button{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.Button{
+    box-sizing: border-box;
+    width: 255px;
+    background-color: #DAE1E5;
+    padding: 20px 35px;
+    margin: 35px;
+    border-color: #DAE1E5 ;
+    border-radius: 8px;
+    font-size: 35px;
+    box-shadow:#DAE1E5 0px 2px 10px 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: #144268;
+    font-weight: bolder;
+    text-align: center;
+    display: inline-block;
+    border-style:outset ;
+    transition: all 0.1s ease;
+    text-decoration: none;
+    /* color: #063053; */
+
+}
+
+.Button:active{
+    text-decoration: none;
+    border-style: outset;
+    background-color: #DAE1E5;
+    transform: translateY(2px);
+}
+
+.Button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+/* <!-- Sección de filtro y search--> */
+.div-Search_Filtro{
+    display: flex;
+}
+
+/* <!-- Sección de search --> */
+.div-search{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    line-height: 28px;
+    position: relative;
+    max-width: 190px;
+}
+
+.SVG-search{
     position: absolute;
-    left: 380px;
-    margin-top: 35px;
+    left: 1rem;
+    height: 15px;
+    width: 16px;
+}
+
+.Input-search{
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    width: 100%;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #d8e1e8;
+    color: #0d0c22;
+    box-shadow: 0 0 5px #bfcad9, 0 0 0 10px #f5f5f5eb;
+    transition: .3s ease;
+}
+
+/* <!-- Sección de filtro --> */
+
+.div-filtro{
+    align-items: center;
+    display: flex;
+}
+
+.Filter {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.192);
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.021);
+    transition: all 0.3s;
+  }
+  
+.Filtro-ICO{
+    height: 16px;
+    fill: rgb(77, 77, 77);
+    transition: all 0.3s;
+  }
+
+.Filter:hover {
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.11);
+    background-color: rgb(59, 59, 59);
+  }
+
+.Filtro-ICO:hover{
+    fill: white;
+  }
+
+
+  /* <!-- Sección de Titulos de dispositivos --> */
+
+.Title-dispositivos{
+    margin-top: 70px;
+    text-align: center;
+    font-size: 28px;
+    color: #172f3e;
     margin-bottom: 35px;
 }
+
+.div-dispositivos{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.Title-header-dispositivos{
+    margin-bottom: -5px;
+    background-color: #d9d9d98d;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 4px;
+    z-index: -2;
+}
+
+ /* <!-- Sección de dispositivos --> */
+
+.div-Lista-Dispositivos{
+    margin-top: 25px;
+}
+
+.div-Info-Dispositivos{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+}
+
+.div-Info-dispo-BGBLACK{
+    background-color: #35454f88;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    /* margin-left: 20px; */
+    margin-right: 1px;
+
+}
+
+.Text-info-Dispositivos{
+    margin-left: -10px;
+    margin-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+}  
+
+.div-form-decorate{
+    max-width: 1100px;
+    height: 8px;
+    background-color: #DAE1E5;
+    z-index: 2;
+   
+}
+

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrador de Usuarios</title>
-    <link rel="stylesheet" href="Pag Administrador.css">
+    <link rel="stylesheet" href="Pag Administrador (Dispositivos).css">
 </head>
 <body>
     
@@ -19,11 +19,11 @@
                     
                 </li>
                 <li class="div-Sec">
-                    <a class="Link-Nav" href="#">Inicio</a><br>
-                    <a class="Link-Nav" href="#">Ingreso de Dispositivo</a><br>
-                    <a class="Link-Nav" href="#">Revisión de Dispositivo</a><br>
-                    <a class="Link-Nav" href="#">Solicitudes de Servicios</a><br>
-                    <a href="">
+                    <a class="Link-Nav" href="Index Administrador.html">Inicio</a><br>
+                    <a class="Link-Nav" href="Administrador (Formulario).html">Ingreso de Dispositivo</a><br>
+                    <a class="Link-Nav"id="Button-active" href="Administrador (Dispositivos).html">Revisión de Dispositivo</a><br>
+                    <a class="Link-Nav" href="Index Administrador (Revision).html">Solicitudes de Servicios</a><br>
+                    <a href="Administrador (Cuenta).html">
                       <img class="Ico-Nav" src="/img/Icono-perfil.png" alt="Icono-Perfil" href="#">
                     </a>            
                 </li>
@@ -38,13 +38,95 @@
 
     <!-- Sección de formulario -->
     <section class="Sec-Body1">
+        <div class="div-Dispositivos">  
+
+            <div class="div-Button">
+                <a href="Administrador (Formulario).html" class="Button">Añadir</a>
+                <a href="" class="Button">Modificar</a>
+                <a href="" class="Button">Actualizar</a>
+            </div>
+
+            <div class="div-Search_Filtro">
+                <div class="div-search">
+                    <img class="SVG-search" src="/img/search.svg" alt="Search">                
+                    <input  class="Input-search" type="search" placeholder="Search" name="" id="">
+                </div>
+            <!-- Sección de filtro -->
+                <div class="div-filtro">   
+                    
+                    <button title="Filter" class="Filter">
+                        <svg class="Filtro-ICO" viewBox="0 0 512 512" height="1em">
+                        <path
+                            d="M0 416c0 17.7 14.3 32 32 32l54.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 
+                            448c17.7 0 32-14.3 32-32s-14.3-32-32-32l-246.7 0c-12.3-28.3-40.5-48-73.3-48s-61 19.7-73.3 
+                            48L32 384c-17.7 0-32 14.3-32 32zm128 0a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM320 256a32 
+                            32 0 1 1 64 0 32 32 0 1 1 -64 0zm32-80c-32.8 0-61 19.7-73.3 48L32 224c-17.7 0-32 14.3-32 
+                            32s14.3 32 32 32l246.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48l54.7 0c17.7 0 32-14.3 
+                            32-32s-14.3-32-32-32l-54.7 0c-12.3-28.3-40.5-48-73.3-48zM192  128a32 32 0 1 1 0-64 32 32 
+                            0 1 1 0 64zm73.3-64C253 35.7 224.8 16 192 16s-61 19.7-73.3 48L32  64C14.3 64 0 78.3 0 96s14.3 
+                            32 32 32l86.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 128c17.7 0 32-14.3 32-32s-14.3-32-32-32L265.3 64z"
+                        ></path>
+                        </svg>
+                    </button>
+    
+                    <h3>Filtrar por:
+                            <select name="id_filtro">
+                                <option value="1">Orden alfabético (A-Z)</option>
+                                <option value="2">Orden alfabético inverso (Z-A)</option>
+                                <option value="3">Precio más bajo a más alto</option>
+                                <option value="4">Precio más alto a más bajo</option>
+                            </select>
+                            <button type="submit">Aplicar</button>
+                    </h3>
+                </div> 
+            </div>
+
+            <!-- Sección de titulos de dispositivos -->
+            <div class="div-dispositivos">
+                    <h3 class="Title-header-dispositivos" >Estado</h3>
+                    <h3 class="Title-header-dispositivos" >Equipo</h3>
+                    <h3 class="Title-header-dispositivos" >Departamento</h3>
+                    <h3 class="Title-header-dispositivos" >Fecha de Entrada</h3>
+                    <h3 class="Title-header-dispositivos" >Fecha de Salida</h3>
+            </div>
+    
+            <div class="div-form-decorate"></div>
+
+        <!-- Sección de revision de dispositivos -->
+            <div class="div-Lista-Dispositivos">
+
+                 <div class="div-form-decorate"></div>
+            <div class="div-Info-Dispositivos">
+                    <p class="Text-info-Dispositivos" >Estado</p>
+                    <p class="Text-info-Dispositivos" >Equipo</p>
+                    <p class="Text-info-Dispositivos" >Departamento</p>
+                    <p class="Text-info-Dispositivos" >Fecha de Entrada</p>
+                    <p class="Text-info-Dispositivos" >Fecha de Salida</p>
+            </div>
+     
+                <div class="div-form-decorate"></div>
+
+      
+            <div class="div-Info-dispo-BGBLACK">
+                    <p class="Text-info-Dispositivos" >Estado</p>
+                    <p class="Text-info-Dispositivos" >Equipo</p>
+                    <p class="Text-info-Dispositivos" >Departamento</p>
+                    <p class="Text-info-Dispositivos" >Fecha de Entrada</p>
+                    <p class="Text-info-Dispositivos" >Fecha de Salida</p>
+            </div>
+
+                <div class="div-form-decorate"></div>
+
+            </div>
+            
+        </div>
        
     </section>
 
 </body>
 </html>
 
-<script>
+<!-- <script>
         // Verificar si el usuario está logueado
         const EstaLogueado = sessionStorage.getItem("EstaLogueado");
 
@@ -52,4 +134,4 @@
             // Si no está logueado, redirigir al login
             window.location.href = "login.php";
         }
-    </script>
+    </script> -->
