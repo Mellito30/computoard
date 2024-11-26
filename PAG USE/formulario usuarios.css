@@ -1,10 +1,7 @@
 body {
-    background-image: url('LOGOARM.png');
-    /* Ajustar la imagen para cubrir todo el fondo */
+    background-image: url('/LOGOARM.png');
     background-size: cover;
-    /* Fijar la imagen para que no se mueva al hacer scroll */
     background-attachment: fixed;
-    /* Centrar la imagen */
     background-position: center;
 }
 

@@ -1,7 +1,7 @@
 body{
     margin: 0;
     background-color: rgb(255, 255, 255);
-    /* position: fixed; */
+
 }
 
 
@@ -17,13 +17,12 @@ body{
     list-style-type: none;
     margin: 0;
     width: 280px;
-    background-color: #144268;
+    background-color: #e1e9ee;
     position: fixed;
     height: 100%;
     overflow: auto;
     padding-left: 25px;
 }
-
 
 .div-Sec{
     display: block;
@@ -34,7 +33,7 @@ body{
 }
 
 .Link-Nav{
-    color: #E9EDEF;
+    color: #001627;
     padding: 8px 16px;
     text-decoration: none;
     display: block;
@@ -77,28 +76,15 @@ body{
 
 /* <!-- Sección de encabezado  --> */
 .Header {
-    background-color: #DAE1E5;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 20px;
-    padding-bottom: 20px
-}
-.Title1{
-    position: relative;
-    margin-left:  330px;
-    color: #0b1a27;
-
-}
-    /* <!-- Sección de dispositivos  --> */
-.Sec-Body1 {
-    margin-left: 320px; 
-    display: flex;
+    position: block;
+    width: 100%;
+    background-color: #001627;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
 }
 
 .div-Button{
+    padding-left: 320px; 
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -106,14 +92,14 @@ body{
 
 .Button{
     box-sizing: border-box;
-    width: 255px;
-    background-color: #DAE1E5;
-    padding: 20px 35px;
-    margin: 35px;
-    border-color: #DAE1E5 ;
+    width: 205px;
+    background-color: #e8ecee;
+    padding: 15px 2px;
+    margin: 30px;
+    border-color: #e1e9ee ;
     border-radius: 8px;
-    font-size: 35px;
-    box-shadow:#DAE1E5 0px 2px 10px 1px;
+    font-size: 22px;
+    box-shadow:rgba(78, 116, 135, 0.37) 0px 2px 10px 1px;
     font-family: Arial, Helvetica, sans-serif;
     border-style: #144268;
     font-weight: bolder;
@@ -122,7 +108,7 @@ body{
     border-style:outset ;
     transition: all 0.1s ease;
     text-decoration: none;
-    /* color: #063053; */
+    color: #063053;
 
 }
 
@@ -139,9 +125,20 @@ body{
 }
 
 
+    /* <!-- Sección de dispositivos  --> */
+.Sec-Body1 {
+    margin: 45px;
+    padding-left: 305px; 
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+
 /* <!-- Sección de filtro y search--> */
 .div-Search_Filtro{
     display: flex;
+    
 }
 
 /* <!-- Sección de search --> */
@@ -178,9 +175,67 @@ body{
 
 /* <!-- Sección de filtro --> */
 
+.menu {
+    width: 250px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute; 
+    z-index: 1000; 
+    display: absolute; 
+}
+
+#filterMenu{
+    margin-left: 55px;
+    margin-top: 240px;
+}
+
+.menu.oculto {
+    display: none;
+}
+
+.menu h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.filter-checkbox {
+    margin-right: 5px;
+
+}
+
+.filtro-li{
+    list-style-type: none;
+    margin-left: -30px;
+    
+}
+
+#clearFiltersButton {
+    margin-top: 15px;
+    padding: 5px 10px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+}
+
+#clearFiltersButton:hover {
+    background-color: #ff4b4b;
+}
+
+/* diseño del filtro */
+
+
 .div-filtro{
     align-items: center;
     display: flex;
+    margin-left: 25px;
+    margin-right:15px ;
 }
 
 .Filter {
@@ -194,62 +249,64 @@ body{
     cursor: pointer;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.021);
     transition: all 0.3s;
-  }
-  
-.Filtro-ICO{
+    background-color: white;
+    position: relative;
+}
+
+.Filtro-ICO {
     height: 16px;
     fill: rgb(77, 77, 77);
-    transition: all 0.3s;
-  }
+    transition: fill 0.3s, transform 0.3s;
+}
 
 .Filter:hover {
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.11);
     background-color: rgb(59, 59, 59);
-  }
+}
 
-.Filtro-ICO:hover{
+.Filter:hover .Filtro-ICO {
     fill: white;
-  }
-
+    transform: scale(1.1); 
+}
 
   /* <!-- Sección de Titulos de dispositivos --> */
 
-.Title-dispositivos{
-    margin-top: 70px;
-    text-align: center;
-    font-size: 28px;
-    color: #172f3e;
-    margin-bottom: 35px;
-}
-
 .div-dispositivos{
+    z-index: 2;
     display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center; 
     justify-content: space-around;
-}
+    margin-top: 20px;
+    /* background-color: #d8e1e8; */
+    
 
+
+}
 
 .Title-header-dispositivos{
-    margin-bottom: -5px;
-    background-color: #d9d9d98d;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    border-radius: 4px;
-    z-index: -2;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+
 }
 
  /* <!-- Sección de dispositivos --> */
 
 .div-Lista-Dispositivos{
-    margin-top: 25px;
-}
+    /* contenedor responsive */
+    position:sticky;
+
+    }
 
 .div-Info-Dispositivos{
     display: flex;
     justify-content: space-around;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    padding: 10px;
+    margin: 2px;
+
 
 }
 
@@ -257,27 +314,49 @@ body{
     background-color: #35454f88;
     display: flex;
     justify-content: space-around;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    /* margin-left: 20px; */
-    margin-right: 1px;
+    padding: 10px;
+    margin: 2px;
 
 }
 
 .Text-info-Dispositivos{
-    margin-left: -10px;
-    margin-right: 5px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
+    font-size: 18px;
+
 }  
 
 .div-form-decorate{
-    max-width: 1100px;
+    max-width: 100%;
     height: 8px;
     background-color: #DAE1E5;
     z-index: 2;
+    margin: 2px;
    
+}
+
+/* <!-- seccion de paginacion --> */
+.Sec-Paginas{
+    transform: 50%;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.div-paginas{
+    text-align: center;
+}
+
+.Num-Pag{
+    max-width: 10px;
+    max-height: 10px;
+    background-color: #424c52a4;
+    color: #ffffff;
+    padding: 15PX;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.Num-Pag:hover{
+    background-color: #DAE1E5;  
+    color: #424c52a4; 
+    transition: 0.4s ease-in-out;
 }
 

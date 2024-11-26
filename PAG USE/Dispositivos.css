@@ -1,5 +1,10 @@
+
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0;
+    overflow-x: hidden;
 }
 
 /* <!-- Sección de Barra  --> */
@@ -162,40 +167,46 @@ body{
     transition: 0.4s ease-in-out;
 }
 
-/* <!-- Sección de Footer --> */
-.Sec-Footer{
-    background-color:#DAE1E5;
-    padding: 50px;
+/* Footer */
+.Sec-Footer {
+    background-color: #06263f;
+    color: #fff;
+    padding: 20px 20px;
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.Logo-ARM-Footer{
-    margin-left: 155px;
-    width: 165px;
-    height: 58px;
+.Logo-ARM-Footer, .Logo-GRD-Footer {
+    width: 160px;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.Logo-GRD-Footer{
-    margin-left: 18px;
-    width: 165px;
-    height: 58px; 
+.div-text-footer {
+    color: #cce4f3;
+    max-width: 200px;
+    text-align: center;
 }
 
-.div-Footer-decorate{
-    margin-left: 20px;
-    width: 1px; 
-    height: 90px; 
-    background-color: #2b3c47; 
+.TITLE-Contacto{
+    line-height: 3px;
 }
 
-.div-text-footer{
-    margin-left: 55px ;
-    margin-right: 100px;}
+.Title-footer {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e6f7ff;
+    margin-bottom: 10px;
+}
 
-.Title-footer{
-    color: #133448;
-    margin-top: 10px;
+.Text-footer {
+    font-size: 16px;
+    color: #cce4f3;
 }
-.Text-footer{
-    margin-top: -15px;
-}
+
