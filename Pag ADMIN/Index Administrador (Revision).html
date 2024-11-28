@@ -9,38 +9,69 @@
 <body>
     
     <!-- Sección de Barra de navegación -->
-     
     <section class="Sec-Nav">
-        </nav class="div-Nav">
-            <ul class="Barra-Nav">
-                <li class="div-Sec">
-                    
-                        <img class="Logo-ARM" src="/img/LOGOARM.png" alt="LOGOARM">
-                    
-                </li>
-                <li class="div-Sec">
-                    <a class="Link-Nav" href="Index Administrador.html">Inicio</a><br>
-                    <a class="Link-Nav" href="Administrador (Formulario).html">Ingreso de Dispositivo</a><br>
-                    <a class="Link-Nav" href="Administrador (Dispositivos).html">Revisión de Dispositivo</a><br>
-                    <a class="Link-Nav" id="Button-active" href="Index Administrador (Revision).html">Solicitudes de Servicios</a><br>
-                    <a href="Administrador (Cuenta).html">
-                      <img class="Ico-Nav" src="/img/Icono-perfil.png" alt="Icono-Perfil" href="#">
-                    </a>            
-                </li>
-            </ul>
-        </nav>
-    </section>
-  
-        <!-- Sección de encabezado -->
-    <section class="Header">
-         <h1 class="Title1">...</h1>
-    </section>
+    </nav class="div-Nav">
+        <ul class="Barra-Nav">
+            <li class="div-Sec">
+                    <img class="Logo-ARM" src="/img/LOGOARM.png" alt="LOGOARM">
+            </li>
+            <li class="div-Sec">
+                <a class="Link-Nav" href="Index Administrador.html">Inicio</a><br>
+                <a class="Link-Nav" href="Administrador (Formulario).html">Ingreso de Dispositivo</a><br>
+                <a class="Link-Nav" href="Administrador (Dispositivos).html">Revisión de Dispositivo</a><br>
+                <a class="Link-Nav" id="Button-active" href="Index Administrador (Revision).html">Solicitudes de Servicios</a><br>
+                <a href="Administrador (Cuenta).html">
+                  <img class="Ico-Nav" src="/img/Icono-perfil.png" alt="Icono-Perfil" href="#">
+                </a>            
+            </li>
+        </ul>
+    </nav>
+</section>
 
-    <!-- Sección de formulario -->
-    <section class="Sec-Body1">
-       
-    </section>
+    <!-- Sección de encabezado -->
+<section class="Header">
 
+     <div class="div-Button">
+            <a href="#" class="Button">Eliminar</a>
+            <a href="#" class="Button">Actualizar</a>
+        </div>
+
+</section>
+
+ <!-- Sección de solicitud -->
+ <section class="Sec-Body1">
+    <div class="div-solicitudes">
+        <div class="header">
+            <h1>Bandeja de Entrada</h1>
+        </div>
+
+        <div class="marco-solicitud">
+            <span class="star" data-starred="false">★</span>
+            <div class="solicitud-detalles">
+                <div class="nombre-y-rango">
+                    <span class="Solicitud-usuario">Nombre del Guardia</span>
+                    <span class="solicitud-rango">(Rango: Oficial)</span>
+                </div>
+                <div class="solicitud-asunto destacado">Asunto: Asunto de la consulta</div>
+            </div>
+            <div class="solicitud-departamento">Departamento: Informática</div>
+            <div class="solicitud-detalle expandible">
+                Descripción del problema: La pantalla del dispositivo no responde al tacto en ocasiones. Hay líneas horizontales que aparecen intermitentemente en la pantalla. El dispositivo se calienta excesivamente incluso cuando no está en uso. He intentado reiniciar el dispositivo y actualizar el sistema operativo a la última versión disponible, pero el problema persiste. Este comportamiento se ha vuelto recurrente y afecta significativamente el desempeño del trabajo. Además, se han detectado problemas de conectividad con otros dispositivos periféricos. La pantalla presenta fallos que dificultan el reconocimiento de entrada táctil en múltiples áreas.
+            </div>
+            <div class="solicitud-info">
+                <button  class="Buttom-solicitud">Aceptar</button>
+                <div id="AlertButtum">jnahsdfjkhadsjkfj</div>
+                <div class="solicitud-Fecha">26 nov</div>
+            </div>
+            
+        </div>
+        
+
+
+    </div>
+</section>
+
+<script src="Pag Administrador (Revision).js"></script>
 </body>
 </html>
 
@@ -53,3 +84,4 @@
             window.location.href = "login.php";
         }
     </script> -->
+
