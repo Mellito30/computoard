@@ -1,0 +1,161 @@
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:Times;
+}
+
+body {
+    color: #333;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Sección de encabezado */
+.Sec-Header {
+    background-color: #01223b;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.Logo-ARM {
+    width: 300px; 
+    margin-left: 20px;
+}
+
+.div-formulario {
+    margin-right: 20px;
+}
+
+.Formulario {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    border: none;
+    background: none;
+    padding: 5px 10px;
+}
+
+/* Sección de bienvenida */
+.Sec-Body1 {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    text-align: center;
+}
+
+.Title1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.Button-dispositivos {
+    background-color: #06263f;
+    padding: 12px 24px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.Button-dispositivos:hover {
+    background-color: #0056b3;
+}
+
+.Button-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Sección de información */
+.Sec-Body2 {
+    padding: 60px 20px;
+    background-color: #f2f7fb;
+    text-align: center;
+}
+
+.Title-Info {
+    font-size: 28px;
+    color: #00467f;
+    margin-bottom: 20px;
+}
+
+.Text-Info {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Footer */
+.Sec-Footer {
+    background-color: #06263f;
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Logo-ARM-Footer, .Logo-GRD-Footer {
+    width: 160px;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.div-text-footer {
+    color: #cce4f3;
+    max-width: 200px;
+    text-align: center;
+}
+
+.TITLE-Contacto{
+    line-height: 3px;
+}
+
+.Title-footer {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e6f7ff;
+    margin-bottom: 10px;
+}
+
+.Text-footer {
+    font-size: 16px;
+    color: #cce4f3;
+}
+

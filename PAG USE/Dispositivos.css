@@ -1,0 +1,212 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* <!-- Sección de Barra  --> */
+.Sec-Header {
+    background-color: #DAE1E5;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  
+}
+
+.Logo-ARM {
+    width:260px ;
+    height:80px ;
+    margin-left: 200px;
+}
+
+/* <!-- Sección de formulario --> */
+.div-formulario {
+    position: relative;
+}
+.Formulario{
+    text-decoration: none;
+    position: absolute;
+    right: 20px;
+    transform: translateX(-50%);
+    bottom: 30px;
+    color: #133448;
+    font-size: 20px;
+}
+.Formulario:hover{
+    color: #425b77;
+    font-size: 21px;
+    transition-delay: -0.1s; 
+    right: 10px; 
+    text-shadow: #0a3e5f5f 0px 3px 10px;
+}
+
+/* <!-- Sección de inicio --> */
+
+.Inicio{
+    text-decoration: none;
+    position: absolute;
+    right: 320px;
+    transform: translateX(-50%);
+    bottom: 30px;
+    color: #133448;
+    font-size: 20px;
+}
+.Inicio:hover{
+    color: #425b77;
+    font-size: 21px;
+    transition-delay: -0.1s; 
+    right: 318px; 
+    text-shadow: #0a3e5f5f 0px 3px 10px;
+}
+
+/* <!-- Sección de Titulos de dispositivos --> */
+.Sec-Body1{
+    margin-left: 180px;
+    margin-right: 180px;
+}
+
+.Title-dispositivos{
+    margin-top: 70px;
+    text-align: center;
+    font-size: 28px;
+    color: #172f3e;
+    margin-bottom: 35px;
+}
+
+.div-dispositivos{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.Title-header-dispositivos{
+    margin-bottom: -5px;
+    background-color: #d9d9d98d;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 4px;
+    z-index: -2;
+}
+
+.div-form-decorate{
+    max-width: 1100px;
+    height: 8px;
+    background-color: #DAE1E5;
+    margin-left: 25px;
+    margin-right: 25px;
+    z-index: 2;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+    /* <!-- Sección de dispositivos --> */
+.Sec-Dispositivos{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.div-Info-Dispositivos{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+}
+
+.div-Info-dispo-BGBLACK{
+    background-color: #35454f88;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    /* margin-left: 20px; */
+    margin-right: 1px;
+
+}
+
+.Text-info-Dispositivos{
+    margin-left: -10px;
+    margin-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* <!-- seccion de paginacion --> */
+.Sec-Paginas{
+    transform: 50%;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.div-paginas{
+    text-align: center;
+}
+
+.Num-Pag{
+    max-width: 10px;
+    max-height: 10px;
+    background-color: #424c52a4;
+    color: #ffffff;
+    padding: 15PX;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.Num-Pag:hover{
+    background-color: #DAE1E5;  
+    color: #424c52a4; 
+    transition: 0.4s ease-in-out;
+}
+
+/* Footer */
+.Sec-Footer {
+    background-color: #06263f;
+    color: #fff;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Logo-ARM-Footer, .Logo-GRD-Footer {
+    width: 160px;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.div-text-footer {
+    color: #cce4f3;
+    max-width: 200px;
+    text-align: center;
+}
+
+.TITLE-Contacto{
+    line-height: 3px;
+}
+
+.Title-footer {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e6f7ff;
+    margin-bottom: 10px;
+}
+
+.Text-footer {
+    font-size: 16px;
+    color: #cce4f3;
+}
+

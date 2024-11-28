@@ -1,0 +1,65 @@
+body {
+    background-image: url('/LOGOARM.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+.invoice-container {
+    max-width: 670px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.logo-img {
+    width: 250px;
+    height: auto;
+}
+
+h2 {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #495057;
+}
+
+label {
+    font-weight: 500;
+    color: #495057;
+}
+
+textarea {
+    resize: none;
+}
+
+.btn-custom {
+    background-color: #063661;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-dark {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.btn-custom:hover {
+    background-color: #4479a7; 
+    color: rgb(255, 255, 255);
+}
+
+.p {
+    color: #495749;
+}
