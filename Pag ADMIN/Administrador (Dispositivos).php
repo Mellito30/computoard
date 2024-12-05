@@ -1,3 +1,25 @@
+
+<?php
+
+//conexion con la base de datos
+$servidor = "localhost";
+$usuario = "root"; // Cambia esto si usas otro usuario
+$contrasena = ""; // Cambia esto si tienes contraseña
+$base_datos = "armada_computoard";
+
+$conn = new mysqli($servidor, $usuario, $contrasena, $base_datos);
+
+// Verificar la conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+// Obtener todos los datos de la tabla "dispositivos"
+$sql = "SELECT estado, departamento, tipo_dispositivo, modelo, fecha_ingreso, fecha_salida FROM dispositivos";
+$result = $conn->query($sql);
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,8 +39,8 @@
                 </li>
                 <li class="div-Sec">
                     <a class="Link-Nav" href="Index Administrador.html">Inicio</a><br>
-                    <a class="Link-Nav" href="Administrador (Formulario).html">Ingreso de Dispositivo</a><br>
-                    <a class="Link-Nav"id="Button-active" href="Administrador (Dispositivos).html">Revisión de Dispositivo</a><br>
+                    <a class="Link-Nav" href="Administrador (Formulario).php">Ingreso de Dispositivo</a><br>
+                    <a class="Link-Nav"id="Button-active" href="Administrador (Dispositivos).php">Revisión de Dispositivo</a><br>
                     <a class="Link-Nav" href="Index Administrador (Revision).html">Solicitudes de Servicios</a><br>
                     <a href="Administrador (Cuenta).html">
                       <img class="Ico-Nav" src="/img/Icono-perfil.png" alt="Icono-Perfil" href="#">
@@ -102,74 +124,51 @@
             
             </div>
 
-            <!-- Sección de titulos de dispositivos -->
-            <div class="div-dispositivos">
-                    <h3 class="Title-header-dispositivos" >Estado</h3>
-                    <h3 class="Title-header-dispositivos" >Equipo</h3>
-                    <h3 class="Title-header-dispositivos" >Departamento</h3>
-                    <h3 class="Title-header-dispositivos" >Fecha de Entrada</h3>
-                    <h3 class="Title-header-dispositivos" >Fecha de Salida</h3>
-            </div>
-            <div class="div-form-decorate"></div>
+<!-- Sección de títulos -->
+<div class="div-dispositivos">
+        <h3 class="Title-header-dispositivos">Estado</h3>
+        <h3 class="Title-header-dispositivos">Equipo</h3>
+        <h3 class="Title-header-dispositivos">Departamento</h3>
+        <h3 class="Title-header-dispositivos">Fecha de Entrada</h3>
+        <h3 class="Title-header-dispositivos">Fecha de Salida</h3>
+    </div>
+    <div class="div-form-decorate"></div>
 
-        <!-- Sección de revision de dispositivos -->
-                <div class="div-Lista-Dispositivos">
-                    <div class="div-Info-Dispositivos">
-                            <p class="Text-info-Dispositivos" >Estado</p>
-                            <p class="Text-info-Dispositivos" >Equipo</p>
-                            <p class="Text-info-Dispositivos" >Departamento</p>
-                            <p class="Text-info-Dispositivos" >Fecha de Entrada</p>
-                            <p class="Text-info-Dispositivos" >Fecha de Salida</p>
-                    </div>
-                        <div class="div-form-decorate"></div>
-
-            
-                    <div class="div-Info-dispo-BGBLACK">
-                            <p class="Text-info-Dispositivos" >Estado</p>
-                            <p class="Text-info-Dispositivos" >Equipo</p>
-                            <p class="Text-info-Dispositivos" >Departamento</p>
-                            <p class="Text-info-Dispositivos" >Fecha de Entrada</p>
-                            <p class="Text-info-Dispositivos" >Fecha de Salida</p>
-                    </div>
-                        <div class="div-form-decorate"></div>
-                    <div class="div-Info-Dispositivos">
-                            <p class="Text-info-Dispositivos" >Estado</p>
-                            <p class="Text-info-Dispositivos" >Equipo</p>
-                            <p class="Text-info-Dispositivos" >Departamento</p>
-                            <p class="Text-info-Dispositivos" >Fecha de Entrada</p>
-                            <p class="Text-info-Dispositivos" >Fecha de Salida</p>
-                    </div>
-                        <div class="div-form-decorate"></div>
-
-            
-                    <div class="div-Info-dispo-BGBLACK">
-                            <p class="Text-info-Dispositivos" >Estado</p>
-                            <p class="Text-info-Dispositivos" >Equipo</p>
-                            <p class="Text-info-Dispositivos" >Departamento</p>
-                            <p class="Text-info-Dispositivos" >Fecha de Entrada</p>
-                            <p class="Text-info-Dispositivos" >Fecha de Salida</p>
-                    </div>
-                        <div class="div-form-decorate"></div>
-
+    <!-- Sección de dispositivos -->
+    <div class="div-Lista-Dispositivos">
+        <?php if ($result->num_rows > 0): ?>
+            <?php 
+            $is_black = false; // Para alternar clases
+            while ($row = $result->fetch_assoc()): 
+            ?>
+                <div class="<?php echo $is_black ? 'div-Info-dispo-BGBLACK' : 'div-Info-Dispositivos'; ?>">
+                    <p class="Text-info-Dispositivos"><?php echo $row['estado']; ?></p>
+                    <p class="Text-info-Dispositivos"><?php echo $row['modelo']; ?></p>
+                    <p class="Text-info-Dispositivos"><?php echo $row['departamento']; ?></p>
+                    <p class="Text-info-Dispositivos"><?php echo $row['fecha_ingreso']; ?></p>
+                    <p class="Text-info-Dispositivos"><?php echo $row['fecha_salida']; ?></p>
                 </div>
+                <div class="div-form-decorate"></div>
+                <?php $is_black = !$is_black; ?>
+            <?php endwhile; ?>
+        <?php else: ?>
+            <p>No hay dispositivos registrados.</p>
+        <?php endif; ?>
+    </div>
 
-                        <!-- seccion de paginacion -->
-        <section class="Sec-Paginas">
-            <div class="div-paginas">
-                    <a class="Num-Pag" href="#">❮</a>
-                    <a class="Num-Pag" href="#">1</a>
-                    <a class="Num-Pag" href="#">2</a>
-                    <a class="Num-Pag" href="#">3</a>
-                    <a class="Num-Pag" href="#">4</a>
-                    <a class="Num-Pag" href="#">5</a>
-                    <a class="Num-Pag" href="#">6</a>
-                    <a class="Num-Pag" href="#">❯</a>
-            </div>
-                
+    <!-- Sección de paginación -->
+    <section class="Sec-Paginas">
+        <div class="div-paginas">
+            <a class="Num-Pag" href="#">❮</a>
+            <a class="Num-Pag" href="#">1</a>
+            <a class="Num-Pag" href="#">2</a>
+            <a class="Num-Pag" href="#">3</a>
+            <a class="Num-Pag" href="#">4</a>
+            <a class="Num-Pag" href="#">5</a>
+            <a class="Num-Pag" href="#">6</a>
+            <a class="Num-Pag" href="#">❯</a>
         </div>
-       
     </section>
-
 
     <script src="Administrador (Dispositivos).js"> </script>
 
@@ -199,3 +198,5 @@
             window.location.href = "login.php";
         }
     </script> -->
+
+

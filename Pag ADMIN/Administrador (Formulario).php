@@ -1,3 +1,47 @@
+
+<?php
+
+//conexion con la base de datos
+$servidor = "localhost";
+$usuario = "root"; // Cambia esto si usas otro usuario
+$contrasena = ""; // Cambia esto si tienes contraseña
+$base_datos = "armada_computoard";
+
+$conn = new mysqli($servidor, $usuario, $contrasena, $base_datos);
+
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $departamento = $_POST['nombre'];
+    $tipodispositivo = $_POST['tipo'];
+    $modelo = $_POST['marca'];
+    $fechaingreso = $_POST['entradafecha'];
+    $fechasalida = $_POST['salidafecha'];
+
+    //Ingresar los datos a la db
+    $sql = "INSERT INTO dispositivos (departamento, tipo_dispositivo, modelo, fecha_ingreso, fecha_salida) 
+            VALUES ('$departamento', '$tipodispositivo', '$modelo', '$fechaingreso', '$fechasalida')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Datos guardados correctamente.";
+    } else {
+        echo "Error al guardar los datos: " . $conn->error;
+    }
+
+        // Redirigir para evitar reenvío de datos al recargar
+        header("Location: " . $_SERVER['PHP_SELF'] . "?mensaje=" . urlencode($mensaje));
+        exit;
+}
+
+
+// Mostrar mensaje si está presente en la URL
+if (isset($_GET['mensaje'])) {
+    $mensaje = $_GET['mensaje'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,9 +61,9 @@
                 </li>
                 <li class="div-Sec">
                     <a class="Link-Nav" href="Index Administrador.html">Inicio</a><br>
-                    <a class="Link-Nav" id="Button-active" href="Administrador (Formulario).html">Ingreso de Dispositivo</a><br>
-                    <a class="Link-Nav" href="Administrador (Dispositivos).html">Revisión de Dispositivo</a><br>
-                    <a class="Link-Nav" href="Index Administrador (Revision).html">Solicitudes de Servicios</a><br>
+                    <a class="Link-Nav" id="Button-active" href="Administrador (Formulario).php">Ingreso de Dispositivo</a><br>
+                    <a class="Link-Nav" href="Administrador (Dispositivos).php">Revisión de Dispositivo</a><br>
+                    <a class="Link-Nav" href="Index Administrador (Revision).php">Solicitudes de Servicios</a><br>
                     <a href="Administrador (Cuenta).html">  
                       <img class="Ico-Nav" src="/img/Icono-perfil.png" alt="Icono-Perfil" href="#">
                     </a>            
@@ -34,10 +78,10 @@
     </section>
     <!-- Sección de formulario -->
     <section class="Sec-Body1">
-        <form action="guardar.php" method="POST">
+        <form action="" method="POST">
 
             <div class="div-formulario">
-                <label class="Label-formulario" for="nombre">Nombre del dispositivo:</label>
+                <label class="Label-formulario" for="nombre">Nombre del Departamento:</label>
                 <input class="Input-Formulario" type="text" id="nombre" name="nombre" required><br><br>
             </div>
 
@@ -52,18 +96,13 @@
             </div>
 
             <div class="div-formulario">
-                <label class="Label-formulario" for="marca">Descripcion del Problema:</label>
-                <input class="Input-Formulario" type="text" id="notas" name="notas" required><br><br>
-            </div>
-
-            <div class="div-formulario">
                 <label class="Label-formulario" for="marca">Fecha de Ingreso:</label>
                 <input class="Input-Formulario" type="date" id="entradafecha" name="entradafecha" required><br><br>
             </div>
 
             <div class="div-formulario">
                 <label class="Label-formulario" for="marca">Fecha de Salida:</label>
-                <input class="Input-Formulario;" type="date" id="salidafecha" name="salidafecha" required><br><br>
+                <input class="Input-Formulario;" type="date" id="salidafecha" name="salidafecha"><br><br>
             </div>
 
             <button class="Botton-formulario" type="submit">Registrar</button>
@@ -82,3 +121,4 @@
             window.location.href = "login.php";
         }
     </script> -->
+

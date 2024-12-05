@@ -106,38 +106,58 @@ body{
     margin-right: 200px;
 }
 
-    /* <!-- Sección de dispositivos --> */
-.Sec-Dispositivos{
-    margin-left: 200px;
-    margin-right: 200px;
+ 
+  /* <!-- Sección de Titulos de dispositivos --> */
+
+.div-dispositivos{
+    z-index: 2;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center; 
+    justify-content: space-around;
+    margin-top: 20px;
+    /* background-color: #d8e1e8; */
+}
+
+.Title-header-dispositivos{
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+ /* <!-- Sección de dispositivos --> */
+
+.div-Lista-Dispositivos{
+    /* contenedor responsive */
+    position:sticky;
 }
 
 .div-Info-Dispositivos{
     display: flex;
     justify-content: space-around;
-    margin-top: 2px;
-    margin-bottom: 2px;
-
+    padding: 10px;
+    margin: 2px;
 }
 
 .div-Info-dispo-BGBLACK{
-    background-color: #35454f88;
+    background-color: #142c3b88;
     display: flex;
     justify-content: space-around;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    /* margin-left: 20px; */
-    margin-right: 1px;
-
+    padding: 10px;
+    margin: 2px;
 }
 
 .Text-info-Dispositivos{
-    margin-left: -10px;
-    margin-right: 5px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
+    font-size: 18px;
+}  
+
+.div-form-decorate{
+    max-width: 100%;
+    height: 8px;
+    background-color: #DAE1E5;
+    z-index: 2;
+    margin: 2px;
 }
 
 /* <!-- seccion de paginacion --> */
@@ -166,6 +186,8 @@ body{
     color: #424c52a4; 
     transition: 0.4s ease-in-out;
 }
+
+
 
 /* Footer */
 .Sec-Footer {
