@@ -3,23 +3,23 @@ body{
     background-color: rgb(255, 255, 255);
 }
 
-
 /* <!-- Sección de Barra de navegación --> */
+.Sec-Nav{
+    flex: 0 0 280px
+}
 .div-Nav{
     display: block;
 }
 
-.Barra-Nav{
+.Barra-Nav {
     list-style-type: none;
     margin: 0;
     width: 280px;
-    background-color: #144268;
-    position:fixed ;
+    background-color: #e1e9ee;
+    position: fixed;
     height: 100%;
     overflow: auto;
-    list-style-position: outside;
     padding-left: 25px;
-    margin-right: 25px;
 }
 
 .div-Sec{
@@ -31,7 +31,7 @@ body{
 }
 
 .Link-Nav{
-    color: #E9EDEF;
+    color: #001627;
     padding: 8px 16px;
     text-decoration: none;
     display: block;
@@ -40,17 +40,14 @@ body{
     font-family:sans-serif;
  }
 
-
  .Link-Nav:hover{
-    
-    text-shadow: #03152b 0px 2px 10px;
+    text-shadow: #9ba2ac 0px 2px 10px;
     font-size: 18px;
     position: relative;
     font-weight: bolder;
     transition: 0.8s;
     padding-left: 4px;
     padding-right: 4px;
-
  }
 
  #Button-active{
@@ -75,24 +72,17 @@ body{
 
 /* <!-- Sección de encabezado  --> */
 .Header {
-    background-color: #DAE1E5;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 20px;
-    padding-bottom: 20px
+    position: block;
+    width: 100%;
+    background-color: #001627;
+    justify-content: center;
+    align-items: center;
 }
-.Title1{
-    position: relative;
-    margin-left:  330px;
-    color: #0b1a27;
-
-}
-    /* <!-- Sección de formulario --> */
-.Sec-Body1 {
-    background-color: rgb(255, 255, 255);
-    display: block;
-    position: absolute;
-    left: 380px;
-    margin-top: 35px;
-    margin-bottom: 35px;
-}
+    /* <!-- Sección de solicitud  --> */
+    .Sec-Body1 {
+        margin: 45px;
+        padding-left: 305px; 
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+    }
