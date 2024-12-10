@@ -11,7 +11,7 @@
     <section class="Sec-Header">
         <img class="Logo-ARM" src="img/LOGOARM.png" alt="EscudoARM">
         <div class="div-formulario">
-            <a class="Formulario" href="/formulario.html">Solicitud de Formulario</a>
+            <a class="Formulario" href="formulariousuario.php">Solicitud de Formulario</a>
         </div>
     </section>
 
@@ -23,7 +23,7 @@
         <div class="overlay-content">
             <h1 class="Title1">DIRECIÓN DE TECNOLOGÍA E INFORMACIÓN </h1>
             <button class="Button-dispositivos">
-                <a class="Button-link" href="Dispositivos.html" target="_blank">Ver Dispositivos</a>
+                <a class="Button-link" href="Dispositivos.php" target="_blank">Ver Dispositivos</a>
             </button>
         </div>
     </section>

@@ -1,3 +1,5 @@
+
+
 body{
     margin: 0;
     background-color: rgb(255, 255, 255);
@@ -72,14 +74,14 @@ body{
 
 /* <!-- Sección de encabezado  --> */
 .Header {
-    position: block;
-    width: 100%;
+    padding: 50px;
     background-color: #001627;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
-/* <!-- Sección de dispositivos  --> */
+    /* <!-- Sección de dispositivos  --> */
 .Sec-Body1 {
     margin: 45px;
     padding-left: 305px; 
@@ -120,6 +122,17 @@ body{
     outline: none;
     border-color: #05060f;
     transition: 1s;
+}
+
+.Estados-formulario{
+    display: flex;
+    align-items: center;
+
+}
+
+.Estado-opciones{
+    margin: 10px;
+  
 }
 
 .Botton-formulario{
