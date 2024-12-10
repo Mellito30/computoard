@@ -41,13 +41,14 @@ if (isset($_GET['mensaje'])) {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrador de Usuarios</title>
-    <link rel="stylesheet" href="Pag-Administrador-(Formulariooo).css">
+    <link rel="stylesheet" href="giPag-Administrador-(Formulariooo).css">
 
 </head>
 <body>
@@ -75,11 +76,6 @@ if (isset($_GET['mensaje'])) {
         <!-- Sección de encabezado -->
     <section class="Header">
 
-        <div class="div-Button">
-            <a href="Administrador(Formulario).php" class="Button">Añadir</a>
-            <a href="#" class="Button">Modificar</a>
-            <a href="#" class="Button">Actualizar</a>
-        </div>
 
     </section>
     <!-- Sección de formulario -->
@@ -90,11 +86,11 @@ if (isset($_GET['mensaje'])) {
                 <label class="Label-formulario" for="marca">Estado:</label>
                       <div class="Estados-formulario">
                         <input class="Input-Formulario" type="radio" id="marca" name="marca" required><br><br>
-                        <label for="Reparado">Reparado</label><br>
+                        <label class="Estado-opciones" for="Reparado">Reparado</label><br>
                         <input class="Input-Formulario" type="radio" id="marca" name="marca" required><br><br>
-                        <label for="En Proceso">En Proceso</label><br>
+                        <label class="Estado-opciones" for="En Proceso">En Proceso</label><br>
                         <input class="Input-Formulario" type="radio" id="marca" name="marca" required><br><br>
-                        <label for="Sin Iniciar">Sin Iniciar</label><br>
+                        <label class="Estado-opciones" for="Sin Iniciar">Sin Iniciar</label><br>
                     </div>  <br>
             </div>
 
