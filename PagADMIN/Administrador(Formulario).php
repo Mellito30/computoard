@@ -57,7 +57,7 @@ if (isset($_GET['mensaje'])) {
     </nav class="div-Nav">
         <ul class="Barra-Nav">
             <li class="div-Sec">
-                    <img class="Logo-ARM" src="img/LOGOARM.png" alt="LOGOARM">
+                    <img class="Logo-ARM" src="LOGOARM.png" alt="LOGOARM">
             </li>
             <li class="div-Sec">
                 <a class="Link-Nav" href="Index-Administrador.php">Inicio</a><br>
@@ -74,11 +74,29 @@ if (isset($_GET['mensaje'])) {
   
         <!-- Sección de encabezado -->
     <section class="Header">
-         <h1 class="Title1">Formulario de Dispositivo</h1>
+
+        <div class="div-Button">
+            <a href="Administrador(Formulario).php" class="Button">Añadir</a>
+            <a href="#" class="Button">Modificar</a>
+            <a href="#" class="Button">Actualizar</a>
+        </div>
+
     </section>
     <!-- Sección de formulario -->
     <section class="Sec-Body1">
         <form action="" method="POST">
+
+             <div class="div-formulario">
+                <label class="Label-formulario" for="marca">Estado:</label>
+                      <div class="Estados-formulario">
+                        <input class="Input-Formulario" type="radio" id="marca" name="marca" required><br><br>
+                        <label for="Reparado">Reparado</label><br>
+                        <input class="Input-Formulario" type="radio" id="marca" name="marca" required><br><br>
+                        <label for="En Proceso">En Proceso</label><br>
+                        <input class="Input-Formulario" type="radio" id="marca" name="marca" required><br><br>
+                        <label for="Sin Iniciar">Sin Iniciar</label><br>
+                    </div>  <br>
+            </div>
 
             <div class="div-formulario">
                 <label class="Label-formulario" for="nombre">Nombre del Departamento:</label>
@@ -89,11 +107,6 @@ if (isset($_GET['mensaje'])) {
                 <label class="Label-formulario" for="tipo">Tipo de dispositivo:</label>
                 <input class="Input-Formulario" type="text" id="tipo" name="tipo" required><br><br>
             </div>    
-
-            <div class="div-formulario">
-                <label class="Label-formulario" for="marca">Modelo:</label>
-                <input class="Input-Formulario" type="text" id="marca" name="marca" required><br><br>
-            </div>
 
             <div class="div-formulario">
                 <label class="Label-formulario" for="marca">Fecha de Ingreso:</label>

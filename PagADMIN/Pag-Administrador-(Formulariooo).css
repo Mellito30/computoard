@@ -72,14 +72,56 @@ body{
 
 /* <!-- Sección de encabezado  --> */
 .Header {
-    position: block;
+    padding: 500px;
+    position:sticky;
     width: 100%;
     background-color: #001627;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
-/* <!-- Sección de dispositivos  --> */
+.div-Button{
+    padding-left: 320px; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.Button{
+    box-sizing: border-box;
+    width: 205px;
+    background-color: #e8ecee;
+    padding: 15px 2px;
+    margin: 30px;
+    border-color: #e1e9ee ;
+    border-radius: 8px;
+    font-size: 22px;
+    box-shadow:rgba(78, 116, 135, 0.37) 0px 2px 10px 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: #144268;
+    font-weight: bolder;
+    text-align: center;
+    display: inline-block;
+    border-style:outset ;
+    transition: all 0.1s ease;
+    text-decoration: none;
+    color: #063053;
+}
+
+.Button:active{
+    text-decoration: none;
+    border-style: outset;
+    background-color: #DAE1E5;
+    transform: translateY(2px);
+}
+
+.Button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+} 
+
+    /* <!-- Sección de dispositivos  --> */
 .Sec-Body1 {
     margin: 45px;
     padding-left: 305px; 
@@ -120,6 +162,10 @@ body{
     outline: none;
     border-color: #05060f;
     transition: 1s;
+}
+
+.Estados-formulario{
+    display: flex;
 }
 
 .Botton-formulario{

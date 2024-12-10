@@ -54,9 +54,8 @@ $result = $conn->query($sql);
     <section class="Header">
 
          <div class="div-Button">
-                <a href="Administrador (Formulario).html" class="Button">Añadir</a>
+                <a href="Administrador(Formulario).php" class="Button">Añadir</a>
                 <a href="#" class="Button">Modificar</a>
-                <a href="#" class="Button">Actualizar</a>
             </div>
 
     </section>
