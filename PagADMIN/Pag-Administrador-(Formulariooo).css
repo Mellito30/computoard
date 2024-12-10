@@ -72,8 +72,8 @@ body{
 
 /* <!-- Sección de encabezado  --> */
 .Header {
-    padding: 500px;
-    position:sticky;
+    padding: 0px;
+    position:relative;
     width: 100%;
     background-color: #001627;
     justify-content: center;
