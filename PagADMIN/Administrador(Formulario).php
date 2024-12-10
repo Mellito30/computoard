@@ -4,7 +4,7 @@
 $servidor = "localhost";
 $usuario = "root"; // Cambia esto si usas otro usuario
 $contrasena = ""; // Cambia esto si tienes contraseña
-$base_datos = "hola";
+$base_datos = "armada_computoard";
 
 $conn = new mysqli($servidor, $usuario, $contrasena, $base_datos);
 
