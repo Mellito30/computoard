@@ -72,11 +72,11 @@ body{
 
 /* <!-- Sección de encabezado  --> */
 .Header {
-    position: block;
-    width: 100%;
+    padding: 50px;
     background-color: #001627;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .div-Button{
@@ -193,6 +193,12 @@ body{
 .menu h3 {
     margin-top: 0;
     font-size: 18px;
+}
+
+.filtro-ul{
+    display: flex;
+    align-items: center;
+  
 }
 
 .filter-checkbox {

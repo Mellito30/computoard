@@ -97,7 +97,7 @@ $result = $conn->query($sql);
                     <!-- Filtro por estado -->
                     <div>
                         <label>Estado:</label>
-                        <ul>
+                        <ul class="filtro-ul">
                             <li class="filtro-li" ><input type="checkbox" class="filter-checkbox" value="Arreglado"> Arreglado</li>
                             <li class="filtro-li" ><input type="checkbox" class="filter-checkbox" value="Reparando"> Reparando</li>
                             <li class="filtro-li" ><input type="checkbox" class="filter-checkbox" value="Analisis"> Análisis</li>
@@ -125,6 +125,7 @@ $result = $conn->query($sql);
 
 <!-- Sección de títulos -->
 <div class="div-dispositivos">
+        <h3 class="Title-header-dispositivos">ID</h3>
         <h3 class="Title-header-dispositivos">Estado</h3>
         <h3 class="Title-header-dispositivos">Equipo</h3>
         <h3 class="Title-header-dispositivos">Departamento</h3>
@@ -141,6 +142,8 @@ $result = $conn->query($sql);
             while ($row = $result->fetch_assoc()): 
             ?>
                 <div class="<?php echo $is_black ? 'div-Info-dispo-BGBLACK' : 'div-Info-Dispositivos'; ?>">
+
+                    <p class="Text-info-Dispositivos"><?php echo $row['ID']; ?></p>
                     <p class="Text-info-Dispositivos"><?php echo $row['estado']; ?></p>
                     <p class="Text-info-Dispositivos"><?php echo $row['modelo']; ?></p>
                     <p class="Text-info-Dispositivos"><?php echo $row['departamento']; ?></p>

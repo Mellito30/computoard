@@ -48,7 +48,7 @@ if (isset($_GET['mensaje'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrador de Usuarios</title>
-    <link rel="stylesheet" href="giPag-Administrador-(Formulariooo).css">
+    <link rel="stylesheet" href="Pag-Administrador-(Formulariooo).css">
 
 </head>
 <body>
