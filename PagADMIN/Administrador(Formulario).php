@@ -75,6 +75,9 @@ if (isset($_GET['mensaje'])) {
   
         <!-- Sección de encabezado -->
     <section class="Header">
+        <div class="Contenido1">
+            <p class="Textcontanido1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse eius officiis alias soluta nobis dicta consectetur quis minima atque numquam aliquid eaque rem enim, accusantium totam, similique vero deserunt laboriosam.</p>
+        </div>
 
 
     </section>

@@ -31,7 +31,7 @@
   
         <!-- Sección de encabezado -->
     <section class="Header">
-         <h1 class="Title1">...</h1>
+
     </section>
 
     <!-- Sección de formulario -->

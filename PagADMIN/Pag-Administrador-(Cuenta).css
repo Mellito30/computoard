@@ -74,11 +74,12 @@ body{
 
 /* <!-- Sección de encabezado  --> */
 .Header {
-    padding: 50px;
+    display: block;
     background-color: #001627;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    
 }
 
     /* <!-- Sección de dispositivos  --> */

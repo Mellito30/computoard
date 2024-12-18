@@ -74,13 +74,18 @@ body{
 
 /* <!-- Sección de encabezado  --> */
 .Header {
-    padding: 80px;
+    /* display: block; */
     background-color: #001627;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 
+.Textcontanido1{
+    /* color: #e1e9ee; */
+    font-size: 5px;
+    z-index: 1000;
+}
     /* <!-- Sección de dispositivos  --> */
 .Sec-Body1 {
     margin: 45px;

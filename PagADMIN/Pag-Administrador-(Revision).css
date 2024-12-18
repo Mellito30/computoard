@@ -72,11 +72,11 @@ body{
 
 /* <!-- Sección de encabezado  --> */
 .Header {
-    position: block;
-    width: 100%;
+    display: block;
     background-color: #001627;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .div-Button{

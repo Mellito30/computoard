@@ -74,7 +74,8 @@ body{
 
 /* <!-- Sección de encabezado  --> */
 .Header {
-    padding: 50px;
+    padding: 35px;
+
     background-color: #001627;
     justify-content: center;
     align-items: center;
