@@ -1,3 +1,5 @@
+
+
 body{
     margin: 0;
     background-color: rgb(255, 255, 255);
@@ -72,15 +74,21 @@ body{
 
 /* <!-- Sección de encabezado  --> */
 .Header {
-    position: block;
-    width: 100%;
+    /* display: block; */
     background-color: #001627;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
-/* <!-- Sección de dispositivos  --> */
+.Textcontanido1{
+    /* color: #e1e9ee; */
+    font-size: 5px;
+
+}
+    /* <!-- Sección de dispositivos  --> */
 .Sec-Body1 {
+    margin-top: -45px;
     margin: 45px;
     padding-left: 305px; 
     justify-content: center;
@@ -120,6 +128,17 @@ body{
     outline: none;
     border-color: #05060f;
     transition: 1s;
+}
+
+.Estados-formulario{
+    display: flex;
+    align-items: center;
+
+}
+
+.Estado-opciones{
+    margin: 10px;
+  
 }
 
 .Botton-formulario{

@@ -1,3 +1,5 @@
+
+
 body{
     margin: 0;
     background-color: rgb(255, 255, 255);
@@ -72,17 +74,19 @@ body{
 
 /* <!-- Sección de encabezado  --> */
 .Header {
-    position: block;
-    width: 100%;
+    display: block;
     background-color: #001627;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    
 }
-    /* <!-- Sección de solicitud  --> */
-    .Sec-Body1 {
-        margin: 45px;
-        padding-left: 305px; 
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(255, 255, 255);
-    }
+
+    /* <!-- Sección de dispositivos  --> */
+.Sec-Body1 {
+    margin: 45px;
+    padding-left: 305px; 
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
