@@ -19,7 +19,6 @@ $sql = "SELECT estado, departamento, tipo_dispositivo, modelo, fecha_ingreso, fe
 $result = $conn->query($sql);
 ?>
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
