@@ -79,7 +79,12 @@ body{
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    
+    padding: 52.4px;
+}
+.Textcontanido1{
+    color: #e1e9ee;
+    font-size: 5px;
+
 }
 
     /* <!-- Sección de dispositivos  --> */

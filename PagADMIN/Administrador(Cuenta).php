@@ -32,8 +32,10 @@
     </section>
   
         <!-- Sección de encabezado -->
-    <section class="Header">
-         <h1 class="Title1">...</h1>
+        <section class="Header">
+        <div class="Contenido1">
+            <p class="Textcontanido1">m.</p>
+        </div>
     </section>
 
     <!-- Sección de formulario -->

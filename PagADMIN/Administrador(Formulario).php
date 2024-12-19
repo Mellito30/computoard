@@ -78,9 +78,8 @@ if (isset($_GET['mensaje'])) {
         <div class="Contenido1">
             <p class="Textcontanido1">m.</p>
         </div>
-
-
     </section>
+    
     <!-- Sección de formulario -->
     <section class="Sec-Body1">
         <form action="" method="POST">
