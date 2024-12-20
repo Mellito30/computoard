@@ -54,7 +54,7 @@ $result = $conn->query($sql);
 
          <div class="div-Button">
                 <a href="Administrador(Formulario).php" class="Button">Añadir</a>
-                <a href="Administrador(DispositivosModificados).php" class="Button">Modificar</a>
+                <a href="#" class="Button">Modificar</a>
             </div>
 
     </section>
@@ -124,6 +124,7 @@ $result = $conn->query($sql);
 
 <!-- Sección de títulos -->
 <div class="div-dispositivos">
+        <h3 class="Title-header-dispositivos">ID</h3>
         <h3 class="Title-header-dispositivos">Estado</h3>
         <h3 class="Title-header-dispositivos">Equipo</h3>
         <h3 class="Title-header-dispositivos">Departamento</h3>
@@ -141,6 +142,7 @@ $result = $conn->query($sql);
             ?>
                 <div class="<?php echo $is_black ? 'div-Info-dispo-BGBLACK' : 'div-Info-Dispositivos'; ?>">
 
+                    <p class="Text-info-Dispositivos"><?php echo $row['ID']; ?></p>
                     <p class="Text-info-Dispositivos"><?php echo $row['estado']; ?></p>
                     <p class="Text-info-Dispositivos"><?php echo $row['modelo']; ?></p>
                     <p class="Text-info-Dispositivos"><?php echo $row['departamento']; ?></p>
@@ -169,7 +171,7 @@ $result = $conn->query($sql);
         </div>
     </section>
 
-    <script src="Administrador (Dispositivos).js"> </script>
+    <script src="Administrador (DispositivosModificados).js"> </script>
 
 </body>
 </html>
