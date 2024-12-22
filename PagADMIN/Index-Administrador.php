@@ -14,7 +14,7 @@
     </nav class="div-Nav">
         <ul class="Barra-Nav">
             <li class="div-Sec">
-                    <img class="Logo-ARM" src="img/LOGOARM.png" alt="LOGOARM"/>
+                    <img class="Logo-ARM" src="img/logoarm.png" alt="LOGOARM">
             </li>
             <li class="div-Sec">
                 <a class="Link-Nav" id="Button-active" href="Index-Administrador.php">Inicio</a><br>
