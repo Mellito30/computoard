@@ -124,6 +124,35 @@ if (!$result) {
                             ></path>
                         </svg>
                     </button>
+                    <div id="filterMenu" class="menu oculto">
+                    <h3>Filtros</h3>
+            
+                    <!-- Filtro por estado -->
+                    <div>
+                        <label>Estado:</label>
+                        <ul class="filtro-ul">
+                            <li class="filtro-li" ><input type="checkbox" class="filter-checkbox" value="Arreglado"> Arreglado</li>
+                            <li class="filtro-li" ><input type="checkbox" class="filter-checkbox" value="Reparando"> Reparando</li>
+                            <li class="filtro-li" ><input type="checkbox" class="filter-checkbox" value="Analisis"> Análisis</li>
+                        </ul>
+                    </div>
+            
+                    <!-- Filtro por fecha de entrada -->
+                    <div>
+                        <label>Fecha de entrada:</label>
+                        <input type="date" id="startDate">
+                    </div> <br>
+            
+                    <!-- Filtro por fecha de salida -->
+                    <div>
+                        <label>Fecha de salida:</label>
+                        <input type="date" id="endDate">
+                    </div>
+            
+                    <!-- Botón para limpiar filtros -->
+                    <button id="clearFiltersButton">Eliminar Filtros</button>
+                </div>
+
                 </div>
             </div>
 
