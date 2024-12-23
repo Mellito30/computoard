@@ -13,24 +13,32 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $id = $_POST['id']; 
     $departamento = $_POST['nombre'];
     $tipodispositivo = $_POST['tipo'];
-    $modelo = $_POST['marca']; 
+    $modelo = $_POST['marca'];
     $fechaingreso = $_POST['entradafecha'];
     $fechasalida = $_POST['salidafecha'];
-    $estado = $_POST['estado']; 
+    $estado = $_POST['estado'];
 
+    
     if (empty($modelo)) {
         echo "Error: el campo modelo no está lleno.";
     } else {
-        // Ingresar los datos a la base de datos
-        $sql = "INSERT INTO dispositivos (departamento, tipo_dispositivo, modelo, fecha_ingreso, fecha_salida, estado) 
-                VALUES ('$departamento', '$tipodispositivo', '$modelo', '$fechaingreso', '$fechasalida', '$estado')";
+        // Actualizar los datos en la base de datos
+        $sql = "UPDATE dispositivos SET 
+                departamento='$departamento', 
+                tipo_dispositivo='$tipodispositivo', 
+                modelo='$modelo', 
+                fecha_ingreso='$fechaingreso', 
+                fecha_salida='$fechasalida', 
+                estado='$estado' 
+                WHERE id='$id'"; 
 
         if ($conn->query($sql) === TRUE) {
-            echo "Datos guardados correctamente.";
+            echo "Datos actualizados correctamente.";
         } else {
-            echo "Error al guardar los datos: " . $conn->error;
+            echo "Error al actualizar los datos: " . $conn->error;
         }
     }
 
@@ -64,7 +72,7 @@ if (isset($_GET['mensaje'])) {
                 </li>
                 <li class="div-Sec">
                     <a class="Link-Nav" href="Index-Administrador.php">Inicio</a><br>
-                    <a class="Link-Nav" id="Button-active" href="Administrador(Formulario).php">Ingreso de Dispositivo</a><br>
+                    <a class="Link-Nav" id="Button-active" href="Administrador(Formulario).php">Editar Dispositivo</a><br>
                     <a class="Link-Nav" href="Administrador(Dispositivos).php">Revisión de Dispositivo</a><br>
                     <a class="Link-Nav" href="Administrador(Revision).php">Solicitudes de Servicios</a><br>
                     <a href="Administrador(Cuenta).php">
@@ -85,6 +93,11 @@ if (isset($_GET['mensaje'])) {
     <!-- Sección de formulario -->
     <section class="Sec-Body1">
         <form action="" method="POST">
+
+            <div class="div-formulario">
+                <label class="Label-formulario" for="id">ID del Dispositivo:</label>
+                <input class="Input-Formulario" type="text" id="id" name="id" required><br><br>
+            </div>
 
             <div class="div-formulario">
                 <label class="Label-formulario">Estado:</label>
@@ -112,7 +125,7 @@ if (isset($_GET['mensaje'])) {
 
             <div class="div-formulario">
                 <label class="Label-formulario" for="modelo">Modelo del dispositivo:</label>
-                <input class="Input-Formulario" type="text" id="modelo" name="marca" required><br><br> 
+                <input class="Input-Formulario" type="text" id="modelo" name="marca" required><br><br>
             </div>
 
             <div class="div-formulario">
@@ -125,11 +138,13 @@ if (isset($_GET['mensaje'])) {
                 <input class="Input-Formulario" type="date" id="salidafecha" name="salidafecha"><br><br>
             </div>
 
-            <button class="Botton-formulario" type="submit">Registrar</button>
+            <button class="Botton-formulario" type="submit">Actualizar</button>
         </form>
     </section>
 
 </body>
 </html>
+
+
 
 
