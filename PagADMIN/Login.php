@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Login Administrador .css">
+    <link rel="stylesheet" href="Login-Administrador.css">
 </head>
 <body>
     <!-- <div class="div-Formulario">
@@ -34,7 +34,7 @@
            <button class="Button-Log">Acceder</button>
 
             <p class="Link-Sign_up">
-             ¿No tiene una cuenta? <a class="Link" href="Sign up.html">Registrar</a>
+             ¿No tiene una cuenta? <a class="Link" href="Sign-up.php">Registrar</a>
             </p>
 
         </form>
