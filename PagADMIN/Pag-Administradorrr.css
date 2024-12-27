@@ -114,10 +114,13 @@ body {
 
 .profile-info {
     margin-left: 10px;
+
 }
 
 .profile-info p {
     margin: 5px 0;
+    font-style: italic;
+    color: #555;
 }
 
 /* Estilo del botón de cerrar sesión */

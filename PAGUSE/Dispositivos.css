@@ -7,41 +7,42 @@ body{
     overflow-x: hidden;
 }
 
-/* <!-- Sección de Barra  --> */
+/* Sección de encabezado */
 .Sec-Header {
-    background-color: #DAE1E5;
-    margin-top: 0;
-    margin-bottom: 0;
-    position: relative;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  
+    background-color: #e1e9ee;
+    padding: 80px 50px;
+    display: flex;
+    align-items: center;
+}
+
+.Logo-ARM-link{
+    position: absolute;
+    transform: translatey(-50%);
 }
 
 .Logo-ARM {
-    width:260px ;
-    height:80px ;
-    margin-left: 200px;
+    position: absolute;
+    transform: translatex(15%);
 }
 
-/* <!-- Sección de formulario --> */
 .div-formulario {
-    position: relative;
+    display: flex;
+    align-items: center; 
+
 }
-.Formulario{
+
+.Formulario {
+    color: #06263f;
+    font-size: 20px;
     text-decoration: none;
     position: absolute;
-    right: 20px;
-    transform: translateX(-50%);
-    bottom: 30px;
-    color: #133448;
-    font-size: 20px;
+    transform: translatex(-90%);
+    right: 0;
+
 }
 .Formulario:hover{
     color: #425b77;
-    font-size: 21px;
     transition-delay: -0.1s; 
-    right: 10px; 
     text-shadow: #0a3e5f5f 0px 3px 10px;
 }
 
@@ -49,19 +50,17 @@ body{
 
 .Inicio{
     text-decoration: none;
-    position: absolute;
-    right: 320px;
-    transform: translateX(-50%);
-    bottom: 30px;
     color: #133448;
     font-size: 20px;
+    position: absolute;
+    transform: translatex(-190%);
+    right: 0;
 }
 .Inicio:hover{
-    color: #425b77;
-    font-size: 21px;
+    color: #06263f;
     transition-delay: -0.1s; 
-    right: 318px; 
     text-shadow: #0a3e5f5f 0px 3px 10px;
+    
 }
 
 /* <!-- Sección de Titulos de dispositivos --> */
@@ -191,9 +190,10 @@ body{
 
 /* Footer */
 .Sec-Footer {
-    background-color: #06263f;
+    position: absolute;
+    background-color: #e1e9ee;
     color: #fff;
-    padding: 20px 20px;
+    padding: 40px 20px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -201,6 +201,7 @@ body{
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
+    bottom: 0;
 }
 
 .Logo-ARM-Footer, .Logo-GRD-Footer {

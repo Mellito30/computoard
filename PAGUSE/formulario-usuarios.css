@@ -1,5 +1,5 @@
 body {
-    background-image: url('/LOGOARM.png');
+    background-image: url('LOGOARM.png');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -37,7 +37,7 @@ textarea {
 }
 
 .btn-custom {
-    background-color: #063661;
+    background-color: #152f46;
     color: white;
     border: none;
     padding: 10px 20px;

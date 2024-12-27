@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soporte Técnico</title>
-    <link rel="stylesheet" href="PAGINA INICIAL.css">
+    <link rel="stylesheet" href="PAGINA-INICIAL.css">
 </head>
 <body>
     <!-- Encabezado -->
@@ -23,7 +23,7 @@
         <div class="overlay-content">
             <h1 class="Title1">DIRECIÓN DE TECNOLOGÍA E INFORMACIÓN </h1>
             <button class="Button-dispositivos">
-                <a class="Button-link" href="Dispositivos.php" target="_blank">Ver Dispositivos</a>
+                <a class="Button-link" href="Dispositivos.php" >Ver Dispositivos</a>
             </button>
         </div>
     </section>

@@ -58,7 +58,7 @@ if (isset($_GET['mensaje'])) {
         <div class="invoice-container bg-white p-5 rounded shadow-lg">
             <header class="text-center position-relative mb-4">
                 <div class="image-container">
-                    <img src="/img/LOGOARM.png" alt="Logo" class="logo-img">
+                    <img src="img/LOGOARM.png" alt="Logo" class="logo-img">
                 </div>
                 <h2 class="mt-3">Formulario de Reporte</h2>
                 <p class="p">Reportes y Consultas</p>
@@ -96,7 +96,7 @@ if (isset($_GET['mensaje'])) {
                     </div>
 
                 <div class="d-flex justify-content-between mt-4">
-                    <a href="index.html" class="btn btn-dark">Volver</a>
+                    <a href="index.php" class="btn btn-dark">Volver</a>
                     <button type="submit" class="btn btn-custom">Enviar formulario</button>
                 </div>
             </form>

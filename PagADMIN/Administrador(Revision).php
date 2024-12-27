@@ -25,6 +25,10 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv=”Expires” content=”0″>
+    <meta http-equiv=”Cache-Control” content=”no-cache, mustrevalidate”>
+
     <title>Administrador de Usuarios</title>
     <link rel="stylesheet" href="Pag-Administrador-(Revision).css">
 </head>
@@ -79,41 +83,45 @@ $result = $conn->query($sql);
             // Recorrer todas las solicitudes y mostrarlas
             while ($row = $result->fetch_assoc()) {
                 ?>
-                    <div class="marco-solicitud">
-                        <span class="star" data-starred="false">★</span>
-                        <div class="solicitud-detalles">
-                            <div class="nombre-y-rango">
-                                <span class="Solicitud-usuario">Nombre del Guardia: <?php echo htmlspecialchars($row['nombre_solicitante']); ?></span>
-                                <span class="solicitud-rango">(Rango: <?php echo htmlspecialchars($row['rango_solicitante']); ?>)</span>
-                            </div>
-                            <div class="solicitud-asunto destacado">Asunto: <?php echo htmlspecialchars($row['asunto']); ?></div>
+                   <div class="marco-solicitud">
+                    <div class="star-container">
+                    <span class="star" data-starred="false">★</span>
+                    </div>
+                    <div class="solicitud-detalles">
+                        <div class="nombre-y-rango">
+                            <span class="Solicitud-usuario">Nombre del Guardia: <?php echo htmlspecialchars($row['nombre_solicitante']); ?></span>
+                            <span class="solicitud-rango">(Rango: <?php echo htmlspecialchars($row['rango_solicitante']); ?>)</span>
                         </div>
-                        <div class="solicitud-departamento">Departamento: <?php echo htmlspecialchars($row['nombre_departamento']); ?></div>
-                        <div class="solicitud-detalle expandible">
-                            Descripción del problema: <?php echo nl2br(htmlspecialchars($row['descripcion_solicitud'])); ?>
-                        </div>
-                        <div class="solicitud-info">
-                            <button id="Buttonaceptar_<?php echo $row['id']; ?>" class="Buttom-solicitud aceptar" data-id="<?php echo $row['id']; ?>" data-email="<?php echo $row['correo_electronico']; ?>" data-nombre="<?php echo htmlspecialchars($row['nombre_solicitante']); ?>">Aceptar</button>
+                        <div class="solicitud-asunto destacado">Asunto: <?php echo htmlspecialchars($row['asunto']); ?></div>
+                    </div>
+                    <div class="solicitud-departamento">Departamento: <?php echo htmlspecialchars($row['nombre_departamento']); ?></div>
+                    <div class="solicitud-detalle expandible">
+                        Descripción del problema: <?php echo nl2br(htmlspecialchars($row['descripcion_solicitud'])); ?>
+                    </div>
+                    <div class="solicitud-info">
+                        <button class="Buttom-solicitud" onclick="openModal()">Aceptar</button>
+                        <div class="solicitud-Fecha"><?php echo date("d M", strtotime($row['fecha'])); ?></div>
+                    </div>
+
+                <!-- Modal -->
+                <div id="modal" class="modal hidden">
+                    <div class="modal-content">
+                        <h2 class="Tittle-modal">Aceptar Solicitud</h2>
+                        <form id="modal-form">
+                            <label  class="Label-modal" for="nombre-usuario">Nombre del usuario:</label>
+                            <input class="Input-modal" type="text" id="nombre-usuario" name="nombre-usuario" required>
                             
-                            <!-- Contenedor del cuadro emergente (Modal) -->
-                            <div id="formularioModal_<?php echo $row['id']; ?>" class="modal oculto">
-                                <div class="modal-contenido">
-                                    <h2 class="tittle-modal">Información de la Solicitud</h2>
-                                    <label for="nombreUsuario">Nombre del Usuario:</label>
-                                    <input class="input-modal" type="text" id="nombreUsuario_<?php echo $row['id']; ?>" value="" readonly>
-                                    
-                                    <label for="comentarios">Comentario:</label>
-                                    <textarea class="input-modal" id="comentarios_<?php echo $row['id']; ?>" placeholder="Escribe un comentario"></textarea>
-                                    
-                                    <div class="botones">
-                                        <button class="botones-finale" id="guardar_<?php echo $row['id']; ?>">Enviar Comentario</button>
-                                        <button class="botones-finale" id="cancelar_<?php echo $row['id']; ?>">Cancelar</button>
-                                    </div>
-                                </div>
+                            <label class="Label-modal" for="comentario">Comentario:</label>
+                            <textarea class="Input-modal" id="comentario" name="comentario" rows="4" required></textarea>
+                            
+                            <div class="modal-buttons">
+                                <button type="button" class="modal-cancel" onclick="closeModal()">Cancelar</button>
+                                <button type="submit" class="modal-accept">Aceptar</button>
                             </div>
-                        </div>
-    <div class="solicitud-Fecha"><?php echo date("d M", strtotime($row['fecha'])); ?></div>
-</div>
+                        </form>
+                    </div>
+                </div>
+
 
 
     </div>
@@ -133,20 +141,12 @@ $result = $conn->query($sql);
     $conn->close();
     ?>
 
-<script src="Administrador (Cuenta).js"></script>
-<script src="Pag Administrador (Revision).js"></script>
+<script src="Administrador-(Cuenta).js"></script>
+<script src="Pag-Administrador-(Revision).js"></script>
 </body>
 </html>
 
-<!-- <script>
-        // Verificar si el usuario está logueado
-        const EstaLogueado = sessionStorage.getItem("EstaLogueado");
 
-        if (EstaLogueado !== "true") {
-            // Si no está logueado, redirigir al login
-            window.location.href = "login.php";
-        }
-    </script> -->
 
 
 

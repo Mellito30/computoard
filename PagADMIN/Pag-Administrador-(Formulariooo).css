@@ -71,16 +71,19 @@ body {
 .Ico-Nav {
     cursor: pointer;
     height: 100px;
-    width: 0px;
+    width: 80px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 0px; 
     z-index: 100;
+
 }
 
 .Ico-Nav path{
     fill: #6D8290;
 }
+
+
 
 /* Estilo del contenedor del perfil al final de la barra */
 .profile-container {
@@ -133,6 +136,8 @@ body {
 .btn-logout:hover {
     background-color: #c82333;
 }
+
+
 /* <!-- Sección de encabezado  --> */
 .Header {
     display: block;
@@ -142,12 +147,12 @@ body {
     overflow: hidden;
     padding: 52.4px;
 }
-
 .Textcontanido1{
     color: #e1e9ee;
     font-size: 5px;
 
 }
+
     /* <!-- Sección de dispositivos  --> */
 .Sec-Body1 {
     margin: 45px;

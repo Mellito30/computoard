@@ -15,30 +15,28 @@ body {
 
 /* Sección de encabezado */
 .Sec-Header {
-    background-color: #01223b;
-    padding: 25px;
+    background-color: #e1e9ee;
+    padding: 80px 50px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
 }
 
 .Logo-ARM {
-    width: 300px; 
-    margin-left: 20px;
+    position: absolute;
+    transform: translatex(15%);
 }
 
 .div-formulario {
-    margin-right: 20px;
+    position: absolute;
+    transform: translatex(-30%);
+    right: 0;
 }
 
 .Formulario {
-    color: #fff;
-    font-size: 18px;
+    color: #06263f;
+    font-size: 20px;
     text-decoration: none;
-    border: none;
-    background: none;
-    padding: 5px 10px;
+
 }
 
 /* Sección de bienvenida */
