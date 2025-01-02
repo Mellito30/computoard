@@ -39,27 +39,28 @@ detalles.forEach(detalle => {
 //   });
 
 
-
-  
-// Open Modal
+// Abrir el modal
 function openModal() {
-    document.getElementById('modal').classList.remove('hidden');
+    const modal = document.getElementById('modal');
+    modal.classList.remove('hidden'); // Quita la clase que oculta el modal
 }
 
-// Close Modal
+// Cerrar el modal
 function closeModal() {
-    document.getElementById('modal').classList.add('hidden');
+    const modal = document.getElementById('modal');
+    modal.classList.add('hidden'); // Añade la clase que oculta el modal
 }
 
-// Handle Form Submission
+// Manejar el envío del formulario
 document.getElementById('modal-form').addEventListener('submit', function (event) {
-    event.preventDefault();
+    event.preventDefault(); // Evita que la página se recargue
     const nombreUsuario = document.getElementById('nombre-usuario').value;
     const comentario = document.getElementById('comentario').value;
-    
+
+    // Aquí puedes enviar los datos al servidor o manejar la lógica
     console.log("Nombre del usuario:", nombreUsuario);
     console.log("Comentario:", comentario);
-    
-    closeModal();
+
+    closeModal(); // Cierra el modal después del envío
     alert("Solicitud aceptada con éxito");
 });

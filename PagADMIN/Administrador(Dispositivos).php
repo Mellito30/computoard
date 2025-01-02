@@ -190,6 +190,7 @@ if (!$result) {
                             <p class="Text-info-Dispositivos"><?php echo $row['departamento']; ?></p>
                             <p class="Text-info-Dispositivos"><?php echo $row['fecha_ingreso']; ?></p>
                             <p class="Text-info-Dispositivos"><?php echo $row['fecha_salida']; ?></p>
+                            
                         </div>
                         <div class="div-form-decorate"></div>
                         <?php $is_black = !$is_black; ?>

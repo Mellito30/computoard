@@ -347,7 +347,7 @@ body {
 
 .star {
     font-size: 24px;
-    color: rgb(76, 3, 3);
+    color: gray;
     cursor: pointer;
     margin: 0; /* Sin margen adicional */
     line-height: 1; /* Consistencia en el espaciado interno */
