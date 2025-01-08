@@ -69,6 +69,22 @@ INSERT INTO `solicitudes` (`id`, `nombre_solicitante`, `rango_solicitante`, `nom
 (1, 'Comandante JCK', 'Capitán Navío ', 'Computo ', 'Computadora Rota', 'anfellikr@gmail.com', 'hola, tengo un problema grande, tan grande como nunca.', '2024-12-05 13:46:52'),
 (2, 'Anfer', 'GENERAL DE GENERALES', 'GENERAL', 'GENERAL', 'generalanfer@gmail.com', 'Es un problema, tan grande y tan GENERAL, que es grande y es muy GENERAL', '2024-12-05 13:50:38');
 
+
+CREATE TABLE `formulario` (
+`id` INT(11) NOT NULL,
+`nombre_usuario` VARCHAR(255) NOT NULL,
+`apellido_usuario` VARCHAR(255) NOT NULL,
+`rango_usuario` VARCHAR(255) NOT NULL,
+`contraseña` VARCHAR(255) NOT NULL
+) ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE=UTF8MB4_GENERAL_CI;
+
+
+CREATE TABLE `user` (
+`id` INT(11) NOT NULL,
+`user_name` VARCHAR(255) NOT NULL,
+`user_range` VARCHAR(255) NOT NULL,
+) ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE=UTF8MB4_GENERAL_CI;
+
 --
 -- Índices para tablas volcadas
 --
