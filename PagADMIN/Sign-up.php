@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <meta http-equiv=”Expires” content=”0″>
+    <meta http-equiv=”Cache-Control” content=”no-cache, mustrevalidate”>
+
+    
+    <title>Registrate</title>
     <link rel="stylesheet" href="Sign-up-Administrador.css">
 </head>
 <body>    
@@ -15,12 +20,15 @@
             <div>
                 <label class="Label-Sign_up" for="name">Nombre del Usuario</label>
                 <input class="Input-Sign_up" type="text" placeholder="Ingrese su Nombre"><br><br>
-                
+
                 <label class="Label-Sign_up" for="name">Apellido del Usuario</label>
                 <input class="Input-Sign_up" type="text" placeholder="Ingrese su Apellido"><br><br>
-            
+
                 <label class="Label-Sign_up" for="name">Rango del Usuario</label>
                 <input class="Input-Sign_up" type="text" placeholder="Ingrese su Rango"><br><br>
+
+                <label class="Label-Sign_up" for="name">Identificador del Usuario</label>
+                <input class="Input-Sign_up" type="text" placeholder="Ingrese su ID"><br><br>                
                 
                 <label class="Label-Sign_up" for="name">Contraseña</label>
                 <input class="Input-Sign_up" type="password" placeholder="Ingrese su Contraseña"><br><br>

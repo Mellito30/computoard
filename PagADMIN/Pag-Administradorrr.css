@@ -164,3 +164,149 @@ body {
     align-items: center;
     background-color: rgb(255, 255, 255);
 }
+
+.recuadro {
+    box-shadow: 0 1px 2px #0000003b;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f9f9f9e0;
+}
+
+.Recuadros-superiores {
+    display: flex;
+}
+
+/* Contenedor de las solicitudes */
+.Solicitudes {
+    width: 60%;
+    left: 0;
+}
+
+/* Contenedor de recordatorios con scroll */
+.contenedor-recordatorios {
+    max-height: 220px; 
+    overflow-y: auto; 
+    padding-right: 5px; 
+}
+
+/* Estilo de cada recordatorio */
+.recordatorio {
+    border-left: 5px solid #144268;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 15px 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.recordatorio:hover {
+    background-color: #f0f4f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.nombre-rango {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nombre {
+    color: #144268;
+    font-weight: bold;
+}
+
+.rango {
+    font-style: italic;
+    color: #555;
+}
+
+.fecha-aceptada {
+    font-size: 12px;
+    color: #555;
+    font-style: italic;
+}
+
+.detalles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #555;
+    margin-top: 5px;
+}
+
+.departamento {
+    font-weight: bold;
+    color: #144268;
+}
+
+.fecha-solicitada {
+    font-size: 12px;
+    font-style: italic;
+    color: #555;
+    margin-left: 10px;
+}
+
+
+/* Recuadro 2: Formulario */
+.formulario {
+    width: 40%;
+    right: 0;
+}
+
+/* Recuadro 3: Dispositivos recientes */
+.dispositivos {
+    
+    top: 250px;
+    left: 20px;
+    right: 20px;
+    width: calc(100% - 40px);
+}
+
+/* Estilo adicional para la lista */
+.lista-solicitudes {
+    list-style: none;
+    padding: 0;
+}
+
+.lLinea-solicitudes {
+    margin-bottom: 10px;
+}
+
+/* Estilo del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #144268;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0d3450;
+}
