@@ -135,7 +135,7 @@ if (isset($_GET['mensaje'])) {
 
             <div class="div-formulario">
                 <label class="Label-formulario" for="salidafecha">Fecha de Salida:</label>
-                <input class="Input-Formulario" type="date" id="salidafecha" name="salidafecha"><br><br>
+                <input class="Input-Formulario" type="date" id="salidafecha" name="salidafecha" required><br><br>
             </div>
 
             <button class="Botton-formulario" type="submit">Actualizar</button>
