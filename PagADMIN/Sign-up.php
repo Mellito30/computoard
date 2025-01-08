@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Sign up Administrador.css">
+    <link rel="stylesheet" href="Sign-up-Administrador.css">
 </head>
 <body>    
     
@@ -29,7 +29,7 @@
            <button class="Button-Sign_up">Crear cuenta</button>
 
            <p class="Link-log">¿Ya tiene una cuenta? 
-            <a class="Link" href="Login.html">Acceder</a>
+            <a class="Link" href="Login.php">Acceder</a>
         </p>
 
         </form>

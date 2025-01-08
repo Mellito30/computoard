@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="Login Administrador .css">
+    <link rel="stylesheet" href="Login-Administrador.css">
 </head>
 <body>
     <div class="div-Formulario">
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button class="Button-Log">Acceder</button>
 
             <p class="Link-Sign_up">
-             ¿No tiene una cuenta? <a class="Link" href="Sign up.html">Registrar</a>
+             ¿No tiene una cuenta? <a class="Link" href="Sign-up.php">Registrar</a>
             </p>
 
             <?php if (isset($error)): ?>
