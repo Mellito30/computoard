@@ -238,20 +238,21 @@ body {
 }
 
 /* <!-- Sección de filtro --> */
-
+/* Diseño general del menú */
+/* Diseño general del menú */
 .menu {
-    width: 250px;
-    border: 1px solid #ccc;
+    width: 250px; 
+    border: 1px solid #ddd;
     padding: 15px;
-    background-color: #f9f9f9;
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: absolute; 
-    z-index: 1000; 
-    display: absolute; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
 
-#filterMenu{
+#filterMenu {
     margin-left: 55px;
     margin-top: 240px;
 }
@@ -262,41 +263,103 @@ body {
 
 .menu h3 {
     margin-top: 0;
-    font-size: 18px;
+    font-size: 20px;
+    color: #194c82; 
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
-.filtro-ul{
+/* Secciones de filtros */
+.filter-section {
+    margin-bottom: 15px;
+}
+
+/* Etiquetas de los filtros */
+.filter-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    display: inline-block; 
+    margin-right: 10px; 
+    margin-bottom: 0; 
+}
+
+/* Entradas de texto */
+.filter-input {
+    width: calc(100% - 16px); 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.filter-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.estado-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; 
+}
+
+.filtro-ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.filtro-li {
+    margin-bottom: 0;
+    padding: 5px 0;
+    font-size: 14px;
     display: flex;
     align-items: center;
-  
 }
 
 .filter-checkbox {
-    margin-right: 5px;
-
+    margin-right: 8px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #007bff;
+    border-radius: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
 }
 
-.filtro-li{
-    list-style-type: none;
-    margin-left: -30px;
-    
+.filter-checkbox:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: all 0.3s ease;
 }
 
-#clearFiltersButton {
-    margin-top: 15px;
-    padding: 5px 10px;
-    background-color: #ff6b6b;
+/* Botón para limpiar filtros */
+.clear-filters-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; 
     color: white;
     border: none;
     border-radius: 5px;
+    font-size: 14px;
     cursor: pointer;
-
-
+    transition: background-color 0.3s ease;
 }
 
-#clearFiltersButton:hover {
-    background-color: #ff4b4b;
+.clear-filters-button:hover {
+    background-color: #0056b3;
 }
+
 
 /* diseño del filtro */
 

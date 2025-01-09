@@ -28,45 +28,13 @@ if (!$result) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv=”Cache-Control” content=”no-cache, mustrevalidate”>
     
     <meta http-equiv=”Expires” content=”0″>
     
     <title>Administrador de Usuarios</title>
     <link rel="stylesheet" href="Pag-Administrador-(Dispositivos).css">
-    <script>
-        function buscarDispositivos() {
-            const input = document.getElementById('searchInput');
-            const filter = input.value.toLowerCase();
-            const dispositivos = document.getElementsByClassName('div-Info-Dispositivos');
-            const dispositivosNegros = document.getElementsByClassName('div-Info-dispo-BGBLACK');
-
-            // Filtrar dispositivos en color normal
-            for (let i = 0; i < dispositivos.length; i++) {
-                const estado = dispositivos[i].getElementsByClassName('Text-info-Dispositivos')[0].textContent.toLowerCase();
-                const modelo = dispositivos[i].getElementsByClassName('Text-info-Dispositivos')[1].textContent.toLowerCase();
-                const departamento = dispositivos[i].getElementsByClassName('Text-info-Dispositivos')[2].textContent.toLowerCase();
-                
-                if (estado.includes(filter) || modelo.includes(filter) || departamento.includes(filter)) {
-                    dispositivos[i].style.display = "";
-                } else {
-                    dispositivos[i].style.display = "none";
-                }
-            }
-
-            // Filtrar dispositivos en color negro
-            for (let i = 0; i < dispositivosNegros.length; i++) {
-                const estado = dispositivosNegros[i].getElementsByClassName('Text-info-Dispositivos')[0].textContent.toLowerCase();
-                const modelo = dispositivosNegros[i].getElementsByClassName('Text-info-Dispositivos')[1].textContent.toLowerCase();
-                const departamento = dispositivosNegros[i].getElementsByClassName('Text-info-Dispositivos')[2].textContent.toLowerCase();
-                
-                if (estado.includes(filter) || modelo.includes(filter) || departamento.includes(filter)) {
-                    dispositivosNegros[i].style.display = "";
-                } else {
-                    dispositivosNegros[i].style.display = "none";
-                }
-            }
-        }
-    </script>
+   
 </head>
 <body>
     
@@ -131,38 +99,48 @@ if (!$result) {
                                 32s14.3 32 32 32l246.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48l54.7 0c17.7 0 32-14.3 
                                 32-32s-14.3-32-32-32l-54.7 0c-12.3-28.3-40.5-48-73.3-48zM192  128a32 32 0 1 1 0-64 32 32 
                                 0 1 1 0 64zm73.3-64C253 35.7 224.8 16 192 16s-61 19.7-73.3 48L32  64C14.3 64 0 78.3 0 96s14.3 
-                                32 32 32l86.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 128c17.7 0 32-14.3 32-32s-14.3-32-32-32L265.3 64z"
-                            ></path>
+                                32 32 32l86.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 128c17.7 0 32-14.3 32-32s-14.3-32-32-32L265.3 64z">
+                            </path>
                         </svg>
                     </button>
                     <div id="filterMenu" class="menu oculto">
-                    <h3>Filtros</h3>
-            
-                    <!-- Filtro por estado -->
-                    <div>
-                        <label>Estado:</label>
-                        <ul class="filtro-ul">
-                            <li class="filtro-li" ><input type="checkbox" class="filter-checkbox" value="Arreglado"> Arreglado</li>
-                            <li class="filtro-li" ><input type="checkbox" class="filter-checkbox" value="Reparando"> Reparando</li>
-                            <li class="filtro-li" ><input type="checkbox" class="filter-checkbox" value="Analisis"> Análisis</li>
-                        </ul>
+                        <h3>Filtros</h3>
+                
+                        <!-- Filtro por estado -->
+                        <div class="filter-section">
+                            <label class="filter-label">Estado:</label>
+                            <div class="estado-inline">
+                                <ul class="filtro-ul">
+                                    <li class="filtro-li">
+                                        <input type="checkbox" class="filter-checkbox" value="Arreglado"> Arreglado
+                                    </li>
+                                    <li class="filtro-li">
+                                        <input type="checkbox" class="filter-checkbox" value="Reparando"> Reparando
+                                    </li>
+                                    <li class="filtro-li">
+                                        <input type="checkbox" class="filter-checkbox" value="Analisis"> Análisis
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                
+                        <!-- Filtro por fecha de entrada -->
+                        <div class="filter-section">
+                            <label class="filter-label">Fecha de entrada:</label>
+                            <input type="date" id="startDate" class="filter-input">
+                        </div>
+                
+                        <!-- Filtro por fecha de salida -->
+                        <div class="filter-section">
+                            <label class="filter-label">Fecha de salida:</label>
+                            <input type="date" id="endDate" class="filter-input">
+                        </div>
+                
+                        <!-- Botón para limpiar filtros -->
+                        <button id="clearFiltersButton" class="clear-filters-button">Eliminar Filtros</button>
                     </div>
-            
-                    <!-- Filtro por fecha de entrada -->
-                    <div>
-                        <label>Fecha de entrada:</label>
-                        <input type="date" id="startDate">
-                    </div> <br>
-            
-                    <!-- Filtro por fecha de salida -->
-                    <div>
-                        <label>Fecha de salida:</label>
-                        <input type="date" id="endDate">
-                    </div>
-            
-                    <!-- Botón para limpiar filtros -->
-                    <button id="clearFiltersButton">Eliminar Filtros</button>
                 </div>
+
 
                 </div>
             </div>
@@ -213,8 +191,6 @@ if (!$result) {
                     <a class="Num-Pag" href="#">❯</a>
                 </div>
             </section>
-
-            <script src="Administrador (Dispositivos).js"></script>
 
         </div>
     </section>

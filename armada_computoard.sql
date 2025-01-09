@@ -79,11 +79,19 @@ CREATE TABLE `formulario` (
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE=UTF8MB4_GENERAL_CI;
 
 
-CREATE TABLE `user` (
-`id` INT(11) NOT NULL,
-`user_name` VARCHAR(255) NOT NULL,
-`user_range` VARCHAR(255) NOT NULL,
-) ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE=UTF8MB4_GENERAL_CI;
+
+
+CREATE TABLE `comentarios_solicitudes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `solicitud_id` int(11) NOT NULL,
+  `nombre_usuario` varchar(255) NOT NULL,
+  `comentario` text NOT NULL,
+  `fecha` datetime DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`solicitud_id`) REFERENCES `solicitudes`(`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
 
 --
 -- Índices para tablas volcadas

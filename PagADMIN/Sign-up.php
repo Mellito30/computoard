@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input class="Input-Sign_up" type="text" placeholder="Ingrese su ID"><br><br>                
                 
                 <label class="Label-Sign_up" for="name">Contraseña</label>
-                <input class="Input-Sign_up" type="password" name="clave"><br><br>
+                <input class="Input-Sign_up" type="password" placeholder="Ingrese su contraseña "name="clave"><br><br>
             </div>
             
            <button class="Button-Sign_up">Crear cuenta</button>
