@@ -1,14 +1,13 @@
 <?php
-session_start(); // Inicia la sesión
+session_start();  // Iniciar la sesión
 
-// Verificamos si el usuario está logueado
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    // Si no está logueado, redirigimos a la página de login
-    header("Location: Login.php");
+// Verificamos si el usuario ha iniciado sesión
+if (!isset($_SESSION['user_id'])) {
+    // Si no está logueado, redirigimos al login
+    header("Location: login.php");
     exit();
 }
 ?>
-
 <?php
 
 // Conexión con la base de datos
@@ -149,7 +148,7 @@ if (isset($_GET['mensaje'])) {
 
             <div class="div-formulario">
                 <label class="Label-formulario" for="salidafecha">Fecha de Salida:</label>
-                <input class="Input-Formulario" type="date" id="salidafecha" name="salidafecha"><br><br>
+                <input class="Input-Formulario" type="date" id="salidafecha" name="salidafecha" required><br><br>
             </div>
 
             <button class="Botton-formulario" type="submit">Actualizar</button>

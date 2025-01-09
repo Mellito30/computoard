@@ -1,14 +1,13 @@
 <?php
-session_start(); // Inicia la sesión
+session_start();  // Iniciar la sesión
 
-// Verificamos si el usuario está logueado
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    // Si no está logueado, redirigimos a la página de login
-    header("Location: Login.php");
+// Verificamos si el usuario ha iniciado sesión
+if (!isset($_SESSION['user_id'])) {
+    // Si no está logueado, redirigimos al login
+    header("Location: login.php");
     exit();
 }
 ?>
-
 <?php
 
 // Conexión con la base de datos
