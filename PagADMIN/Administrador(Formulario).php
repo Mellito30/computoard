@@ -25,22 +25,22 @@ if ($conn->connect_error) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $departamento = $_POST['nombre'];
     $tipodispositivo = $_POST['tipo'];
-    $modelo = $_POST['marca']; 
+    $modelo = $_POST['marca'];
     $fechaingreso = $_POST['entradafecha'];
     $fechasalida = $_POST['salidafecha'];
-    $estado = $_POST['estado']; 
+    $estado = $_POST['estado'];
 
     if (empty($modelo)) {
         echo "Error: el campo modelo no está lleno.";
     } else {
-        // Ingresar los datos a la base de datos
+        // Insertar los datos en la base de datos
         $sql = "INSERT INTO dispositivos (departamento, tipo_dispositivo, modelo, fecha_ingreso, fecha_salida, estado) 
-                VALUES ('$departamento', '$tipodispositivo', '$modelo', '$fechaingreso', '$fechasalida', '$estado')";
+                VALUES ('$departamento', '$tipodispositivo', '$modelo', '$fechaingreso', '$fechasalida', '$estado')"; 
 
         if ($conn->query($sql) === TRUE) {
-            echo "Datos guardados correctamente.";
+            echo "Datos agregados correctamente.";
         } else {
-            echo "Error al guardar los datos: " . $conn->error;
+            echo "Error al agregar los datos: " . $conn->error;
         }
     }
 
@@ -61,8 +61,8 @@ if (isset($_GET['mensaje'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta http-equiv=”Expires” content=”0″>
-    
+    <meta http-equiv="Expires" content="0">
+
     <title>Administrador de Usuarios</title>
     <link rel="stylesheet" href="Pag-Administrador-(Formulariooo).css">
 </head>
@@ -87,11 +87,11 @@ if (isset($_GET['mensaje'])) {
                 <div class="profile-details">
                     <img class="profile-img-small" src="img/Icono-perfil.png" alt="Icono-Perfil">
                     <div class="profile-info">
-                        <p><strong>Nombre:</strong> Juan Pérez</p> <!-- Sustituir por datos dinámicos -->
-                        <p><strong>Rango:</strong> Administrador</p>
+                    <p><strong>Nombre:</strong> <?php echo $_SESSION['nombre_usuario']; ?></p> <!-- Sustituir por datos dinámicos -->
+                    <p><strong>Rango:</strong> <?php echo  $_SESSION['rango']; ?></p>
                     </div>
                 </div>
-                <button class="btn-logout" onclick="logout()">Cerrar Sesión</button>
+                <button class="btn-logout"><a href="logout.php">Cerrar sesión</a></button>
             </div>
         </ul>
     </div>
@@ -133,23 +133,26 @@ if (isset($_GET['mensaje'])) {
             </div>    
 
             <div class="div-formulario">
+                <label class="Label-formulario" for="modelo">Modelo del dispositivo:</label>
+                <input class="Input-Formulario" type="text" id="modelo" name="marca" required><br><br>
+            </div>
+
+            <div class="div-formulario">
                 <label class="Label-formulario" for="entradafecha">Fecha de Ingreso:</label>
                 <input class="Input-Formulario" type="date" id="entradafecha" name="entradafecha" required><br><br>
             </div>
 
             <div class="div-formulario">
                 <label class="Label-formulario" for="salidafecha">Fecha de Salida:</label>
-                <input class="Input-Formulario" type="date" id="salidafecha" name="salidafecha"><br><br>
+                <input class="Input-Formulario" type="date" id="salidafecha" name="salidafecha" required><br><br>
             </div>
 
-            <button class="Botton-formulario" type="submit">Registrar</button>
+            <button class="Botton-formulario" type="submit">Agregar</button>
         </form>
     </section>
 
-<script src="Administrador-(Cuenta).js"></script>
-
+    <script src="Administrador-(Dispositivos).js"></script>
+    <script src="Administrador-(Cuenta).js"></script>
 
 </body>
 </html>
-
-

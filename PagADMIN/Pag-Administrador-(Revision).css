@@ -201,6 +201,11 @@ body {
     margin-top: 10px;
 }
 
+.btn-logout a{
+    color: white;
+    text-decoration: none;
+}
+
 .btn-logout:hover {
     background-color: #c82333;
 }

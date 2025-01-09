@@ -72,10 +72,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <p class="Title-Sign_up">Sign up</p> <br>
             <div>
                 <label class="Label-Sign_up" for="name">Nombre del Usuario</label>
-                <input class="Input-Sign_up" type="text" placeholder="Ingrese su Nombre"><br><br>
+                <input class="Input-Sign_up" type="text" name="nombre"placeholder="Ingrese su Nombre"><br><br>
 
                 <label class="Label-Sign_up" for="name">Apellido del Usuario</label>
-                <input class="Input-Sign_up" type="text" name="clave" placeholder="Ingrese su Apellido"><br><br>
+                <input class="Input-Sign_up" type="text" name="apellido" placeholder="Ingrese su Apellido"><br><br>
 
                 <label class="Label-Sign_up" for="name">Rango del Usuario</label>
                 <input class="Input-Sign_up" type="text" name="rango" placeholder="Ingrese su Rango"><br><br>              
