@@ -6,17 +6,18 @@ $contrasena = "";
 $base_datos = "armada_computoard";
 
 $conn = new mysqli($servidor, $usuario, $contrasena, $base_datos);
-session_start();
+
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
+session_start();  // Iniciar la sesión para usar las variables de sesión
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $nombre_usuario = $_POST['nombre_usuario'];
     $clave = $_POST['clave'];
 
-    
+    // Consulta a la base de datos para obtener el usuario
     $sql = "SELECT * FROM formulario WHERE nombre_usuario = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $nombre_usuario);
@@ -28,18 +29,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $row = $result->fetch_assoc();
         if (password_verify($clave, $row['clave'])) {
             
-            echo "¡Bienvenido, " . $row['nombre_usuario'] . "!";
-            
-            session_start();
-            $_SESSION['user_id'] = $row['id'];
-            $_SESSION['nombre_usuario'] = $row['nombre_usuario'];
+            // Si las credenciales son correctas, iniciar sesión
+            echo "¡Bienvenido, " . $row['nombre_usuario'] . "!"; // Esto lo mostramos en el mismo archivo para confirmación
+
+            // Guardamos la información del usuario en la sesión
+            $_SESSION['user_id'] = $row['id'];  // Almacenamos el ID del usuario
+            $_SESSION['nombre_usuario'] = $row['nombre_usuario'];  // Almacenamos el nombre de usuario
+            $_SESSION['rango'] = $row['rango'];  // Almacenamos el rango si es necesario
+
+            // Redirigimos a la página de administrador
             header("Location: Index-Administrador.php"); 
+            exit(); // Aseguramos que no se ejecute código posterior
         } else {
-            
             echo "Contraseña incorrecta.";
         }
     } else {
-        
         echo "El nombre de usuario no está registrado.";
     }
 

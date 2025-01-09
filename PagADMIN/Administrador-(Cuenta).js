@@ -1,3 +1,5 @@
+
+
 // Función para mostrar los detalles del perfil
 function toggleProfileDetails() {
     const profileContainer = document.getElementById('profileContainer');
@@ -7,7 +9,7 @@ function toggleProfileDetails() {
         <div class="profile-details">
             <img class="profile-img-small" src="img/Icono-perfil.png" alt="Icono-Perfil">
             <div class="profile-info">
-                <p><strong>Nombre:</strong> Juan Pérez</p>
+                <p><strong>Nombre:</strong> ${nombreUsuario} </p>
                 <p><strong>Rango:</strong> Administrador</p>
             </div>
         </div>
