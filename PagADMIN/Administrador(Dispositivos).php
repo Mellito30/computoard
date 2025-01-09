@@ -1,4 +1,15 @@
 <?php
+session_start(); // Inicia la sesión
+
+// Verificamos si el usuario está logueado
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    // Si no está logueado, redirigimos a la página de login
+    header("Location: Login.php");
+    exit();
+}
+?>
+
+<?php
 
 // Conexión con la base de datos
 $servidor = "localhost";
@@ -29,7 +40,7 @@ if (!$result) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta http-equiv=”Expires” content=”0″>
+    <meta http-equiv=”Cache-Control” content=”no-cache, mustrevalidate”>
     
     <title>Administrador de Usuarios</title>
     <link rel="stylesheet" href="Pag-Administrador-(Dispositivos).css">
