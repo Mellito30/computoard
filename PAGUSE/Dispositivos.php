@@ -31,13 +31,13 @@ $result = $conn->query($sql);
 <body>
       <!-- Sección de barra -->
       <section class="Sec-Header">
-        <a  href="index.html">
-                <img class="Logo-ARM" src="/img/LOGOARM.png" alt="EscudoARM">
+        <a class="Logo-ARM-link" href="index.php">
+            <img class="Logo-ARM" src="img/LOGOARM.png" alt="EscudoARM">
         </a>
         <!-- Sección de formulario -->
         <div class="div-formulario">
-                <a class="Inicio" href="/index.html">Inicio</a>
-                <a class="Formulario" href="/formulario.html">Solicitud de Formulario</a>
+                <a class="Inicio" href="index.php">Inicio</a>
+                <a class="Formulario" href="formulariousuario.php">Solicitud de Formulario</a>
             </div>
         </section>
  
@@ -87,6 +87,8 @@ $result = $conn->query($sql);
             <a class="Num-Pag" href="#">❯</a>
         </div>
     </section>
+
+
         <!-- Footer -->
     <section class="Sec-Footer">
         <img class="Logo-ARM-Footer" src="img/LOGOARM.png" alt="EscudoARM">    
@@ -97,11 +99,7 @@ $result = $conn->query($sql);
         </div>
         <div class="div-text-footer">
             <h4 class="Title-footer">CONTÁCTANOS</h4>
-                <div class="TITLE-Contacto" >
-                        <p class="Text-footer">Tel: (809) 593-5900 Ext. 5242</p>
-                        <p class="Text-footer">5237 Fax: (809) 598-1060</p>
-                        <p class="Text-footer">info@armada.mil.do</p>
-                </div>
+            <p class="Text-footer">Tel: (809) 593-5900 Ext. 5242  5237 Fax: (809) 598-1060 info@armada.mil.do</p>
         </div>
         <div class="div-text-footer">
             <h4 class="Title-footer">BÚSCANOS</h4>

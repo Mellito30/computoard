@@ -1,4 +1,15 @@
 <?php
+session_start(); // Inicia la sesión
+
+// Verificamos si el usuario está logueado
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    // Si no está logueado, redirigimos a la página de login
+    header("Location: Login.php");
+    exit();
+}
+?>
+
+<?php
 
 // Conexión con la base de datos
 $servidor = "localhost";
@@ -58,6 +69,9 @@ if (isset($_GET['mensaje'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv=”Expires” content=”0″>
+
     <title>Administrador de Usuarios</title>
     <link rel="stylesheet" href="Pag-Administrador-(Formulariooo).css">
 </head>
@@ -141,6 +155,11 @@ if (isset($_GET['mensaje'])) {
             <button class="Botton-formulario" type="submit">Actualizar</button>
         </form>
     </section>
+
+
+    <script src="Administrador-(Dispositivos).js"> </script>
+    <script src="Administrador-(Cuenta).js"></script>
+
 
 </body>
 </html>

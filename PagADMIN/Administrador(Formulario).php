@@ -1,4 +1,15 @@
 <?php
+session_start(); // Inicia la sesión
+
+// Verificamos si el usuario está logueado
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    // Si no está logueado, redirigimos a la página de login
+    header("Location: Login.php");
+    exit();
+}
+?>
+
+<?php
 
 // Conexión con la base de datos
 $servidor = "localhost";
@@ -50,6 +61,9 @@ if (isset($_GET['mensaje'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv=”Expires” content=”0″>
+    
     <title>Administrador de Usuarios</title>
     <link rel="stylesheet" href="Pag-Administrador-(Formulariooo).css">
 </head>
@@ -76,7 +90,7 @@ if (isset($_GET['mensaje'])) {
                 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 
                 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 
                 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"></path></svg>
-            </div>
+            </div>           
         </ul>
     </div>
 </section>
@@ -117,11 +131,6 @@ if (isset($_GET['mensaje'])) {
             </div>    
 
             <div class="div-formulario">
-                <label class="Label-formulario" for="modelo">Modelo del dispositivo:</label>
-                <input class="Input-Formulario" type="text" id="modelo" name="marca" required><br><br> 
-            </div>
-
-            <div class="div-formulario">
                 <label class="Label-formulario" for="entradafecha">Fecha de Ingreso:</label>
                 <input class="Input-Formulario" type="date" id="entradafecha" name="entradafecha" required><br><br>
             </div>
@@ -135,7 +144,7 @@ if (isset($_GET['mensaje'])) {
         </form>
     </section>
 
-    <script src="Administrador (Cuenta).js"></script>
+<script src="Administrador-(Cuenta).js"></script>
 
 
 </body>

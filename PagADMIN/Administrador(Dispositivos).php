@@ -1,4 +1,15 @@
 <?php
+session_start(); // Inicia la sesión
+
+// Verificamos si el usuario está logueado
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    // Si no está logueado, redirigimos a la página de login
+    header("Location: Login.php");
+    exit();
+}
+?>
+
+<?php
 
 // Conexión con la base de datos
 $servidor = "localhost";
@@ -28,6 +39,9 @@ if (!$result) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv=”Cache-Control” content=”no-cache, mustrevalidate”>
+    
     <title>Administrador de Usuarios</title>
     <link rel="stylesheet" href="Pag-Administrador-(Dispositivos).css">
     <script>
@@ -187,6 +201,7 @@ if (!$result) {
                             <p class="Text-info-Dispositivos"><?php echo $row['departamento']; ?></p>
                             <p class="Text-info-Dispositivos"><?php echo $row['fecha_ingreso']; ?></p>
                             <p class="Text-info-Dispositivos"><?php echo $row['fecha_salida']; ?></p>
+                            
                         </div>
                         <div class="div-form-decorate"></div>
                         <?php $is_black = !$is_black; ?>
@@ -215,8 +230,8 @@ if (!$result) {
         </div>
     </section>
 
-    <script src="Administrador (Dispositivos).js"> </script>
-    <script src="Administrador (Cuenta).js"></script>
+    <script src="Administrador-(Dispositivos).js"> </script>
+    <script src="Administrador-(Cuenta).js"></script>
 
 </body>
 </html>
