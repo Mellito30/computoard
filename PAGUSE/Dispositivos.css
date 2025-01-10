@@ -17,7 +17,7 @@ body{
 
 .Logo-ARM-link{
     position: absolute;
-    transform: translatey(-50%);
+    transform: translatey(50%);
 }
 
 .Logo-ARM {
@@ -65,8 +65,7 @@ body{
 
 /* <!-- Sección de Titulos de dispositivos --> */
 .Sec-Body1{
-    margin-left: 180px;
-    margin-right: 180px;
+    margin: 40px 180px;
 }
 
 .Title-dispositivos{
@@ -190,6 +189,7 @@ body{
 
 /* Footer */
 .Sec-Footer {
+    
     position: absolute;
     background-color: #e1e9ee;
     color: #fff;
@@ -197,11 +197,10 @@ body{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    position: relative; 
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
-    bottom: 0;
+
 }
 
 .Logo-ARM-Footer, .Logo-GRD-Footer {
@@ -212,7 +211,7 @@ body{
 }
 
 .div-text-footer {
-    color: #cce4f3;
+    color: #06263f;
     max-width: 200px;
     text-align: center;
 }
@@ -224,12 +223,12 @@ body{
 .Title-footer {
     font-size: 20px;
     font-weight: bold;
-    color: #e6f7ff;
+    color: #06263f;
     margin-bottom: 10px;
 }
 
 .Text-footer {
     font-size: 16px;
-    color: #cce4f3;
+    color: #06263f;
 }
 

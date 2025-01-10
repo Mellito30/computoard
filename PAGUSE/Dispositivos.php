@@ -31,9 +31,9 @@ $result = $conn->query($sql);
 <body>
       <!-- Sección de barra -->
       <section class="Sec-Header">
-        <a class="Logo-ARM-link" href="index.php">
+        <!-- <a class="Logo-ARM-link" href="index.php"> -->
             <img class="Logo-ARM" src="img/LOGOARM.png" alt="EscudoARM">
-        </a>
+        <!-- </a> -->
         <!-- Sección de formulario -->
         <div class="div-formulario">
                 <a class="Inicio" href="index.php">Inicio</a>
@@ -43,6 +43,7 @@ $result = $conn->query($sql);
  
  
 <!-- Sección de títulos -->
+ <section class="Sec-Body1">
 <div class="div-dispositivos">
         <h3 class="Title-header-dispositivos">Estado</h3>
         <h3 class="Title-header-dispositivos">Equipo</h3>
@@ -73,6 +74,7 @@ $result = $conn->query($sql);
             <p>No hay dispositivos registrados.</p>
         <?php endif; ?>
     </div>
+    </section>
 
     <!-- Sección de paginación -->
     <section class="Sec-Paginas">
