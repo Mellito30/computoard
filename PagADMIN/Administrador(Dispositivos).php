@@ -23,6 +23,8 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
+
+
 // Obtener todos los datos de la tabla "dispositivos"
 $sql = "SELECT estado, departamento, tipo_dispositivo, modelo, fecha_ingreso, fecha_salida FROM dispositivos";
 $result = $conn->query($sql);
@@ -67,11 +69,11 @@ if (!$result) {
                 <div class="profile-details">
                     <img class="profile-img-small" src="img/Icono-perfil.png" alt="Icono-Perfil">
                     <div class="profile-info">
-                        <p><strong>Nombre:</strong> Juan Pérez</p> <!-- Sustituir por datos dinámicos -->
-                        <p><strong>Rango:</strong> Administrador</p>
+                         <p><strong>Nombre:</strong> <?php echo $_SESSION['nombre_usuario']; ?></p> <!-- Sustituir por datos dinámicos -->
+                        <p><strong>Rango:</strong> <?php echo  $_SESSION['rango']; ?></p>
                     </div>
                 </div>
-                <button class="btn-logout" onclick="logout()">Cerrar Sesión</button>
+                <button class="btn-logout"><a href="logout.php">Cerrar sesión</a></button>
             </div>
         </ul>
     </div>
@@ -156,7 +158,9 @@ if (!$result) {
 
 
                 </div>
-            </div>
+            </div> 
+
+       
 
             <!-- Sección de títulos -->
             <div class="div-dispositivos">

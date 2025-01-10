@@ -80,11 +80,11 @@ $result = $conn->query($sql);
                 <div class="profile-details">
                     <img class="profile-img-small" src="img/Icono-perfil.png" alt="Icono-Perfil">
                     <div class="profile-info">
-                        <p><strong>Nombre:</strong> Juan Pérez</p> <!-- Sustituir por datos dinámicos -->
-                        <p><strong>Rango:</strong> Administrador</p>
+                    <p><strong>Nombre:</strong> <?php echo $_SESSION['nombre_usuario']; ?></p> <!-- Sustituir por datos dinámicos -->
+                    <p><strong>Rango:</strong> <?php echo  $_SESSION['rango']; ?></p>
                     </div>
                 </div>
-                <button class="btn-logout" onclick="logout()">Cerrar Sesión</button>
+                <button class="btn-logout"><a href="logout.php">Cerrar sesión</a></button>
             </div>
         </ul>
     </div>
