@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($stmt->execute()) {
             echo "¡Registro exitoso!";
         } else {
-            echo "Error al registrar: " . $stmt->error;
+            echo "Error cuando registras: " . $stmt->error;
         }
     }
 
