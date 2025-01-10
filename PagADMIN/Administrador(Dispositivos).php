@@ -2,11 +2,11 @@
 session_start();  // Iniciar la sesión
 
 // Verificamos si el usuario ha iniciado sesión
-if (!isset($_SESSION['user_id'])) {
-    // Si no está logueado, redirigimos al login
-    header("Location: login.php");
-    exit();
-}
+// if (!isset($_SESSION['user_id'])) {
+//     // Si no está logueado, redirigimos al login
+//     header("Location: login.php");
+//     exit();
+// }
 ?>
 <?php
 
@@ -56,9 +56,9 @@ if (!$result) {
                 <img class="Logo-ARM" src="img/logoarm.png" alt="LOGOARM">
             </li>
             <li class="div-Sec">
-                <a class="Link-Nav" id="Button-active" href="Index-Administrador.php">Inicio</a><br>
+                <a class="Link-Nav" href="Index-Administrador.php">Inicio</a><br>
                 <a class="Link-Nav" href="Administrador(Formulario).php">Ingreso de Dispositivo</a><br>
-                <a class="Link-Nav" href="Administrador(Dispositivos).php">Revisión de Dispositivo</a><br>
+                <a class="Link-Nav" id="Button-active" href="Administrador(Dispositivos).php">Revisión de Dispositivo</a><br>
                 <a class="Link-Nav" href="Administrador(Revision).php">Solicitudes de Servicios</a><br>
             </li>
 

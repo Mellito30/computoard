@@ -2,11 +2,11 @@
 session_start();  // Iniciar la sesión
 
 // Verificamos si el usuario ha iniciado sesión
-if (!isset($_SESSION['user_id'])) {
-    // Si no está logueado, redirigimos al login
-    header("Location: login.php");
-    exit();
-}
+// if (!isset($_SESSION['user_id'])) {
+//     // Si no está logueado, redirigimos al login
+//     header("Location: login.php");
+//     exit();
+// }
 ?>
 <?php
 
@@ -51,6 +51,11 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv=”Expires” content=”0″>
+    <meta http-equiv=”Cache-Control” content=”no-cache, mustrevalidate”>
+    <meta http-equiv="pragma" content="no-cache">
+
     <title>Administrador de Usuarios</title>
     <link rel="stylesheet" href="Pag-Administrador-(Revision).css">
 </head>
@@ -64,10 +69,10 @@ $result = $conn->query($sql);
                 <img class="Logo-ARM" src="img/logoarm.png" alt="LOGOARM">
             </li>
             <li class="div-Sec">
-                <a class="Link-Nav" id="Button-active" href="Index-Administrador.php">Inicio</a><br>
+                <a class="Link-Nav" href="Index-Administrador.php">Inicio</a><br>
                 <a class="Link-Nav" href="Administrador(Formulario).php">Ingreso de Dispositivo</a><br>
                 <a class="Link-Nav" href="Administrador(Dispositivos).php">Revisión de Dispositivo</a><br>
-                <a class="Link-Nav" href="Administrador(Revision).php">Solicitudes de Servicios</a><br>
+                <a class="Link-Nav" id="Button-active" href="Administrador(Revision).php">Solicitudes de Servicios</a><br>
             </li>
 
             <!-- Detalles del perfil (siempre visibles) -->

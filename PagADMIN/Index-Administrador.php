@@ -2,10 +2,35 @@
 session_start();  // Iniciar la sesión
 
 // Verificamos si el usuario ha iniciado sesión
-if (!isset($_SESSION['user_id'])) {
-    // Si no está logueado, redirigimos al login
-    header("Location: login.php");
-    exit();
+// if (!isset($_SESSION['user_id'])) {
+//     // Si no está logueado, redirigimos al login
+//     header("Location: login.php");
+//     exit();
+// }
+?>
+<?php
+
+
+// Conexión con la base de datos
+$servidor = "localhost";
+$usuario = "root"; 
+$contrasena = ""; 
+$base_datos = "armada_computoard";
+
+$conn = new mysqli($servidor, $usuario, $contrasena, $base_datos);
+
+// Verificar la conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+// Obtener todos los datos de la tabla "dispositivos"
+$sql = "SELECT estado, departamento, tipo_dispositivo, modelo, fecha_ingreso, fecha_salida FROM dispositivos";
+$result = $conn->query($sql);
+
+// Manejo de errores en la consulta
+if (!$result) {
+    die("Error en la consulta: " . $conn->error);
 }
 ?>
 
@@ -138,11 +163,38 @@ if (!isset($_SESSION['user_id'])) {
 
         <!-- Recuadro 3: Lista de dispositivos recientes -->
         <div class="recuadro dispositivos">
-            <h3>Dispositivos Recientes</h3>
-            <ul>
-                <li>Dispositivo 1: Marca, Modelo, Fecha</li>
-                <li>Dispositivo 2: Marca, Modelo, Fecha</li>
-            </ul>
+            <!-- Sección de títulos -->
+            <div class="div-dispositivos">
+                <h3 class="Title-header-dispositivos">Estado</h3>
+                <h3 class="Title-header-dispositivos">Equipo</h3>
+                <h3 class="Title-header-dispositivos">Departamento</h3>
+                <h3 class="Title-header-dispositivos">Fecha de Entrada</h3>
+                <h3 class="Title-header-dispositivos">Fecha de Salida</h3>
+            </div>
+            <div class="div-form-decorate"></div>
+
+            <!-- Sección de dispositivos -->
+            <div class="div-Lista-Dispositivos">
+                <?php if ($result->num_rows > 0): ?>
+                    <?php 
+                    $is_black = false; // Para alternar clases
+                    while ($row = $result->fetch_assoc()): 
+                    ?>
+                        <div class="<?php echo $is_black ? 'div-Info-dispo-BGBLACK' : 'div-Info-Dispositivos'; ?>">
+                            <p class="Text-info-Dispositivos"><?php echo $row['estado']; ?></p>
+                            <p class="Text-info-Dispositivos"><?php echo $row['modelo']; ?></p>
+                            <p class="Text-info-Dispositivos"><?php echo $row['departamento']; ?></p>
+                            <p class="Text-info-Dispositivos"><?php echo $row['fecha_ingreso']; ?></p>
+                            <p class="Text-info-Dispositivos"><?php echo $row['fecha_salida']; ?></p>
+                            
+                        </div>
+                        <div class="div-form-decorate"></div>
+                        <?php $is_black = !$is_black; ?>
+                    <?php endwhile; ?>
+                <?php else: ?>
+                    <p>No hay dispositivos registrados.</p>
+                <?php endif; ?>
+            </div>
         </div>
     </section>
 
