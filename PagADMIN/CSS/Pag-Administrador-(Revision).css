@@ -440,6 +440,11 @@ body {
 .modal.hidden {
     display: none;
 }
+
+#modal {
+    display: none;
+}
+
 .modal {
     position: fixed;
     top: 0;

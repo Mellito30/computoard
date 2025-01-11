@@ -137,8 +137,8 @@ if (isset($_GET['mensaje'])) {
                 <img class="Logo-ARM" src="img/logoarm.png" alt="LOGOARM">
             </li>
             <li class="div-Sec">
-                <a class="Link-Nav" id="Button-active" href="Index-Administrador.php">Inicio</a><br>
-                <a class="Link-Nav" href="Administrador(Formulario).php">Ingreso de Dispositivo</a><br>
+                <a class="Link-Nav" href="Index-Administrador.php">Inicio</a><br>
+                <a class="Link-Nav" id="Button-active" href="Administrador(Formulario).php">Ingreso de Dispositivo</a><br>
                 <a class="Link-Nav" href="Administrador(Dispositivos).php">Revisión de Dispositivo</a><br>
                 <a class="Link-Nav" href="Administrador(Revision).php">Solicitudes de Servicios</a><br>
             </li>

@@ -310,7 +310,6 @@ body {
 
 /* <!-- Sección de filtro --> */
 /* Diseño general del menú */
-/* Diseño general del menú */
 .menu {
     width: 250px; 
     border: 1px solid #ddd;
@@ -433,8 +432,6 @@ body {
 
 
 /* diseño del filtro */
-
-
 .div-filtro{
     align-items: center;
     display: flex;
@@ -474,7 +471,6 @@ body {
 }
 
   /* <!-- Sección de Titulos de dispositivos --> */
-
 .div-dispositivos{
     z-index: 2;
     display: flex;
