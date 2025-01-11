@@ -72,16 +72,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <p class="Title-Sign_up">Sign up</p> <br>
             <div>
                 <label class="Label-Sign_up" for="name">Nombre del Usuario</label>
-                <input class="Input-Sign_up" type="text" name="nombre"placeholder="Ingrese su Nombre"><br><br>
+                <input class="Input-Sign_up" type="text" name="nombre"placeholder="Ingrese su Nombre" required><br><br>
 
                 <label class="Label-Sign_up" for="name">Apellido del Usuario</label>
-                <input class="Input-Sign_up" type="text" name="apellido" placeholder="Ingrese su Apellido"><br><br>
+                <input class="Input-Sign_up" type="text" name="apellido" placeholder="Ingrese su Apellido" required><br><br>
 
                 <label class="Label-Sign_up" for="name">Rango del Usuario</label>
-                <input class="Input-Sign_up" type="text" name="rango" placeholder="Ingrese su Rango"><br><br>              
+                <input class="Input-Sign_up" type="text" name="rango" placeholder="Ingrese su Rango" required><br><br>              
                 
                 <label class="Label-Sign_up" for="name">Contraseña</label>
-                <input class="Input-Sign_up" type="password" placeholder="Ingrese su contraseña "name="clave"><br><br>
+                <input class="Input-Sign_up" type="password" placeholder="Ingrese su contraseña "name="clave" required><br><br>
             </div>
             
            <button class="Button-Sign_up">Crear cuenta</button>
