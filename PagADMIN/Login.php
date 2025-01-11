@@ -12,6 +12,8 @@ if ($conn->connect_error) {
 }
 session_start();  // Iniciar la sesión para usar las variables de sesión
 
+$mensaje = '';
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $nombre_usuario = $_POST['nombre_usuario'];
@@ -28,23 +30,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         $row = $result->fetch_assoc();
         if (password_verify($clave, $row['clave'])) {
-            
-            // Si las credenciales son correctas, iniciar sesión
-            echo "¡Bienvenido, " . $row['nombre_usuario'] . "!"; // Esto lo mostramos en el mismo archivo para confirmación
-
-            // Guardamos la información del usuario en la sesión
             $_SESSION['user_id'] = $row['id'];  // Almacenamos el ID del usuario
             $_SESSION['nombre_usuario'] = $row['nombre_usuario'];  // Almacenamos el nombre de usuario
             $_SESSION['rango'] = $row['rango'];  // Almacenamos el rango si es necesario
-
-            // Redirigimos a la página de administrador
             header("Location: Index-Administrador.php"); 
             exit(); // Aseguramos que no se ejecute código posterior
         } else {
-            echo "Contraseña incorrecta.";
+            $mensaje = "Contraseña incorrecta.";
         }
     } else {
-        echo "El nombre de usuario no está registrado.";
+        $mensaje = "El nombre de usuario no está registrado.";
     }
 
     // Cerrar la conexión
@@ -59,7 +54,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión </title>
-    <link rel="stylesheet" href="Login-Administrador.css">
+    <link rel="stylesheet" href="CSS/Login-Administrador.css">
+    <?php include 'Modals/modal.php'; ?>
+    <link rel="stylesheet" href="Modals/modalstyle.css">
+    <script src="Modals/modal.js"></script>
+    <div id="php-mensaje" style="display: none;"><?php echo $mensaje; ?></div>
 </head>
 <body>
     <div class="div-Formulario">

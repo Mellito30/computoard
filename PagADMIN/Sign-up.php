@@ -11,7 +11,6 @@ $conn = new mysqli($servidor, $usuario, $contrasena, $base_datos);
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Recoger datos del formulario
     $nombre_usuario = $_POST['nombre'];
@@ -27,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-        echo "¡Este nombre de usuario ya está registrado!";
+        $mensaje = "¡Este nombre de usuario ya está registrado!";
     } else {
         // Cifrar la contraseña
         $clave_cifrada = password_hash($clave, PASSWORD_DEFAULT);
@@ -37,9 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("ssss", $nombre_usuario, $apellido_usuario, $rango, $clave_cifrada);
         if ($stmt->execute()) {
-            echo "¡Registro exitoso!";
+            $mensaje = "¡Registro exitoso!";
         } else {
-            echo "Error cuando registras: " . $stmt->error;
+            $mensaje = "Error cuando registras: " . $stmt->error;
         }
     }
 
@@ -62,10 +61,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     
     <title>Registrate</title>
-    <link rel="stylesheet" href="Sign-up-Administrador.css">
+    <link rel="stylesheet" href="CSS/Sign-up-Administrador.css">
+    <?php include 'Modals/modal.php'; ?>
+    <link rel="stylesheet" href="Modals/modalstyle.css">
+    <script src="Modals/modal.js"></script>
+    <div id="php-mensaje" style="display: none;"><?php echo $mensaje; ?></div>
 </head>
-<body>     
-    
+<body>         
     <div class="div-Formulario">
         <form class="Formulario" action="" method="POST" id="RegisterForm">
 

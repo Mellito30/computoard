@@ -45,7 +45,7 @@ if (!$result) {
     <meta http-equiv=”Cache-Control” content=”no-cache, mustrevalidate”>
     
     <title>Administrador de Usuarios</title>
-    <link rel="stylesheet" href="Pag-Administrador-(Dispositivos).css">
+    <link rel="stylesheet" href="CSS/Pag-Administrador-(Dispositivos).css">
    
 </head>
 <body>
@@ -84,7 +84,7 @@ if (!$result) {
 
          <div class="div-Button">
                 <a href="Administrador(Formulario).php" class="Button">Añadir</a>
-                <a href="" class="Button">Modificar</a>
+                <a href="Administrador(FormularioModificar).php" class="Button">Modificar</a>
             </div>
 
     </section>

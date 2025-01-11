@@ -21,7 +21,7 @@ if (!isset($_SESSION['user_id'])) {
 
 
     <title>Administrador de Usuarios</title>
-    <link rel="stylesheet" href="Pag-Administradorrr.css">
+    <link rel="stylesheet" href="CSS/Pag-Administradorrr.css">
 </head>
 <body>
     <!-- Sección de Barra de navegación -->
@@ -43,7 +43,7 @@ if (!isset($_SESSION['user_id'])) {
                 <div class="profile-details">
                     <img class="profile-img-small" src="img/Icono-perfil.png" alt="Icono-Perfil">
                     <div class="profile-info">
-                        <p><strong>Nombre:</strong> <?php echo $_SESSION['nombre_usuario']; ?></p> <!-- Sustituir por datos dinámicos -->
+                        <p><strong>Nombre:</strong> <?php echo $_SESSION['nombre_usuario'];?></p> <!-- Sustituir por datos dinámicos -->
                         <p><strong>Rango:</strong> <?php echo  $_SESSION['rango']; ?></p>
                     </div>
                 </div>

@@ -52,7 +52,7 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrador de Usuarios</title>
-    <link rel="stylesheet" href="Pag-Administrador-(Revision).css">
+    <link rel="stylesheet" href="CSS/Pag-Administrador-(Revision).css">
 </head>
 <body>
     
