@@ -87,15 +87,27 @@ CREATE TABLE `comentarios_solicitudes` (
   `nombre_usuario` varchar(255) NOT NULL,
   `comentario` text NOT NULL,
   `fecha` datetime DEFAULT current_timestamp(),
-  PRIMARY KEY (`id`),
-  FOREIGN KEY (`solicitud_id`) REFERENCES `solicitudes`(`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
+-- Indices de la tabla `comentarios_solicitudes`
+--
+ALTER TABLE `comentarios_solicitudes`
+  ADD constraint fk_comentarios_solicitudes
+  foreign key (`solicitud_id`) REFERENCES solicitudes(`id`);
 
+--
+
+-- Indices de la tabla `comentarios_solicitudes`
+--
+ALTER TABLE `comentarios_solicitudes`
+  ADD PRIMARY KEY (`id`);
+
+--
 --
 -- Índices para tablas volcadas
 --
+
 
 --
 -- Indices de la tabla `dispositivos`

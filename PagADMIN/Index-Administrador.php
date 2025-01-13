@@ -2,11 +2,11 @@
 session_start();  // Iniciar la sesión
 
 // Verificamos si el usuario ha iniciado sesión
-if (!isset($_SESSION['user_id'])) {
-    // Si no está logueado, redirigimos al login
-    header("Location: login.php");
-    exit();
-}
+// if (!isset($_SESSION['user_id'])) {
+//     // Si no está logueado, redirigimos al login
+//     header("Location: login.php");
+//     exit();
+// }
 ?>
 <?php
 

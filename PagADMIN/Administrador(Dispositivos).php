@@ -2,11 +2,11 @@
 session_start();  // Iniciar la sesión
 
 // Verificamos si el usuario ha iniciado sesión
-if (!isset($_SESSION['user_id'])) {
-    // Si no está logueado, redirigimos al login
-    header("Location: login.php");
-    exit();
-}
+// if (!isset($_SESSION['user_id'])) {
+//     // Si no está logueado, redirigimos al login
+//     header("Location: login.php");
+//     exit();
+// }
 ?>
 <?php
 
@@ -22,8 +22,6 @@ $conn = new mysqli($servidor, $usuario, $contrasena, $base_datos);
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
-
-
 
 // Obtener todos los datos de la tabla "dispositivos"
 $sql = "SELECT estado, departamento, tipo_dispositivo, modelo, fecha_ingreso, fecha_salida FROM dispositivos";
