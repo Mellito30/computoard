@@ -8,6 +8,8 @@ $base_datos = "armada_computoard";
 
 $conn = new mysqli($servidor, $usuario, $contrasena, $base_datos);
 
+$mensaje = "";
+
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
