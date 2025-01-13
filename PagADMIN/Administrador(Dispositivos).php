@@ -212,8 +212,8 @@ if (!$result) {
         </div>
     </section>
 
-    <script src="Administrador-(Dispositivos).js"> </script>
-    <script src="Administrador-(Cuenta).js"></script>
+    <script src="JavaScript/Administrador-(Dispositivos).js"> </script>
+    <script src="JavaScript/Administrador-(Cuenta).js"></script>
 
 </body>
 </html>

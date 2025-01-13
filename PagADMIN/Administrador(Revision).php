@@ -154,8 +154,8 @@ $result = $conn->query($sql);
 
     <?php $conn->close(); ?>
 
-    <script src="Pag-Administrador-(Revision).js"></script>
-    <script src="Administrador-(Cuenta).js"></script>
+    <script src="JavaScript/Pag-Administrador-(Revision).js"></script>
+    <script src="JavaScript/Administrador-(Cuenta).js"></script>
 
 </body>
 </html>
