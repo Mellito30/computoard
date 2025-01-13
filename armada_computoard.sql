@@ -81,28 +81,22 @@ CREATE TABLE `formulario` (
 
 
 
+
 CREATE TABLE `comentarios_solicitudes` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `solicitud_id` int(11) NOT NULL,
   `nombre_usuario` varchar(255) NOT NULL,
   `comentario` text NOT NULL,
-  `fecha` datetime DEFAULT current_timestamp(),
+  `fecha` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-
 -- Indices de la tabla `comentarios_solicitudes`
 --
 ALTER TABLE `comentarios_solicitudes`
-  ADD constraint fk_comentarios_solicitudes
-  foreign key (`solicitud_id`) REFERENCES solicitudes(`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `solicitud_id` (`solicitud_id`);
 
 --
-
--- Indices de la tabla `comentarios_solicitudes`
---
-ALTER TABLE `comentarios_solicitudes`
-  ADD PRIMARY KEY (`id`);
-
 --
 --
 -- Índices para tablas volcadas
@@ -112,7 +106,7 @@ ALTER TABLE `comentarios_solicitudes`
 --
 -- Indices de la tabla `dispositivos`
 --
-ALTER TABLE `dispositivos`
+ALTER TABLE `dispositivos`armada_computoard
   ADD PRIMARY KEY (`id`);
 
 --
@@ -125,6 +119,13 @@ ALTER TABLE `solicitudes`
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
+
+
+-- AUTO_INCREMENT de la tabla `comentarios_solicitudes`
+--
+ALTER TABLE `comentarios_solicitudes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT de la tabla `dispositivos`
 --
@@ -136,7 +137,20 @@ ALTER TABLE `dispositivos`
 --
 ALTER TABLE `solicitudes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+
+  -- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `comentarios_solicitudes`
+--
+ALTER TABLE `comentarios_solicitudes`
+  ADD CONSTRAINT `comentarios_solicitudes_ibfk_1` FOREIGN KEY (`solicitud_id`) REFERENCES `solicitudes` (`id`);
 COMMIT;
+
+
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
