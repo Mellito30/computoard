@@ -22,6 +22,8 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
+$mensaje = '';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['id']; 
     $departamento = $_POST['nombre'];
@@ -31,31 +33,78 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fechasalida = $_POST['salidafecha'];
     $estado = $_POST['estado'];
 
-    
-    if (empty($modelo)) {
-        echo "Error: el campo modelo no está lleno.";
+    // Verificar si las fechas están vacías y asignarles un valor por defecto o NULL
+    if (empty($fechaingreso)) {
+        $fechaingreso = NULL;
     } else {
-        // Actualizar los datos en la base de datos
-        $sql = "UPDATE dispositivos SET 
-                departamento='$departamento', 
-                tipo_dispositivo='$tipodispositivo', 
-                modelo='$modelo', 
-                fecha_ingreso='$fechaingreso', 
-                fecha_salida='$fechasalida', 
-                estado='$estado' 
-                WHERE id='$id'"; 
-
-        if ($conn->query($sql) === TRUE) {
-            echo "Datos actualizados correctamente.";
-        } else {
-            echo "Error al actualizar los datos: " . $conn->error;
+        if (!DateTime::createFromFormat('Y-m-d', $fechaingreso)) {
+            $mensaje = "Error: la fecha de ingreso no tiene un formato válido.";
+            exit;
         }
     }
 
-    // Redirigir para evitar reenvío de datos al recargar
-    header("Location: " . $_SERVER['PHP_SELF'] . "?mensaje=" . urlencode($mensaje));
-    exit;
+    if (empty($fechasalida)) {
+        $fechasalida = NULL;
+    } else {
+        if (!DateTime::createFromFormat('Y-m-d', $fechasalida)) {
+            $mensaje = "Error: la fecha de salida no tiene un formato válido.";
+            exit;
+        }
+    }
+
+    if (empty($id)) {
+        $mensaje = "Error: el ID del dispositivo no está especificado.";
+    } else {
+        // Obtener los valores actuales desde la base de datos
+        $query = "SELECT departamento, tipo_dispositivo, modelo, fecha_ingreso, fecha_salida, estado FROM dispositivos WHERE id = '$id'";
+        $result = $conn->query($query);
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+
+            // Si la fecha ingresada es NULL, se mantiene el valor anterior
+            if (empty($fechaingreso)) {
+                $fechaingreso = $row['fecha_ingreso'];
+            }
+            if (empty($fechasalida)) {
+                $fechasalida = $row['fecha_salida'];
+            }
+
+            // Compara si realmente hay un cambio en los datos
+            $cambioDepartamento = ($row['departamento'] != $departamento);
+            $cambioTipo = ($row['tipo_dispositivo'] != $tipodispositivo);
+            $cambioModelo = ($row['modelo'] != $modelo);
+            $cambioFechaIngreso = ($row['fecha_ingreso'] != $fechaingreso);
+            $cambioFechaSalida = ($row['fecha_salida'] != $fechasalida);
+            $cambioEstado = ($row['estado'] != $estado);
+
+            // Si no hubo ningún cambio en los valores, no hacemos nada
+            if (!$cambioDepartamento && !$cambioTipo && !$cambioModelo && !$cambioFechaIngreso && !$cambioFechaSalida && !$cambioEstado) {
+                $mensaje = "No se realizaron cambios.";
+            } else {
+                // Si hay cambios, proceder con la actualización
+                // La consulta asegura que las fechas vacías sean enviadas como NULL si se proporciona una nueva fecha
+                $sql = "UPDATE dispositivos SET 
+                        departamento='$departamento', 
+                        tipo_dispositivo='$tipodispositivo', 
+                        modelo='$modelo', 
+                        fecha_ingreso=" . ($fechaingreso ? "'$fechaingreso'" : "fecha_ingreso") . ", 
+                        fecha_salida=" . ($fechasalida ? "'$fechasalida'" : "fecha_salida") . ", 
+                        estado='$estado' 
+                        WHERE id='$id'"; 
+
+                if ($conn->query($sql) === TRUE) {
+                    $mensaje = "Datos actualizados correctamente.";
+                } else {
+                    $mensaje = "Error al actualizar los datos: " . $conn->error;
+                }
+            }
+        } else {
+            $mensaje = "Dispositivo no encontrado.";
+        }
+    }
 }
+
 
 // Mostrar mensaje si está presente en la URL
 if (isset($_GET['mensaje'])) {
@@ -72,7 +121,11 @@ if (isset($_GET['mensaje'])) {
     <meta http-equiv=”Expires” content=”0″>
 
     <title>Administrador de Usuarios</title>
-    <link rel="stylesheet" href="Pag-Administrador-(Formulariooo).css">
+    <link rel="stylesheet" href="CSS/Pag-Administrador-(Formulariooo).css">
+    <?php include 'Modals/modal.php'; ?>
+    <link rel="stylesheet" href="Modals/modalstyle.css">
+    <script src="Modals/modal.js"></script>
+    <div id="php-mensaje" style="display: none;"><?php echo $mensaje; ?></div>
 </head>
 <body>
     
@@ -124,40 +177,40 @@ if (isset($_GET['mensaje'])) {
             <div class="div-formulario">
                 <label class="Label-formulario">Estado:</label>
                 <div class="Estados-formulario">
-                    <input class="Input-Formulario" type="radio" id="reparado" name="estado" value="Reparado" required>
+                    <input class="Input-Formulario" type="radio" id="reparado" name="estado" value="Reparado">
                     <label class="Estado-opciones" for="reparado">Reparado</label><br>
 
-                    <input class="Input-Formulario" type="radio" id="en_proceso" name="estado" value="En Proceso" required>
+                    <input class="Input-Formulario" type="radio" id="en_proceso" name="estado" value="En Proceso">
                     <label class="Estado-opciones" for="en_proceso">En Proceso</label><br>
 
-                    <input class="Input-Formulario" type="radio" id="sin_iniciar" name="estado" value="Sin Iniciar" required>
+                    <input class="Input-Formulario" type="radio" id="sin_iniciar" name="estado" value="Sin Iniciar">
                     <label class="Estado-opciones" for="sin_iniciar">Sin Iniciar</label><br>
                 </div><br>
             </div>
 
             <div class="div-formulario">
                 <label class="Label-formulario" for="nombre">Nombre del Departamento:</label>
-                <input class="Input-Formulario" type="text" id="nombre" name="nombre" required><br><br>
+                <input class="Input-Formulario" type="text" id="nombre" name="nombre"><br><br>
             </div>
 
             <div class="div-formulario">
                 <label class="Label-formulario" for="tipo">Tipo de dispositivo:</label>
-                <input class="Input-Formulario" type="text" id="tipo" name="tipo" required><br><br>
+                <input class="Input-Formulario" type="text" id="tipo" name="tipo"><br><br>
             </div>    
 
             <div class="div-formulario">
                 <label class="Label-formulario" for="modelo">Modelo del dispositivo:</label>
-                <input class="Input-Formulario" type="text" id="modelo" name="marca" required><br><br>
+                <input class="Input-Formulario" type="text" id="modelo" name="marca"><br><br>
             </div>
 
             <div class="div-formulario">
                 <label class="Label-formulario" for="entradafecha">Fecha de Ingreso:</label>
-                <input class="Input-Formulario" type="date" id="entradafecha" name="entradafecha" required><br><br>
+                <input class="Input-Formulario" type="date" id="entradafecha" name="entradafecha"><br><br>
             </div>
 
             <div class="div-formulario">
                 <label class="Label-formulario" for="salidafecha">Fecha de Salida:</label>
-                <input class="Input-Formulario" type="date" id="salidafecha" name="salidafecha" required><br><br>
+                <input class="Input-Formulario" type="date" id="salidafecha" name="salidafecha"><br><br>
             </div>
 
             <button class="Botton-formulario" type="submit">Actualizar</button>
@@ -167,6 +220,17 @@ if (isset($_GET['mensaje'])) {
 
     <script src="Administrador-(Dispositivos).js"> </script>
     <script src="Administrador-(Cuenta).js"></script>
+    <script src="Modal.js"></script>
+
+
+<!-- Modal de notificación -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-message">Mensaje de notificación</h2>
+        <button class="btn-aceptar" onclick="closeModal()">Aceptar</button>
+    </div>
+</div>
 
 
 </body>

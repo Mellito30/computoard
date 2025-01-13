@@ -10,6 +10,8 @@ if (!isset($_SESSION['user_id'])) {
 ?>
 <?php
 
+$mensaje = '';
+
 // Conexión con la base de datos
 $servidor = "localhost";
 $usuario = "root"; 
@@ -21,7 +23,6 @@ $conn = new mysqli($servidor, $usuario, $contrasena, $base_datos);
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $departamento = $_POST['nombre'];
     $tipodispositivo = $_POST['tipo'];
@@ -30,17 +31,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fechasalida = $_POST['salidafecha'];
     $estado = $_POST['estado'];
 
+    // Verificar si las fechas están vacías y asignar NULL sin comillas si es necesario
+    $fechaingreso = empty($fechaingreso) ? "NULL" : "'$fechaingreso'";  // Si está vacío, usar NULL
+    $fechasalida = empty($fechasalida) ? "NULL" : "'$fechasalida'";  // Si está vacío, usar NULL
+
+    // Verificar si el modelo está vacío
     if (empty($modelo)) {
-        echo "Error: el campo modelo no está lleno.";
+        $mensaje = "Error: el campo modelo no está lleno.";
     } else {
         // Insertar los datos en la base de datos
         $sql = "INSERT INTO dispositivos (departamento, tipo_dispositivo, modelo, fecha_ingreso, fecha_salida, estado) 
-                VALUES ('$departamento', '$tipodispositivo', '$modelo', '$fechaingreso', '$fechasalida', '$estado')"; 
+                VALUES ('$departamento', '$tipodispositivo', '$modelo', $fechaingreso, $fechasalida, '$estado')"; 
 
         if ($conn->query($sql) === TRUE) {
-            echo "Datos agregados correctamente.";
+            $mensaje = "Datos agregados correctamente.";
         } else {
-            echo "Error al agregar los datos: " . $conn->error;
+            $mensaje = "Error al agregar los datos: " . $conn->error;
         }
     }
 
@@ -64,7 +70,11 @@ if (isset($_GET['mensaje'])) {
     <meta http-equiv="Expires" content="0">
 
     <title>Administrador de Usuarios</title>
-    <link rel="stylesheet" href="Pag-Administrador-(Formulariooo).css">
+    <link rel="stylesheet" href="CSS/Pag-Administrador-(Formulariooo).css">
+    <?php include 'Modals/modal.php'; ?>
+    <link rel="stylesheet" href="Modals/modalstyle.css">
+    <script src="Modals/modal.js"></script>
+    <div id="php-mensaje" style="display: none;"><?php echo $mensaje; ?></div>
 </head>
 <body>
     
@@ -144,7 +154,7 @@ if (isset($_GET['mensaje'])) {
 
             <div class="div-formulario">
                 <label class="Label-formulario" for="salidafecha">Fecha de Salida:</label>
-                <input class="Input-Formulario" type="date" id="salidafecha" name="salidafecha" required><br><br>
+                <input class="Input-Formulario" type="date" id="salidafecha" name="salidafecha"><br><br>
             </div>
 
             <button class="Botton-formulario" type="submit">Agregar</button>

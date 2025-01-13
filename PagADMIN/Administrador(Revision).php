@@ -57,7 +57,7 @@ $result = $conn->query($sql);
     <meta http-equiv="pragma" content="no-cache">
 
     <title>Administrador de Usuarios</title>
-    <link rel="stylesheet" href="Pag-Administrador-(Revision).css">
+    <link rel="stylesheet" href="CSS/Pag-Administrador-(Revision).css">
 </head>
 <body>
     
