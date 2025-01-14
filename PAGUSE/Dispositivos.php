@@ -90,7 +90,60 @@ $result = $conn->query($sql);
         </div>
     </section>
 
+ <!-- Sección de dispositivos -->
+    <!-- Sección de títulos -->
+    <div class="div-Lista-Dispositivos">
+    <div class="Title-header-Dispositivos">
+        Revisión de Dispositivos
+    </div>
+    <!-- Títulos de las columnas -->
+    <div class="div-titulos-dispositivos">
+        <p class="Text-info-Titulos">Estado</p>
+        <p class="Text-info-Titulos">Equipo</p>
+        <p class="Text-info-Titulos">Departamento</p>
+        <p class="Text-info-Titulos">Fecha de Entrada</p>
+        <p class="Text-info-Titulos">Fecha de Salida</p>
+    </div>
 
+    <!-- Información de los dispositivos -->
+    <?php if ($result->num_rows > 0): ?>
+        <?php 
+        $is_black = false; // Alternancia de colores para las filas
+        while ($row = $result->fetch_assoc()): 
+        ?>
+            <div class="<?php echo $is_black ? 'div-Info-dispo-BGBLACK' : 'div-Info-Dispositivos'; ?>">
+                <p class="Text-info-Dispositivos"><?php echo $row['estado']; ?></p>
+                <p class="Text-info-Dispositivos"><?php echo $row['modelo']; ?></p>
+                <p class="Text-info-Dispositivos"><?php echo $row['departamento']; ?></p>
+                <p class="Text-info-Dispositivos"><?php echo $row['fecha_ingreso']; ?></p>
+                <p class="Text-info-Dispositivos"><?php echo $row['fecha_salida']; ?></p>
+            </div>
+            <?php $is_black = !$is_black; ?>
+        <?php endwhile; ?>
+    <?php else: ?>
+        <div class="div-Info-Dispositivos">
+            <p class="Text-info-Dispositivos">No hay dispositivos registrados.</p>
+        </div>
+    <?php endif; ?>
+</div>
+
+
+            <!-- Sección de paginación -->
+<section class="Sec-Paginas">
+    <div class="div-paginas">
+        <a class="Num-Pag" href="#">❮</a>
+        <a class="Num-Pag active" href="#">1</a>
+        <a class="Num-Pag" href="#">2</a>
+        <a class="Num-Pag" href="#">3</a>
+        <a class="Num-Pag" href="#">4</a>
+        <a class="Num-Pag" href="#">5</a>
+        <a class="Num-Pag" href="#">6</a>
+        <a class="Num-Pag" href="#">❯</a>
+    </div>
+</section>
+
+
+       
         <!-- Footer -->
     <section class="Sec-Footer">
         <img class="Logo-ARM-Footer" src="img/LOGOARM.png" alt="EscudoARM">    
