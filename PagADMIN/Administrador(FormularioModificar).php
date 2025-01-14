@@ -120,7 +120,7 @@ if (isset($_GET['mensaje'])) {
     
     <meta http-equiv=”Expires” content=”0″>
 
-    <title>Administrador de Usuarios</title>
+    <title>Administrado de Usuarios</title>
     <link rel="stylesheet" href="CSS/Pag-Administrador-(Formulariooo).css">
     <?php include 'Modals/modal.php'; ?>
     <link rel="stylesheet" href="Modals/modalstyle.css">
