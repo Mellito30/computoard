@@ -24,7 +24,6 @@ function getSelectedFilters() {
 // Llamar a `getSelectedFilters` cuando desees obtener los valores seleccionados
 
 
-
 function buscarDispositivos() {
   const input = document.getElementById('searchInput');
   const filter = input.value.toLowerCase();

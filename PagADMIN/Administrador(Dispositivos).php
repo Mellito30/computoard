@@ -156,56 +156,60 @@ if (!$result) {
 
 
                 </div>
-            </div> 
-
-       
-
-            <!-- Sección de títulos -->
-            <div class="div-dispositivos">
-                <h3 class="Title-header-dispositivos">Estado</h3>
-                <h3 class="Title-header-dispositivos">Equipo</h3>
-                <h3 class="Title-header-dispositivos">Departamento</h3>
-                <h3 class="Title-header-dispositivos">Fecha de Entrada</h3>
-                <h3 class="Title-header-dispositivos">Fecha de Salida</h3>
-            </div>
-            <div class="div-form-decorate"></div>
+            </div>             
 
             <!-- Sección de dispositivos -->
-            <div class="div-Lista-Dispositivos">
-                <?php if ($result->num_rows > 0): ?>
-                    <?php 
-                    $is_black = false; // Para alternar clases
-                    while ($row = $result->fetch_assoc()): 
-                    ?>
-                        <div class="<?php echo $is_black ? 'div-Info-dispo-BGBLACK' : 'div-Info-Dispositivos'; ?>">
-                            <p class="Text-info-Dispositivos"><?php echo $row['estado']; ?></p>
-                            <p class="Text-info-Dispositivos"><?php echo $row['modelo']; ?></p>
-                            <p class="Text-info-Dispositivos"><?php echo $row['departamento']; ?></p>
-                            <p class="Text-info-Dispositivos"><?php echo $row['fecha_ingreso']; ?></p>
-                            <p class="Text-info-Dispositivos"><?php echo $row['fecha_salida']; ?></p>
-                            
-                        </div>
-                        <div class="div-form-decorate"></div>
-                        <?php $is_black = !$is_black; ?>
-                    <?php endwhile; ?>
-                <?php else: ?>
-                    <p>No hay dispositivos registrados.</p>
-                <?php endif; ?>
+    <!-- Sección de títulos -->
+    <div class="div-Lista-Dispositivos">
+    <div class="Title-header-Dispositivos">
+        Revisión de Dispositivos
+    </div>
+    <!-- Títulos de las columnas -->
+    <div class="div-titulos-dispositivos">
+        <p class="Text-info-Titulos">Estado</p>
+        <p class="Text-info-Titulos">Equipo</p>
+        <p class="Text-info-Titulos">Departamento</p>
+        <p class="Text-info-Titulos">Fecha de Entrada</p>
+        <p class="Text-info-Titulos">Fecha de Salida</p>
+    </div>
+
+    <!-- Información de los dispositivos -->
+    <?php if ($result->num_rows > 0): ?>
+        <?php 
+        $is_black = false; // Alternancia de colores para las filas
+        while ($row = $result->fetch_assoc()): 
+        ?>
+            <div class="<?php echo $is_black ? 'div-Info-dispo-BGBLACK' : 'div-Info-Dispositivos'; ?>">
+                <p class="Text-info-Dispositivos"><?php echo $row['estado']; ?></p>
+                <p class="Text-info-Dispositivos"><?php echo $row['modelo']; ?></p>
+                <p class="Text-info-Dispositivos"><?php echo $row['departamento']; ?></p>
+                <p class="Text-info-Dispositivos"><?php echo $row['fecha_ingreso']; ?></p>
+                <p class="Text-info-Dispositivos"><?php echo $row['fecha_salida']; ?></p>
             </div>
+            <?php $is_black = !$is_black; ?>
+        <?php endwhile; ?>
+    <?php else: ?>
+        <div class="div-Info-Dispositivos">
+            <p class="Text-info-Dispositivos">No hay dispositivos registrados.</p>
+        </div>
+    <?php endif; ?>
+</div>
+
 
             <!-- Sección de paginación -->
-            <section class="Sec-Paginas">
-                <div class="div-paginas">
-                    <a class="Num-Pag" href="#">❮</a>
-                    <a class="Num-Pag" href="#">1</a>
-                    <a class="Num-Pag" href="#">2</a>
-                    <a class="Num-Pag" href="#">3</a>
-                    <a class="Num-Pag" href="#">4</a>
-                    <a class="Num-Pag" href="#">5</a>
-                    <a class="Num-Pag" href="#">6</a>
-                    <a class="Num-Pag" href="#">❯</a>
-                </div>
-            </section>
+<section class="Sec-Paginas">
+    <div class="div-paginas">
+        <a class="Num-Pag" href="#">❮</a>
+        <a class="Num-Pag active" href="#">1</a>
+        <a class="Num-Pag" href="#">2</a>
+        <a class="Num-Pag" href="#">3</a>
+        <a class="Num-Pag" href="#">4</a>
+        <a class="Num-Pag" href="#">5</a>
+        <a class="Num-Pag" href="#">6</a>
+        <a class="Num-Pag" href="#">❯</a>
+    </div>
+</section>
+
 
         </div>
     </section>
