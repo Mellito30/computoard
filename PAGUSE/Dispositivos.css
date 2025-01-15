@@ -1,71 +1,54 @@
-
-*{
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
-    overflow-x: hidden;
 }
 
 /* Sección de encabezado */
 .Sec-Header {
-    background-color: #e1e9ee;
-    padding: 80px 50px;
+    background-color: #132b3a;
+    padding: 20px 50px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-}
-
-.Logo-ARM-link{
-    position: absolute;
-    transform: translatey(50%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .Logo-ARM {
-    position: absolute;
-    transform: translatex(15%);
+    height: 100px;
+    width: auto;
+    margin-right: 20px;
 }
 
 .div-formulario {
     display: flex;
-    align-items: center; 
-
+    gap: 30px;
 }
 
-.Formulario {
-    color: #06263f;
-    font-size: 20px;
+.Inicio, .Formulario {
+    color: #FFFFFF;
+    font-size: 16px;
     text-decoration: none;
-    position: absolute;
-    transform: translatex(-90%);
-    right: 0;
-
-}
-.Formulario:hover{
-    color: #425b77;
-    transition-delay: -0.1s; 
-    text-shadow: #0a3e5f5f 0px 3px 10px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
 }
 
-/* <!-- Sección de inicio --> */
-
-.Inicio{
-    text-decoration: none;
-    color: #133448;
-    font-size: 20px;
-    position: absolute;
-    transform: translatex(-190%);
-    right: 0;
-}
-.Inicio:hover{
-    color: #06263f;
-    transition-delay: -0.1s; 
-    text-shadow: #0a3e5f5f 0px 3px 10px;
-    
+.Inicio:hover, .Formulario:hover {
+    background-color: #DAE1E5;
+    color: #0D1E28;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* <!-- Sección de Titulos de dispositivos --> */
 .Sec-Body1{
-    margin: 40px 180px;
+    margin: 40px 140px;
 }
 
 /* <!-- Sección de Revisión de Dispositivos --> */
@@ -140,6 +123,7 @@ body{
     text-align: center;
 }
 
+
 /* <!-- Sección de paginación --> */
 .Sec-Paginas {
     display: flex;
@@ -147,6 +131,7 @@ body{
     align-items: center;
     margin-top: 35px;
     margin-bottom: 35px;
+    z-index: 500;
 }
 
 .div-paginas {
@@ -187,46 +172,50 @@ body{
 
 /* Footer */
 .Sec-Footer {
-    
-    position: absolute;
-    background-color: #e1e9ee;
-    color: #fff;
+    background-color: #0D1E28;
+    color: #FFFFFF;
     padding: 40px 20px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    bottom: 0;
-    width: 100%;
-    box-sizing: border-box;
-
+    margin-top: auto;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .Logo-ARM-Footer, .Logo-GRD-Footer {
-    width: 160px;
-    height: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    height: 60px;
+    width: auto;
+    margin: 10px 0;
 }
 
 .div-text-footer {
-    color: #06263f;
-    max-width: 200px;
-    text-align: center;
-}
-
-.TITLE-Contacto{
-    line-height: 3px;
+    color: #FFFFFF;
+    max-width: 250px;
+    text-align: left;
+    margin: 20px 0;
 }
 
 .Title-footer {
-    font-size: 20px;
+    text-align: center;
+    font-size: 18px;
     font-weight: bold;
-    color: #06263f;
     margin-bottom: 10px;
+    color: #DAE1E5;
 }
 
 .Text-footer {
-    font-size: 16px;
-    color: #06263f;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #E1E9EE;
 }
 
+.Text-footer a {
+    color: #DAE1E5;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.Text-footer a:hover {
+    color: #FFFFFF;
+}

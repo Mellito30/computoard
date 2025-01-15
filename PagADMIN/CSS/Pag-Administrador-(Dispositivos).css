@@ -549,6 +549,7 @@ body {
     align-items: center;
     margin-top: 35px;
     margin-bottom: 35px;
+    z-index: 500;
 }
 
 .div-paginas {

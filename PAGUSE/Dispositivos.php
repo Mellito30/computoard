@@ -1,10 +1,9 @@
-
 <?php
 
-//conexion con la base de datos
+// Configuración de la conexión a la base de datos
 $servidor = "localhost";
-$usuario = "root"; // Cambia esto si usas otro usuario
-$contrasena = ""; // Cambia esto si tienes contraseña
+$usuario = "root"; 
+$contrasena = ""; 
 $base_datos = "armada_computoard";
 
 $conn = new mysqli($servidor, $usuario, $contrasena, $base_datos);
@@ -14,10 +13,36 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-// Obtener todos los datos de la tabla "dispositivos"
-$sql = "SELECT estado, departamento, tipo_dispositivo, modelo, fecha_ingreso, fecha_salida FROM dispositivos";
+// Parámetros de paginación
+$records_per_page = 10; // Número de registros por página
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1; // Página actual
+$offset = ($page - 1) * $records_per_page; // Desplazamiento
+$buttons_to_display = 5; // Máximo de botones visibles
+
+// Consultar registros con límite y desplazamiento
+$sql = "SELECT estado, departamento, tipo_dispositivo, modelo, fecha_ingreso, fecha_salida 
+        FROM dispositivos 
+        LIMIT $records_per_page OFFSET $offset";
 $result = $conn->query($sql);
+
+// Obtener el número total de registros
+$total_sql = "SELECT COUNT(*) as total FROM dispositivos";
+$total_result = $conn->query($total_sql);
+$total_records = $total_result->fetch_assoc()['total'];
+
+// Calcular el número total de páginas
+$total_pages = ceil($total_records / $records_per_page);
+
+// Calcular el rango de botones visibles
+$start_page = max(1, $page - floor($buttons_to_display / 2));
+$end_page = min($total_pages, $start_page + $buttons_to_display - 1);
+
+// Ajustar el rango si hay menos páginas al inicio
+if (($end_page - $start_page + 1) < $buttons_to_display) {
+    $start_page = max(1, $end_page - $buttons_to_display + 1);
+}
 ?>
+
 
 
 <!DOCTYPE html>
@@ -41,23 +66,25 @@ $result = $conn->query($sql);
             </div>
         </section>
  
- 
-<!-- Sección de títulos -->
- <section class="Sec-Body1">
-<div class="div-dispositivos">
-        <h3 class="Title-header-dispositivos">Estado</h3>
-        <h3 class="Title-header-dispositivos">Equipo</h3>
-        <h3 class="Title-header-dispositivos">Departamento</h3>
-        <h3 class="Title-header-dispositivos">Fecha de Entrada</h3>
-        <h3 class="Title-header-dispositivos">Fecha de Salida</h3>
-    </div>
-    <div class="div-form-decorate"></div>
-
-    <!-- Sección de dispositivos -->
+ <!-- Sección de dispositivos -->
+<section class="Sec-Body1">
     <div class="div-Lista-Dispositivos">
+        <div class="Title-header-Dispositivos">
+            Revisión de Dispositivos
+        </div>
+        <!-- Títulos de las columnas -->
+        <div class="div-titulos-dispositivos">
+            <p class="Text-info-Titulos">Estado</p>
+            <p class="Text-info-Titulos">Equipo</p>
+            <p class="Text-info-Titulos">Departamento</p>
+            <p class="Text-info-Titulos">Fecha de Entrada</p>
+            <p class="Text-info-Titulos">Fecha de Salida</p>
+        </div>
+
+        <!-- Información de los dispositivos -->
         <?php if ($result->num_rows > 0): ?>
             <?php 
-            $is_black = false; // Para alternar clases
+            $is_black = false;
             while ($row = $result->fetch_assoc()): 
             ?>
                 <div class="<?php echo $is_black ? 'div-Info-dispo-BGBLACK' : 'div-Info-Dispositivos'; ?>">
@@ -67,78 +94,30 @@ $result = $conn->query($sql);
                     <p class="Text-info-Dispositivos"><?php echo $row['fecha_ingreso']; ?></p>
                     <p class="Text-info-Dispositivos"><?php echo $row['fecha_salida']; ?></p>
                 </div>
-                <div class="div-form-decorate"></div>
                 <?php $is_black = !$is_black; ?>
             <?php endwhile; ?>
         <?php else: ?>
-            <p>No hay dispositivos registrados.</p>
+            <div class="div-Info-Dispositivos">
+                <p class="Text-info-Dispositivos">No hay dispositivos registrados.</p>
+            </div>
         <?php endif; ?>
     </div>
-    </section>
+</section>
 
-    <!-- Sección de paginación -->
-    <section class="Sec-Paginas">
-        <div class="div-paginas">
-            <a class="Num-Pag" href="#">❮</a>
-            <a class="Num-Pag" href="#">1</a>
-            <a class="Num-Pag" href="#">2</a>
-            <a class="Num-Pag" href="#">3</a>
-            <a class="Num-Pag" href="#">4</a>
-            <a class="Num-Pag" href="#">5</a>
-            <a class="Num-Pag" href="#">6</a>
-            <a class="Num-Pag" href="#">❯</a>
-        </div>
-    </section>
-
- <!-- Sección de dispositivos -->
-    <!-- Sección de títulos -->
-    <div class="div-Lista-Dispositivos">
-    <div class="Title-header-Dispositivos">
-        Revisión de Dispositivos
-    </div>
-    <!-- Títulos de las columnas -->
-    <div class="div-titulos-dispositivos">
-        <p class="Text-info-Titulos">Estado</p>
-        <p class="Text-info-Titulos">Equipo</p>
-        <p class="Text-info-Titulos">Departamento</p>
-        <p class="Text-info-Titulos">Fecha de Entrada</p>
-        <p class="Text-info-Titulos">Fecha de Salida</p>
-    </div>
-
-    <!-- Información de los dispositivos -->
-    <?php if ($result->num_rows > 0): ?>
-        <?php 
-        $is_black = false; // Alternancia de colores para las filas
-        while ($row = $result->fetch_assoc()): 
-        ?>
-            <div class="<?php echo $is_black ? 'div-Info-dispo-BGBLACK' : 'div-Info-Dispositivos'; ?>">
-                <p class="Text-info-Dispositivos"><?php echo $row['estado']; ?></p>
-                <p class="Text-info-Dispositivos"><?php echo $row['modelo']; ?></p>
-                <p class="Text-info-Dispositivos"><?php echo $row['departamento']; ?></p>
-                <p class="Text-info-Dispositivos"><?php echo $row['fecha_ingreso']; ?></p>
-                <p class="Text-info-Dispositivos"><?php echo $row['fecha_salida']; ?></p>
-            </div>
-            <?php $is_black = !$is_black; ?>
-        <?php endwhile; ?>
-    <?php else: ?>
-        <div class="div-Info-Dispositivos">
-            <p class="Text-info-Dispositivos">No hay dispositivos registrados.</p>
-        </div>
-    <?php endif; ?>
-</div>
-
-
-            <!-- Sección de paginación -->
 <section class="Sec-Paginas">
     <div class="div-paginas">
-        <a class="Num-Pag" href="#">❮</a>
-        <a class="Num-Pag active" href="#">1</a>
-        <a class="Num-Pag" href="#">2</a>
-        <a class="Num-Pag" href="#">3</a>
-        <a class="Num-Pag" href="#">4</a>
-        <a class="Num-Pag" href="#">5</a>
-        <a class="Num-Pag" href="#">6</a>
-        <a class="Num-Pag" href="#">❯</a>
+        <!-- Botón Anterior -->
+        <a class="Num-Pag" href="?page=<?php echo max(1, $page - 1); ?>">❮</a>
+
+        <!-- Números de página dinámicos -->
+        <?php for ($i = $start_page; $i <= $end_page; $i++): ?>
+            <a class="Num-Pag <?php echo $i == $page ? 'active' : ''; ?>" href="?page=<?php echo $i; ?>">
+                <?php echo $i; ?>
+            </a>
+        <?php endfor; ?>
+
+        <!-- Botón Siguiente -->
+        <a class="Num-Pag" href="?page=<?php echo min($total_pages, $page + 1); ?>">❯</a>
     </div>
 </section>
 

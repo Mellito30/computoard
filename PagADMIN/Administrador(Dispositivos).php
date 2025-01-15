@@ -23,13 +23,38 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-// Obtener todos los datos de la tabla "dispositivos"
-$sql = "SELECT estado, departamento, tipo_dispositivo, modelo, fecha_ingreso, fecha_salida FROM dispositivos";
+// Parámetros de paginación
+$records_per_page = 10; // Número de registros por página
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1; // Página actual
+$offset = ($page - 1) * $records_per_page; // Desplazamiento
+$buttons_to_display = 5; // Máximo de botones visibles
+
+// Consultar registros con límite y desplazamiento
+$sql = "SELECT estado, departamento, tipo_dispositivo, modelo, fecha_ingreso, fecha_salida 
+        FROM dispositivos 
+        LIMIT $records_per_page OFFSET $offset";
 $result = $conn->query($sql);
 
 // Manejo de errores en la consulta
 if (!$result) {
     die("Error en la consulta: " . $conn->error);
+}
+
+// Obtener el número total de registros
+$total_sql = "SELECT COUNT(*) as total FROM dispositivos";
+$total_result = $conn->query($total_sql);
+$total_records = $total_result->fetch_assoc()['total'];
+
+// Calcular el número total de páginas
+$total_pages = ceil($total_records / $records_per_page);
+
+// Calcular el rango de botones visibles
+$start_page = max(1, $page - floor($buttons_to_display / 2));
+$end_page = min($total_pages, $start_page + $buttons_to_display - 1);
+
+// Ajustar el rango si hay menos páginas al inicio
+if (($end_page - $start_page + 1) < $buttons_to_display) {
+    $start_page = max(1, $end_page - $buttons_to_display + 1);
 }
 ?>
 
@@ -197,25 +222,29 @@ if (!$result) {
 
 
             <!-- Sección de paginación -->
-<section class="Sec-Paginas">
-    <div class="div-paginas">
-        <a class="Num-Pag" href="#">❮</a>
-        <a class="Num-Pag active" href="#">1</a>
-        <a class="Num-Pag" href="#">2</a>
-        <a class="Num-Pag" href="#">3</a>
-        <a class="Num-Pag" href="#">4</a>
-        <a class="Num-Pag" href="#">5</a>
-        <a class="Num-Pag" href="#">6</a>
-        <a class="Num-Pag" href="#">❯</a>
-    </div>
-</section>
+            <section class="Sec-Paginas">
+                <div class="div-paginas">
+                    <!-- Botón Anterior -->
+                    <a class="Num-Pag" href="?page=<?php echo max(1, $page - 1); ?>">❮</a>
+
+                    <!-- Números de página dinámicos -->
+                    <?php for ($i = $start_page; $i <= $end_page; $i++): ?>
+                        <a class="Num-Pag <?php echo $i == $page ? 'active' : ''; ?>" href="?page=<?php echo $i; ?>">
+                            <?php echo $i; ?>
+                        </a>
+                    <?php endfor; ?>
+
+                    <!-- Botón Siguiente -->
+                    <a class="Num-Pag" href="?page=<?php echo min($total_pages, $page + 1); ?>">❯</a>
+                </div>
+            </section>
 
 
         </div>
     </section>
 
-    <script src="Administrador-(Dispositivos).js"> </script>
-    <script src="Administrador-(Cuenta).js"></script>
+    <script src="JavaScript/Administrador-(Dispositivos).js"> </script>
+    <script src="JavaScript/Administrador-(Cuenta).js"></script>
 
 </body>
 </html>

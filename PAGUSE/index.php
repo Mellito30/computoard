@@ -21,7 +21,7 @@
             <source src="video.mp4" type="video/mp4">
         </video>
         <div class="overlay-content">
-            <h1 class="Title1">DIRECIÓN DE TECNOLOGÍA E INFORMACIÓN </h1>
+            <h1 class="Title1">DIRECCIÓN DE TECNOLOGÍA E INFORMACIÓN </h1>
             <button class="Button-dispositivos">
                 <a class="Button-link" href="Dispositivos.php" >Ver Dispositivos</a>
             </button>
