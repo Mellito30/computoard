@@ -234,65 +234,118 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
+/* contenedor de navegador de opciones */
 
-.div-formulario:hover {
-    color: #05060fc2;
+.Nav-Revision {
+    margin-left: 350px; ;
+    position: relative;
+    max-width: 380px;
+    background-color: blue;
 }
-
-.Label-formulario{
-    display: block;
-    margin-bottom: .3rem;
-    font-size: .9rem;
-    font-weight: bold;
-    color: #05060f99;
-    transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
-}
-
-.Input-Formulario{
-    max-width: 190px;
-    height: 44px;
-    background-color: #05060f0a;
-    border-radius: .5rem;
-    padding: 0 1rem;
-    border: 2px solid transparent;
-    font-size: 1rem;
-    transition: 
-    border-color .3s cubic-bezier(.25,.01,.25,1) 0s 
-    color .3s cubic-bezier(.25,.01,.25,1) 0s, 
-    background .2s cubic-bezier(.25,.01,.25,1) 0s;
-}
-
-.Input-Formulario:hover, .Input-Formulario:focus{
-    outline: none;
-    border-color: #05060f;
-    transition: 1s;
-}
-
-.Estados-formulario{
-    display: flex;
+.div-Nav-revision{
+    padding: 25px;
     align-items: center;
-
+    align-content: center;
+    justify-content: center;
+}
+.nav-button-Revision{
+    padding: 5px;margin: 5px;
+}
+.nav-link-Revision{
+    text-decoration: none;
 }
 
-.Estado-opciones{
-    margin: 10px;
-  
+
+
+/* Contenedor del formulario */
+.Formulario {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #001627;
 }
 
-.Botton-formulario{
+/* Título del formulario */
+.Titulo-Formulario {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #063661;
+}
+
+/* Etiquetas del formulario */
+.Label-formulario {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #001627;
+}
+
+/* Inputs y selects */
+.Input-Formulario {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    font-size: 14px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+}
+
+.Input-Formulario:focus {
+    border-color: #063661;
+    box-shadow: 0px 0px 8px rgba(6, 54, 97, 0.2);
+    outline: none;
+}
+
+/* Opciones de estado */
+.Estados-formulario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Estado-opciones {
+    font-size: 14px;
+    color: #001627;
+    margin-left: 10px;
+}
+
+/* Botón del formulario */
+.Botton-formulario {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
     background-color: #063661;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: Times;
+    font-size: 16px;
     font-weight: bold;
-    margin-left: 250px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.Botton-formulario:hover{
-    background-color: #4479a7; 
-    color: rgb(255, 255, 255);
+.Botton-formulario:hover {
+    background-color: #4479a7;
+    transform: translateY(-2px);
+}
+
+/* Mensajes dinámicos */
+#php-mensaje {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 20px;
+    color: white;
+    background-color: #063661;
+    border-radius: 5px;
+    display: none; /* Por defecto oculto */
 }
