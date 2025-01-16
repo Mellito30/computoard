@@ -225,46 +225,104 @@ body {
 
 }
 
-    /* <!-- Sección de dispositivos  --> */
+ 
+
+/* <!-- Sección de dispositivos  --> */
 .Sec-Body1 {
-    margin: 45px;
     padding-left: 305px; 
-    justify-content: center;
-    align-items: center;
     background-color: rgb(255, 255, 255);
+    display: flex;   
 }
 
-/* contenedor de navegador de opciones */
-
+/* Contenedor principal de la barra de navegación */
 .Nav-Revision {
-    margin-left: 350px; ;
     position: relative;
-    max-width: 380px;
-    background-color: blue;
-}
-.div-Nav-revision{
-    padding: 25px;
-    align-items: center;
-    align-content: center;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 80vh;
+    background-color: #001627; 
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    padding: 20px;
+    z-index: 10;
 }
-.nav-button-Revision{
-    padding: 5px;margin: 5px;
+
+/* Contenedor de botones */
+.div-Nav-revision {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
 }
-.nav-link-Revision{
+
+/* Estilo de los botones */
+.nav-button-Revision {
+    width: 260px;
+    padding: 15px 20px;
+    background-color: #063661; 
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #e1e9ee; 
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 4px 6px inset,
+                rgba(0, 0, 0, 0.3) 0px 6px 10px; 
+    transition: all 0.3s ease;
+}
+
+
+.nav-button-Revision:hover {
+    background-color: #144268; 
+    transform: scale(1.05); 
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 6px 10px inset,
+                rgba(0, 0, 0, 0.4) 0px 8px 12px; 
+    color: #ffffff;
+}
+
+
+.nav-button-Revision:active {
+    transform: scale(0.95); 
+    background-color: #0b304f; 
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 4px inset,
+                rgba(0, 0, 0, 0.5) 0px 4px 6px;
+}
+
+
+.nav-link-Revision {
     text-decoration: none;
 }
 
 
 
 /* Contenedor del formulario */
+.Div-borde-formulario{
+    height: 84vh;
+
+    margin: 0;
+    background-color: #ffffff;
+    box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 5px 50px;
+    width: 500px;
+}
+
+.div-formulario{
+    padding: 5px;
+}
 .Formulario {
     max-width: 600px;
-    margin: 50px auto;
-    padding: 20px 40px;
+    margin: 10px auto;
+    padding: 30px 50px;
+    justify-content: center;
+    align-items: center;
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.2);
     font-family: 'Arial', sans-serif;
     color: #001627;
 }
@@ -288,7 +346,7 @@ body {
 
 /* Inputs y selects */
 .Input-Formulario {
-    width: 100%;
+    width:  370px;
     height: 40px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -315,12 +373,14 @@ body {
 .Estado-opciones {
     font-size: 14px;
     color: #001627;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 /* Botón del formulario */
 .Botton-formulario {
-    width: 100%;
+    width: 360px;
+    justify-content: center;
+    align-items: center;
     padding: 12px;
     border: none;
     border-radius: 5px;
@@ -347,5 +407,7 @@ body {
     color: white;
     background-color: #063661;
     border-radius: 5px;
-    display: none; /* Por defecto oculto */
+    display: none; 
 }
+
+
