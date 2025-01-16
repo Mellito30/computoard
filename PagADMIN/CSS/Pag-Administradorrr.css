@@ -337,6 +337,11 @@ body {
     font-weight: bold;
     color: #144268;
 }
+.asunto {
+    font-weight: bold;
+    color: #144268;
+    margin-left: -15px;
+}
 
 .fecha-solicitada {
     font-size: 12px;

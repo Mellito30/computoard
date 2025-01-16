@@ -158,69 +158,78 @@ if (isset($_GET['mensaje'])) {
     </div>
 </section>
   
-    <!-- Sección de encabezado -->
-    <section class="Header">
-        <div class="Contenido1">
-            <p class="Textcontanido1">m.</p>
-        </div>
-    </section>
     
     <!-- Sección de formulario -->
     <section class="Sec-Body1">
-        <form action="" method="POST">
 
-            <div class="div-formulario">
+
+    <div class="Nav-Revision">
+            <div class="div-Nav-revision">
+                <a class="nav-link-Revision" href="Administrador(Formulario).php">
+                    <button class="nav-button-Revision">Ingreso de Dispositivos</button>
+                </a>
+                <a class="nav-link-Revision active" href="Administrador(FormularioModificar).php">
+                    <button class="nav-button-Revision">Modificación de Dispositivos</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="Div-borde-formulario">
+            <form action="" method="POST" class="Formulario">
+                <h2 class="Titulo-Formulario">Ingreso de Dispositivos</h2>
+                <div class="div-formulario">
+                    <label class="Label-formulario">Estado:</label>
+                    <div class="Estados-formulario">
+                        <input class="Input-Formulario" type="radio" id="reparado" name="estado" value="Reparado" required>
+                        <label class="Estado-opciones" for="reparado">Reparado</label>
+        
+                        <input class="Input-Formulario" type="radio" id="en_proceso" name="estado" value="En Proceso" required>
+                        <label class="Estado-opciones" for="en_proceso">En Proceso</label>
+        
+                        <input class="Input-Formulario" type="radio" id="sin_iniciar" name="estado" value="Sin Iniciar" required>
+                        <label class="Estado-opciones" for="sin_iniciar">Sin Iniciar</label>
+                    </div>
+                </div>
+
+                <div class="div-formulario">
                 <label class="Label-formulario" for="id">ID del Dispositivo:</label>
-                <input class="Input-Formulario" type="text" id="id" name="id" required><br><br>
-            </div>
-
-            <div class="div-formulario">
-                <label class="Label-formulario">Estado:</label>
-                <div class="Estados-formulario">
-                    <input class="Input-Formulario" type="radio" id="reparado" name="estado" value="Reparado">
-                    <label class="Estado-opciones" for="reparado">Reparado</label><br>
-
-                    <input class="Input-Formulario" type="radio" id="en_proceso" name="estado" value="En Proceso">
-                    <label class="Estado-opciones" for="en_proceso">En Proceso</label><br>
-
-                    <input class="Input-Formulario" type="radio" id="sin_iniciar" name="estado" value="Sin Iniciar">
-                    <label class="Estado-opciones" for="sin_iniciar">Sin Iniciar</label><br>
-                </div><br>
-            </div>
-
-            <div class="div-formulario">
-                <label class="Label-formulario" for="nombre">Nombre del Departamento:</label>
-                <input class="Input-Formulario" type="text" id="nombre" name="nombre"><br><br>
-            </div>
-
-            <div class="div-formulario">
-                <label class="Label-formulario" for="tipo">Tipo de dispositivo:</label>
-                <input class="Input-Formulario" type="text" id="tipo" name="tipo"><br><br>
-            </div>    
-
-            <div class="div-formulario">
-                <label class="Label-formulario" for="modelo">Modelo del dispositivo:</label>
-                <input class="Input-Formulario" type="text" id="modelo" name="marca"><br><br>
-            </div>
-
-            <div class="div-formulario">
-                <label class="Label-formulario" for="entradafecha">Fecha de Ingreso:</label>
-                <input class="Input-Formulario" type="date" id="entradafecha" name="entradafecha"><br><br>
-            </div>
-
-            <div class="div-formulario">
-                <label class="Label-formulario" for="salidafecha">Fecha de Salida:</label>
-                <input class="Input-Formulario" type="date" id="salidafecha" name="salidafecha"><br><br>
-            </div>
-
-            <button class="Botton-formulario" type="submit">Actualizar</button>
-        </form>
+                <input class="Input-Formulario" type="text" id="id" name="id" placeholder="Ingrese ID del dispositivo" required>
+                </div>
+        
+                <div class="div-formulario">
+                    <label class="Label-formulario" for="nombre">Nombre del Departamento:</label>
+                    <input class="Input-Formulario" type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre del departamento" required>
+                </div>
+        
+                <div class="div-formulario">
+                    <label class="Label-formulario" for="tipo">Tipo de dispositivo:</label>
+                    <input class="Input-Formulario" type="text" id="tipo" name="tipo" placeholder="Ingrese el tipo de dispositivo" required>
+                </div>    
+        
+                <div class="div-formulario">
+                    <label class="Label-formulario" for="modelo">Modelo del dispositivo:</label>
+                    <input class="Input-Formulario" type="text" id="modelo" name="marca" placeholder="Ingrese el modelo de dispositivo" required>
+                </div>
+        
+                <div class="div-formulario">
+                    <label class="Label-formulario" for="entradafecha">Fecha de Ingreso:</label>
+                    <input class="Input-Formulario" type="date" id="entradafecha" name="entradafecha" required>
+                </div>
+        
+                <div class="div-formulario">
+                    <label class="Label-formulario" for="salidafecha">Fecha de Salida:</label>
+                    <input class="Input-Formulario" type="date" id="salidafecha" name="salidafecha">
+                </div>
+        
+                <button class="Botton-formulario" type="submit">Actualizar</button>
+                </form>
+        </div>
     </section>
 
 
-    <script src="Administrador-(Dispositivos).js"> </script>
-    <script src="Administrador-(Cuenta).js"></script>
-    <script src="Modal.js"></script>
+    <<script src="JavaScript/Administrador-(Formulario).js"></>
+    <script src="JavaScript/Administrador-(Cuenta).js"></script>
+    <script src="Modals/Modal.js"></script>
 
 
 <!-- Modal de notificación -->

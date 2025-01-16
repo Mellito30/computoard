@@ -104,49 +104,16 @@ if (!$result) {
                         <span class="nombre">Comandante JCK</span>
                         <span class="rango">(Capitán Navío)</span>
                     </div>
-                    <div class="fecha-aceptada">
+                    <!-- <div class="fecha-aceptada">
                         Aceptado: <span>06/12</span>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="detalles">
                     <span class="departamento">Cómputo</span>
+                    <span class="asunto">Asunto:</span>
                     <span class="fecha-solicitada">Solicitado: <span>05/12</span></span>
                 </div>
-            </div>
-
-            <div class="recordatorio">
-                <div class="encabezado">
-                    <div class="nombre-rango">
-                        <span class="nombre">Comandante JCK</span>
-                        <span class="rango">(Capitán Navío)</span>
-                    </div>
-                    <div class="fecha-aceptada">
-                        Aceptado: <span>06/12</span>
-                    </div>
-                </div>
-                <div class="detalles">
-                    <span class="departamento">Cómputo</span>
-                    <span class="fecha-solicitada">Solicitado: <span>05/12</span></span>
-                </div>
-            </div>
-            
-            <div class="recordatorio">
-                <div class="encabezado">
-                    <div class="nombre-rango">
-                        <span class="nombre">Comandante JCK</span>
-                        <span class="rango">(Capitán Navío)</span>
-                    </div>
-                    <div class="fecha-aceptada">
-                        Aceptado: <span>06/12</span>
-                    </div>
-                </div>
-                <div class="detalles">
-                    <span class="departamento">Cómputo</span>
-                    <span class="fecha-solicitada">Solicitado: <span>05/12</span></span>
-                </div>
-            </div>
-            
-            
+            </div>            
             
         </div>
     </div>                                 
@@ -154,8 +121,10 @@ if (!$result) {
 
             <!-- Recuadro 2: Formulario de ingreso -->
             <div class="recuadro formulario">
-                <h3>Formulario de Ingreso</h3>
-                <form action="#" method="post">
+            <div class="Title-header">
+                Formulario de Ingreso           
+             </div>
+                    <form action="#" method="post">
                     <label for="dispositivo">Dispositivo:</label>
                     <input type="text" id="dispositivo" name="dispositivo">
                     <button type="submit">Ingresar</button>

@@ -108,11 +108,10 @@ if (isset($_GET['mensaje'])) {
 </section>
   
     <!-- Sección de encabezado -->
-    <section class="Header">
+    <!-- <section class="Header">
         <div class="Contenido1">
-            <p class="Textcontanido1">m.</p>
         </div>
-    </section>
+    </section> -->
     
 
 
@@ -122,10 +121,10 @@ if (isset($_GET['mensaje'])) {
 
         <div class="Nav-Revision">
             <div class="div-Nav-revision">
-                <a class="nav-link-Revision" href="Administrador(Formulario).php">
+                <a class="nav-link-Revision active" href="Administrador(Formulario).php">
                     <button class="nav-button-Revision">Ingreso de Dispositivos</button>
                 </a>
-                <a class="nav-link-Revision" href="Administrador(FormularioModificados).php">
+                <a class="nav-link-Revision" href="Administrador(FormularioModificar).php">
                     <button class="nav-button-Revision">Modificación de Dispositivos</button>
                 </a>
             </div>
