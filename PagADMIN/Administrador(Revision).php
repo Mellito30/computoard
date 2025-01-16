@@ -93,8 +93,8 @@ $result = $conn->query($sql);
     <!-- Sección de encabezado -->
     <section class="Header">
         <div class="div-Button">
-            <a href="#" class="Button">Eliminar</a>
-            <a href="#" class="Button">Actualizar</a>
+            <button href="#" class="Button">Eliminar</button>
+            <button href="#" id="resetButton" class="Button">Actualizar</button>
         </div>
     </section>
 
@@ -136,21 +136,22 @@ $result = $conn->query($sql);
 
     <!-- Modal -->
     <div id="modal" class="modal hidden">
-        <div class="modal-content">
-            <h2 class="Tittle-modal">Aceptar Solicitud</h2>
-            <form id="modal-form" method="POST">
-                <input type="hidden" id="solicitud-id" name="solicitud-id" value="">
-                <label class="Label-modal" for="nombre-usuario">Nombre del usuario:</label>
-                <input class="Input-modal" type="text" id="nombre-usuario" name="nombre-usuario" required>
-                <label class="Label-modal" for="comentario">Comentario:</label>
-                <textarea class="Input-modal" id="comentario" name="comentario" rows="4" required></textarea>
-                <div class="modal-buttons">
-                    <button type="button" class="modal-cancel" onclick="closeModal()">Cancelar</button>
-                    <button type="submit" class="modal-accept">Aceptar</button>
-                </div>
-            </form>
-        </div>
+    <div class="modal-content">
+        <h2 class="modal-title">Aceptar Solicitud</h2>
+        <form id="modal-form" method="POST">
+            <input type="hidden" id="solicitud-id" name="solicitud-id" value="">
+            <label class="modal-label" for="nombre-usuario">Nombre del usuario:</label>
+            <input class="modal-input" type="text" id="nombre-usuario" name="nombre-usuario" placeholder="Ingrese su nombre de usuario" required>
+            <label class="modal-label" for="comentario">Comentario:</label>
+            <input class="modal-input" id="comentario" name="comentario" placeholder="Ingrese un comentario al usuario" rows="4" required></input>
+            <div class="modal-buttons">
+                <button type="button" id="closeModalBtn" class="modal-cancel" onclick="closeModal()">Cancelar</button>
+                <button type="submit" class="modal-accept">Aceptar</button>
+            </div>
+        </form>
     </div>
+</div>
+
 
     <?php $conn->close(); ?>
 

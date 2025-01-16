@@ -100,7 +100,9 @@
     color: #fff;
     font-size: 16px;
     transform: .3s ease;
+    text-decoration: none;
  }
+ 
 
  .Button-Log:hover{
     background-color: rgb(19, 100, 180);

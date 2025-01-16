@@ -17,6 +17,8 @@
     width: 80%;
     max-width: 400px;
     text-align: center;
+    border-radius: 15px;
+
 }
 
 .close {
@@ -36,7 +38,7 @@
 }
 
 .btn-aceptar {
-    background-color: #4CAF50;
+    background-color: #f44336;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -46,5 +48,5 @@
 }
 
 .btn-aceptar:hover {
-    background-color: #45a049;
+    background-color: #b03229;
 }

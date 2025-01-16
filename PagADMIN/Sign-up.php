@@ -88,7 +88,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input class="Input-Sign_up" type="password" placeholder="Ingrese su contraseña "name="clave" required><br><br>
             </div>
             
-           <button class="Button-Sign_up">Crear cuenta</button>
+           <button class="Button-Sign_up">Crear cuenta
+            <a href="Login.php"></a>
+           </button>
 
            <p class="Link-log">¿Ya tiene una cuenta? 
             <a class="Link" href="Login.php">Acceder</a>

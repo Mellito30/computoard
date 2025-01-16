@@ -82,17 +82,17 @@ if (isset($_GET['mensaje'])) {
 
                 <div class="mb-3">
                     <label for="AsuntoDe" class="form-label"><strong>Asunto</strong></label>
-                    <input type="text" id="AsuntoDe" name="asunto" class="form-control" required placeholder="Introduzca el titulo de su solicitud">
+                    <input type="text" id="AsuntoDe" name="asunto" class="form-control" required placeholder="Introduzca el título de su solicitud">
                 </div>
 
                 <div class="mb-3">
-                    <label for="AsuntoDe" class="form-label"><strong>Correo Eletronico</strong></label>
-                    <input type="email" id="AsuntoDe" name="correo" class="form-control" required placeholder="Introduzca su correo eletrónico">
+                    <label for="AsuntoDe" class="form-label"><strong>Correo Electrónico</strong></label>
+                    <input type="email" id="AsuntoDe" name="correo" class="form-control" required placeholder="Introduzca su correo electrónico">
                 </div>
                
                     <div class="mb-3">
-                        <label for="observaciones" class="form-label"><strong>Descripcion de la Solicitud:</strong></label>
-                        <textarea id="observaciones" name="descripcion" rows="4" class="form-control" placeholder="Introduzca su problematica"></textarea>
+                        <label for="observaciones" class="form-label"><strong>Descripción de la Solicitud:</strong></label>
+                        <textarea id="observaciones" name="descripcion" rows="4" class="form-control" placeholder="Introduzca su problemática"></textarea>
                     </div>
 
                 <div class="d-flex justify-content-between mt-4">
