@@ -370,17 +370,31 @@ input {
     border-radius: 5px;
 }
 
-button {
-    background-color: #144268;
-    color: #fff;
-    padding: 10px;
+.Buttom-formulario {
+    width: 360px;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
     border: none;
     border-radius: 5px;
+    background-color: #063661;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
-    background-color: #0d3450;
+.Buttom-formulario:hover {
+    background-color: #4479a7;
+    transform: translateY(-2px);
+}
+
+.link-buttom{
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+
 }
 
 /* Recuadro 3: Dispositivos recientes */

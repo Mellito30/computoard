@@ -11,7 +11,7 @@
     <section class="Sec-Header">
         <img class="Logo-ARM" src="img/LOGOARM.png" alt="EscudoARM">
         <div class="div-formulario">
-            <a class="Formulario" href="formulariousuario.php">Solicitud de Formulario</a>
+        <a class="Formulario" href="formulariousuario.php">Solicitud de Formulario</a>
         </div>
     </section>
 
@@ -58,5 +58,6 @@
             <p class="Text-footer">Ave. España, Punta Torrecilla, Sans Soucí, Villa Duarte, Santo Domingo Este, PSD</p>
         </div>
     </section>
+
 </body>
 </html>

@@ -125,9 +125,13 @@ if (!$result) {
                 Formulario de Ingreso           
              </div>
                     <form action="#" method="post">
-                    <label for="dispositivo">Dispositivo:</label>
-                    <input type="text" id="dispositivo" name="dispositivo">
-                    <button type="submit">Ingresar</button>
+                        <label for="dispositivo">Dispositivo:</label>
+                        <input type="text" id="dispositivo" name="dispositivo">
+                        
+                            <button class="Buttom-formulario" type="submit">Ingresar 
+                            <a  class="link-buttom" href="Administrador(Formulario).php"> </a>
+                            </button>
+                        
                 </form>
             </div>
 

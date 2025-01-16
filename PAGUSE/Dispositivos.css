@@ -1,5 +1,8 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:Times;
 }
 
 body {
@@ -11,7 +14,7 @@ body {
 
 /* Sección de encabezado */
 .Sec-Header {
-    background-color: #132b3a;
+    background-color: #e1e9ee;
     padding: 20px 50px;
     display: flex;
     justify-content: space-between;
@@ -31,7 +34,7 @@ body {
 }
 
 .Inicio, .Formulario {
-    color: #FFFFFF;
+    color: #0D1E28;
     font-size: 16px;
     text-decoration: none;
     font-weight: bold;
@@ -41,8 +44,8 @@ body {
 }
 
 .Inicio:hover, .Formulario:hover {
-    background-color: #DAE1E5;
-    color: #0D1E28;
+    background-color: #0D1E28;
+    color: #DAE1E5;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -172,8 +175,8 @@ body {
 
 /* Footer */
 .Sec-Footer {
-    background-color: #0D1E28;
-    color: #FFFFFF;
+    background-color: #e1e9ee;
+    color: #0D1E28;
     padding: 40px 20px;
     display: flex;
     justify-content: space-around;
@@ -189,7 +192,7 @@ body {
 }
 
 .div-text-footer {
-    color: #FFFFFF;
+    color: #0D1E28;
     max-width: 250px;
     text-align: left;
     margin: 20px 0;
@@ -200,22 +203,22 @@ body {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #DAE1E5;
+    color: #0D1E28;
 }
 
 .Text-footer {
     text-align: center;
     font-size: 14px;
     line-height: 1.5;
-    color: #E1E9EE;
+    color: #0D1E28;
 }
 
 .Text-footer a {
-    color: #DAE1E5;
+    color: #0D1E28;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
 
 .Text-footer a:hover {
-    color: #FFFFFF;
+    color: #0D1E28;
 }

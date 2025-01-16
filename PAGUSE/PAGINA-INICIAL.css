@@ -27,15 +27,23 @@ body {
 }
 
 .div-formulario {
-    position: absolute;
-    transform: translatex(-30%);
-    right: 0;
+    display: flex;
+    gap: 30px;
+}
+ .Formulario {
+    color: #0D1E28;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
 }
 
-.Formulario {
-    color: #06263f;
-    font-size: 20px;
-    text-decoration: none;
+ .Formulario:hover {
+    background-color: #0D1E28;
+    color: #DAE1E5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -114,46 +122,52 @@ body {
     line-height: 1.8;
 }
 
-/* Footer */
+/*  Footer */
 .Sec-Footer {
-    background-color: #06263f;
-    color: #fff;
+    background-color: #e1e9ee;
+    color: #0D1E28;
     padding: 40px 20px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    position: relative; 
-    bottom: 0;
-    width: 100%;
-    box-sizing: border-box;
+    margin-top: auto;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .Logo-ARM-Footer, .Logo-GRD-Footer {
-    width: 160px;
-    height: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    height: 60px;
+    width: auto;
+    margin: 10px 0;
 }
 
 .div-text-footer {
-    color: #cce4f3;
-    max-width: 200px;
-    text-align: center;
-}
-
-.TITLE-Contacto{
-    line-height: 3px;
+    color: #0D1E28;
+    max-width: 250px;
+    text-align: left;
+    margin: 20px 0;
 }
 
 .Title-footer {
-    font-size: 20px;
+    text-align: center;
+    font-size: 18px;
     font-weight: bold;
-    color: #e6f7ff;
     margin-bottom: 10px;
+    color: #0D1E28;
 }
 
 .Text-footer {
-    font-size: 16px;
-    color: #cce4f3;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #0D1E28;
 }
 
+.Text-footer a {
+    color: #0D1E28;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.Text-footer a:hover {
+    color: #0D1E28;
+}
