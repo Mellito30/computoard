@@ -101,6 +101,8 @@ if (($end_page - $start_page + 1) < $buttons_to_display) {
         </ul>
     </div>
 </section>
+
+
   
     <!-- Sección de encabezado -->
     <section class="Header">
@@ -238,11 +240,8 @@ if (($end_page - $start_page + 1) < $buttons_to_display) {
                     <a class="Num-Pag" href="?page=<?php echo min($total_pages, $page + 1); ?>">❯</a>
                 </div>
             </section>
-
-
         </div>
     </section>
-
     <script src="JavaScript/Administrador-(Dispositivos).js"> </script>
     <script src="JavaScript/Administrador-(Cuenta).js"></script>
 
